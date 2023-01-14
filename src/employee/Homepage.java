@@ -55,7 +55,7 @@ public class Homepage extends javax.swing.JFrame {
         canvas1 = new java.awt.Canvas();
         jButton12 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        createresumebutton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         PersonalPanel = new javax.swing.JPanel();
@@ -74,103 +74,103 @@ public class Homepage extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         PersonalContentPanel = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        firstnameinput = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        lastnameinput = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        personalcontinuebutton = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        emailinput = new javax.swing.JTextField();
+        githuburlinput = new javax.swing.JTextField();
+        linkdininput = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         AcademicContentPanel = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        puccollagenameinput = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
+        pucpercentageinput = new javax.swing.JTextField();
+        degreecgpainput = new javax.swing.JTextField();
+        degreecollageinput = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
+        pucboardinput = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
+        degreeboardinput = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
+        puccourseinput = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        jTextField16 = new javax.swing.JTextField();
-        jTextField17 = new javax.swing.JTextField();
-        jTextField18 = new javax.swing.JTextField();
+        degreecourseinput = new javax.swing.JTextField();
+        pucyearinput = new javax.swing.JTextField();
+        degreeyearinput = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        academiccontinuebutton = new javax.swing.JButton();
         SkillsContentPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        jTextField13 = new javax.swing.JTextField();
+        skillnameinput = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
+        skilldeletebutton = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        skilldescriptioninput = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
+        skilladdonemorebutton = new javax.swing.JButton();
+        skillscontinuebutton = new javax.swing.JButton();
         ProjectsContentPanel = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
-        jTextField14 = new javax.swing.JTextField();
+        projectnameinput = new javax.swing.JTextField();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
+        projectdeletebutton = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        projectdescriptioninput = new javax.swing.JTextArea();
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
+        projectaddonemorebutton = new javax.swing.JButton();
+        projectcontinuebutton = new javax.swing.JButton();
         AchivementsContentPanel = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         jPanel8 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
-        jTextField15 = new javax.swing.JTextField();
+        achivementinput = new javax.swing.JTextField();
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
-        jButton8 = new javax.swing.JButton();
+        Achivementdeletebutton = new javax.swing.JButton();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
+        Achivementdescriptioninput = new javax.swing.JTextArea();
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
-        jButton9 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
+        achivementaddonemorebutton = new javax.swing.JButton();
+        achivementcontinuebutton = new javax.swing.JButton();
         ExperienceContentPanel = new javax.swing.JPanel();
         jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
-        jButton10 = new javax.swing.JButton();
+        experiencecontinuebutton = new javax.swing.JButton();
         jScrollPane8 = new javax.swing.JScrollPane();
         jPanel10 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField19 = new javax.swing.JTextField();
+        experienceroleinput = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
-        jTextArea4 = new javax.swing.JTextArea();
+        experienceroledescriptioninput = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
-        jButton16 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jButton15 = new javax.swing.JButton();
+        experiencedeletebutton = new javax.swing.JButton();
+        experiencedurationdropdown = new javax.swing.JComboBox<>();
+        experienceaddonemorebutton = new javax.swing.JButton();
 
         jButton12.setBackground(new java.awt.Color(0, 153, 255));
         jButton12.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
@@ -181,11 +181,11 @@ public class Homepage extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
-        jButton1.setBackground(new java.awt.Color(102, 204, 0));
-        jButton1.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
-        jButton1.setText("create");
-        jButton1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        createresumebutton.setBackground(new java.awt.Color(102, 204, 0));
+        createresumebutton.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        createresumebutton.setText("create");
+        createresumebutton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        createresumebutton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel7.setFont(new java.awt.Font("Liberation Sans", 0, 48)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 51, 51));
@@ -199,7 +199,7 @@ public class Homepage extends javax.swing.JFrame {
                 .addGap(17, 17, 17)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(createresumebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
         jPanel1Layout.setVerticalGroup(
@@ -207,7 +207,7 @@ public class Homepage extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(createresumebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
@@ -425,8 +425,8 @@ public class Homepage extends javax.swing.JFrame {
 
         PersonalContentPanel.setBackground(new java.awt.Color(255, 255, 255));
         PersonalContentPanel.setLayout(null);
-        PersonalContentPanel.add(jTextField1);
-        jTextField1.setBounds(227, 156, 380, 52);
+        PersonalContentPanel.add(firstnameinput);
+        firstnameinput.setBounds(227, 156, 380, 52);
 
         jLabel6.setText("First Name");
         PersonalContentPanel.add(jLabel6);
@@ -435,8 +435,8 @@ public class Homepage extends javax.swing.JFrame {
         jLabel8.setText("Last Name");
         PersonalContentPanel.add(jLabel8);
         jLabel8.setBounds(227, 226, 71, 18);
-        PersonalContentPanel.add(jTextField2);
-        jTextField2.setBounds(227, 250, 380, 54);
+        PersonalContentPanel.add(lastnameinput);
+        lastnameinput.setBounds(227, 250, 380, 54);
 
         jLabel9.setFont(new java.awt.Font("Liberation Sans", 1, 48)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 153, 255));
@@ -444,12 +444,12 @@ public class Homepage extends javax.swing.JFrame {
         PersonalContentPanel.add(jLabel9);
         jLabel9.setBounds(242, 13, 347, 56);
 
-        jButton2.setBackground(new java.awt.Color(0, 153, 255));
-        jButton2.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Continue");
-        PersonalContentPanel.add(jButton2);
-        jButton2.setBounds(351, 517, 127, 34);
+        personalcontinuebutton.setBackground(new java.awt.Color(0, 153, 255));
+        personalcontinuebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        personalcontinuebutton.setForeground(new java.awt.Color(255, 255, 255));
+        personalcontinuebutton.setText("Continue");
+        PersonalContentPanel.add(personalcontinuebutton);
+        personalcontinuebutton.setBounds(351, 517, 127, 34);
 
         jLabel10.setText("Now you are ready! now add your name and personal details!");
         PersonalContentPanel.add(jLabel10);
@@ -458,12 +458,12 @@ public class Homepage extends javax.swing.JFrame {
         jLabel11.setText("Email");
         PersonalContentPanel.add(jLabel11);
         jLabel11.setBounds(227, 316, 37, 18);
-        PersonalContentPanel.add(jTextField3);
-        jTextField3.setBounds(227, 340, 380, 51);
-        PersonalContentPanel.add(jTextField4);
-        jTextField4.setBounds(89, 421, 265, 49);
-        PersonalContentPanel.add(jTextField5);
-        jTextField5.setBounds(471, 421, 298, 49);
+        PersonalContentPanel.add(emailinput);
+        emailinput.setBounds(227, 340, 380, 51);
+        PersonalContentPanel.add(githuburlinput);
+        githuburlinput.setBounds(89, 421, 265, 49);
+        PersonalContentPanel.add(linkdininput);
+        linkdininput.setBounds(471, 421, 298, 49);
 
         jLabel12.setText("Github URL(Optional)");
         PersonalContentPanel.add(jLabel12);
@@ -511,10 +511,10 @@ public class Homepage extends javax.swing.JFrame {
         jLabel26.setForeground(new java.awt.Color(0, 153, 255));
         jLabel26.setText("DEGREE");
 
-        jButton4.setBackground(new java.awt.Color(0, 153, 255));
-        jButton4.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Continue");
+        academiccontinuebutton.setBackground(new java.awt.Color(0, 153, 255));
+        academiccontinuebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        academiccontinuebutton.setForeground(new java.awt.Color(255, 255, 255));
+        academiccontinuebutton.setText("Continue");
 
         javax.swing.GroupLayout AcademicContentPanelLayout = new javax.swing.GroupLayout(AcademicContentPanel);
         AcademicContentPanel.setLayout(AcademicContentPanelLayout);
@@ -530,47 +530,46 @@ public class Homepage extends javax.swing.JFrame {
                                 .addComponent(jLabel25)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(puccollagenameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel17)
-                                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(puccourseinput, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel21)
                                     .addComponent(jLabel15)
-                                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(degreecollageinput, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel23)
-                                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(degreecourseinput, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(AcademicContentPanelLayout.createSequentialGroup()
                                         .addGap(4, 4, 4)
                                         .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel22)
-                                            .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel24)
-                                            .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(pucyearinput, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(degreeyearinput, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel24)))
                                     .addGroup(AcademicContentPanelLayout.createSequentialGroup()
-                                        .addGap(26, 26, 26)
+                                        .addGap(71, 71, 71)
                                         .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel19)
+                                            .addComponent(jLabel20)
                                             .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(jLabel20))
+                                                .addComponent(pucboardinput, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(degreeboardinput, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGap(29, 29, 29)
                                         .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(degreecgpainput, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel16)
-                                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(pucpercentageinput, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel18)))))
                             .addGroup(AcademicContentPanelLayout.createSequentialGroup()
                                 .addGap(108, 108, 108)
                                 .addComponent(jLabel14))))
                     .addGroup(AcademicContentPanelLayout.createSequentialGroup()
                         .addGap(169, 169, 169)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(34, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AcademicContentPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton4)
-                .addGap(328, 328, 328))
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(AcademicContentPanelLayout.createSequentialGroup()
+                        .addGap(381, 381, 381)
+                        .addComponent(academiccontinuebutton)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         AcademicContentPanelLayout.setVerticalGroup(
             AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -588,9 +587,9 @@ public class Homepage extends javax.swing.JFrame {
                             .addComponent(jLabel16))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(puccollagenameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pucpercentageinput, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pucboardinput, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(AcademicContentPanelLayout.createSequentialGroup()
                         .addGap(23, 23, 23)
                         .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -600,32 +599,31 @@ public class Homepage extends javax.swing.JFrame {
                     .addComponent(jLabel22))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(puccourseinput, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pucyearinput, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56)
                 .addComponent(jLabel26)
                 .addGap(18, 18, 18)
-                .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(AcademicContentPanelLayout.createSequentialGroup()
-                        .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel20)
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel18))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(29, 29, 29)
-                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(jLabel18)
+                    .addComponent(jLabel20))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(degreecollageinput, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(degreecgpainput, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(degreeboardinput, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel24))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4)
-                .addGap(101, 101, 101))
+                    .addComponent(degreecourseinput, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(degreeyearinput, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addComponent(academiccontinuebutton)
+                .addGap(54, 54, 54))
         );
 
         jTabbedPane1.addTab("tab2", AcademicContentPanel);
@@ -638,11 +636,11 @@ public class Homepage extends javax.swing.JFrame {
 
         jLabel29.setText("Skill Description");
 
-        jButton5.setText("del");
+        skilldeletebutton.setText("del");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
+        skilldescriptioninput.setColumns(20);
+        skilldescriptioninput.setRows(5);
+        jScrollPane2.setViewportView(skilldescriptioninput);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -651,7 +649,7 @@ public class Homepage extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField13)
+                    .addComponent(skillnameinput)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel28)
@@ -659,7 +657,7 @@ public class Homepage extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(skilldeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );
         jPanel5Layout.setVerticalGroup(
@@ -667,7 +665,7 @@ public class Homepage extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addComponent(jLabel28)
                 .addGap(8, 8, 8)
-                .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(skillnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(3, 3, 3)
@@ -676,7 +674,7 @@ public class Homepage extends javax.swing.JFrame {
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(skilldeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
@@ -706,14 +704,14 @@ public class Homepage extends javax.swing.JFrame {
         jLabel27.setForeground(new java.awt.Color(0, 153, 255));
         jLabel27.setText("Add your skills");
 
-        jButton3.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(0, 153, 255));
-        jButton3.setText("Add one more +");
+        skilladdonemorebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        skilladdonemorebutton.setForeground(new java.awt.Color(0, 153, 255));
+        skilladdonemorebutton.setText("Add one more +");
 
-        jButton14.setBackground(new java.awt.Color(0, 153, 255));
-        jButton14.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
-        jButton14.setForeground(new java.awt.Color(255, 255, 255));
-        jButton14.setText("Continue");
+        skillscontinuebutton.setBackground(new java.awt.Color(0, 153, 255));
+        skillscontinuebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        skillscontinuebutton.setForeground(new java.awt.Color(255, 255, 255));
+        skillscontinuebutton.setText("Continue");
 
         javax.swing.GroupLayout SkillsContentPanelLayout = new javax.swing.GroupLayout(SkillsContentPanel);
         SkillsContentPanel.setLayout(SkillsContentPanelLayout);
@@ -729,12 +727,12 @@ public class Homepage extends javax.swing.JFrame {
                                 .addComponent(jLabel27))
                             .addGroup(SkillsContentPanelLayout.createSequentialGroup()
                                 .addGap(87, 87, 87)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 726, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(skilladdonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 726, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(skillscontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(SkillsContentPanelLayout.createSequentialGroup()
                         .addGap(252, 252, 252)
                         .addComponent(jLabel4)))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
         SkillsContentPanelLayout.setVerticalGroup(
             SkillsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -746,9 +744,9 @@ public class Homepage extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(skilladdonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48)
-                .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(skillscontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(49, Short.MAX_VALUE))
         );
 
@@ -762,11 +760,11 @@ public class Homepage extends javax.swing.JFrame {
 
         jLabel31.setText("Project Description");
 
-        jButton6.setText("del");
+        projectdeletebutton.setText("del");
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane5.setViewportView(jTextArea2);
+        projectdescriptioninput.setColumns(20);
+        projectdescriptioninput.setRows(5);
+        jScrollPane5.setViewportView(projectdescriptioninput);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -775,7 +773,7 @@ public class Homepage extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField14)
+                    .addComponent(projectnameinput)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel30)
@@ -783,7 +781,7 @@ public class Homepage extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 555, Short.MAX_VALUE))
                 .addGap(29, 29, 29)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(projectdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19))
         );
         jPanel7Layout.setVerticalGroup(
@@ -791,7 +789,7 @@ public class Homepage extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addComponent(jLabel30)
                 .addGap(8, 8, 8)
-                .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(projectnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(3, 3, 3)
@@ -800,7 +798,7 @@ public class Homepage extends javax.swing.JFrame {
                         .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(projectdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 13, Short.MAX_VALUE))
         );
 
@@ -830,14 +828,14 @@ public class Homepage extends javax.swing.JFrame {
         jLabel33.setForeground(new java.awt.Color(0, 153, 255));
         jLabel33.setText("Add your projects");
 
-        jButton7.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(0, 153, 255));
-        jButton7.setText("Add one more +");
+        projectaddonemorebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        projectaddonemorebutton.setForeground(new java.awt.Color(0, 153, 255));
+        projectaddonemorebutton.setText("Add one more +");
 
-        jButton13.setBackground(new java.awt.Color(0, 153, 255));
-        jButton13.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
-        jButton13.setForeground(new java.awt.Color(255, 255, 255));
-        jButton13.setText("Continue");
+        projectcontinuebutton.setBackground(new java.awt.Color(0, 153, 255));
+        projectcontinuebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        projectcontinuebutton.setForeground(new java.awt.Color(255, 255, 255));
+        projectcontinuebutton.setText("Continue");
 
         javax.swing.GroupLayout ProjectsContentPanelLayout = new javax.swing.GroupLayout(ProjectsContentPanel);
         ProjectsContentPanel.setLayout(ProjectsContentPanelLayout);
@@ -851,14 +849,14 @@ public class Homepage extends javax.swing.JFrame {
                     .addGroup(ProjectsContentPanelLayout.createSequentialGroup()
                         .addGap(87, 87, 87)
                         .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(projectcontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 726, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(projectaddonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 726, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 726, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(ProjectsContentPanelLayout.createSequentialGroup()
                         .addGap(230, 230, 230)
                         .addComponent(jLabel32)))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
         ProjectsContentPanelLayout.setVerticalGroup(
             ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -870,9 +868,9 @@ public class Homepage extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(projectaddonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(projectcontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(66, Short.MAX_VALUE))
         );
 
@@ -882,15 +880,15 @@ public class Homepage extends javax.swing.JFrame {
 
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel34.setText("Project Name");
+        jLabel34.setText("Achivement name");
 
-        jLabel35.setText("Project Description");
+        jLabel35.setText("Achivement description");
 
-        jButton8.setText("del");
+        Achivementdeletebutton.setText("del");
 
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jScrollPane6.setViewportView(jTextArea3);
+        Achivementdescriptioninput.setColumns(20);
+        Achivementdescriptioninput.setRows(5);
+        jScrollPane6.setViewportView(Achivementdescriptioninput);
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -899,15 +897,15 @@ public class Homepage extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField15)
+                    .addComponent(achivementinput)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 562, Short.MAX_VALUE)
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel34)
                             .addComponent(jLabel35))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 562, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
-                .addComponent(jButton8)
+                .addComponent(Achivementdeletebutton)
                 .addGap(9, 9, 9))
         );
         jPanel9Layout.setVerticalGroup(
@@ -915,16 +913,16 @@ public class Homepage extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addComponent(jLabel34)
                 .addGap(8, 8, 8)
-                .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(achivementinput, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(jLabel35)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel35)
+                        .addGap(3, 3, 3)
                         .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(8, 8, 8)
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Achivementdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(7, Short.MAX_VALUE))
         );
 
@@ -954,14 +952,14 @@ public class Homepage extends javax.swing.JFrame {
         jLabel37.setForeground(new java.awt.Color(0, 153, 255));
         jLabel37.setText("Add your Achivements");
 
-        jButton9.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(0, 153, 255));
-        jButton9.setText("Add one more +");
+        achivementaddonemorebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        achivementaddonemorebutton.setForeground(new java.awt.Color(0, 153, 255));
+        achivementaddonemorebutton.setText("Add one more +");
 
-        jButton11.setBackground(new java.awt.Color(0, 153, 255));
-        jButton11.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
-        jButton11.setForeground(new java.awt.Color(255, 255, 255));
-        jButton11.setText("Continue");
+        achivementcontinuebutton.setBackground(new java.awt.Color(0, 153, 255));
+        achivementcontinuebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        achivementcontinuebutton.setForeground(new java.awt.Color(255, 255, 255));
+        achivementcontinuebutton.setText("Continue");
 
         javax.swing.GroupLayout AchivementsContentPanelLayout = new javax.swing.GroupLayout(AchivementsContentPanel);
         AchivementsContentPanel.setLayout(AchivementsContentPanelLayout);
@@ -976,13 +974,13 @@ public class Homepage extends javax.swing.JFrame {
                     .addGroup(AchivementsContentPanelLayout.createSequentialGroup()
                         .addGap(87, 87, 87)
                         .addGroup(AchivementsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(achivementcontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 726, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 726, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(achivementaddonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 726, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(AchivementsContentPanelLayout.createSequentialGroup()
                         .addGap(200, 200, 200)
                         .addComponent(jLabel36)))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
         AchivementsContentPanelLayout.setVerticalGroup(
             AchivementsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -994,9 +992,9 @@ public class Homepage extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(achivementaddonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
-                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(achivementcontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(61, Short.MAX_VALUE))
         );
 
@@ -1011,10 +1009,10 @@ public class Homepage extends javax.swing.JFrame {
         jLabel41.setForeground(new java.awt.Color(0, 153, 255));
         jLabel41.setText("Add your Experience");
 
-        jButton10.setBackground(new java.awt.Color(0, 153, 255));
-        jButton10.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
-        jButton10.setForeground(new java.awt.Color(255, 255, 255));
-        jButton10.setText("Continue");
+        experiencecontinuebutton.setBackground(new java.awt.Color(0, 153, 255));
+        experiencecontinuebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        experiencecontinuebutton.setForeground(new java.awt.Color(255, 255, 255));
+        experiencecontinuebutton.setText("Continue");
 
         jPanel10.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1022,16 +1020,16 @@ public class Homepage extends javax.swing.JFrame {
 
         jLabel2.setText("Role Description");
 
-        jTextArea4.setColumns(20);
-        jTextArea4.setRows(5);
-        jScrollPane7.setViewportView(jTextArea4);
+        experienceroledescriptioninput.setColumns(20);
+        experienceroledescriptioninput.setRows(5);
+        jScrollPane7.setViewportView(experienceroledescriptioninput);
 
         jLabel3.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
         jLabel3.setText("Duration:");
 
-        jButton16.setText("del");
+        experiencedeletebutton.setText("del");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        experiencedurationdropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -1046,11 +1044,11 @@ public class Homepage extends javax.swing.JFrame {
                         .addGap(200, 200, 200)
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 551, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(experiencedurationdropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(experienceroleinput, javax.swing.GroupLayout.PREFERRED_SIZE, 551, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton16)
+                .addComponent(experiencedeletebutton)
                 .addGap(22, 22, 22))
         );
         jPanel11Layout.setVerticalGroup(
@@ -1059,12 +1057,12 @@ public class Homepage extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(experienceroleinput, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jComboBox1)
-                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(experiencedurationdropdown)
+                        .addComponent(experiencedeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel3))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -1093,9 +1091,9 @@ public class Homepage extends javax.swing.JFrame {
 
         jScrollPane8.setViewportView(jPanel10);
 
-        jButton15.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
-        jButton15.setForeground(new java.awt.Color(0, 153, 255));
-        jButton15.setText("Add one more +");
+        experienceaddonemorebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        experienceaddonemorebutton.setForeground(new java.awt.Color(0, 153, 255));
+        experienceaddonemorebutton.setText("Add one more +");
 
         javax.swing.GroupLayout ExperienceContentPanelLayout = new javax.swing.GroupLayout(ExperienceContentPanel);
         ExperienceContentPanel.setLayout(ExperienceContentPanelLayout);
@@ -1104,7 +1102,7 @@ public class Homepage extends javax.swing.JFrame {
             .addGroup(ExperienceContentPanelLayout.createSequentialGroup()
                 .addGroup(ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(experiencecontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(ExperienceContentPanelLayout.createSequentialGroup()
                             .addGroup(ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(ExperienceContentPanelLayout.createSequentialGroup()
@@ -1117,9 +1115,9 @@ public class Homepage extends javax.swing.JFrame {
                     .addGroup(ExperienceContentPanelLayout.createSequentialGroup()
                         .addGap(72, 72, 72)
                         .addGroup(ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(experienceaddonemorebutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jScrollPane8))))
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addContainerGap(131, Short.MAX_VALUE))
         );
         ExperienceContentPanelLayout.setVerticalGroup(
             ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1131,9 +1129,9 @@ public class Homepage extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addComponent(jScrollPane8)
                 .addGap(18, 18, 18)
-                .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(experienceaddonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(experiencecontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(53, 53, 53))
         );
 
@@ -1310,6 +1308,8 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JPanel AcademicContentPanel;
     private javax.swing.JLabel AcademicsLabel;
     private javax.swing.JPanel AcademicsPanel;
+    private javax.swing.JButton Achivementdeletebutton;
+    private javax.swing.JTextArea Achivementdescriptioninput;
     private javax.swing.JPanel AchivementsContentPanel;
     private javax.swing.JLabel AchivementsLabel;
     private javax.swing.JPanel AchivementsPanel;
@@ -1326,24 +1326,27 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JPanel SkillsContentPanel;
     private javax.swing.JLabel SkillsLabel;
     private javax.swing.JPanel SkillsPanel;
+    private javax.swing.JButton academiccontinuebutton;
+    private javax.swing.JButton achivementaddonemorebutton;
+    private javax.swing.JButton achivementcontinuebutton;
+    private javax.swing.JTextField achivementinput;
     private java.awt.Canvas canvas1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
+    private javax.swing.JButton createresumebutton;
+    private javax.swing.JTextField degreeboardinput;
+    private javax.swing.JTextField degreecgpainput;
+    private javax.swing.JTextField degreecollageinput;
+    private javax.swing.JTextField degreecourseinput;
+    private javax.swing.JTextField degreeyearinput;
+    private javax.swing.JTextField emailinput;
+    private javax.swing.JButton experienceaddonemorebutton;
+    private javax.swing.JButton experiencecontinuebutton;
+    private javax.swing.JButton experiencedeletebutton;
+    private javax.swing.JComboBox<String> experiencedurationdropdown;
+    private javax.swing.JTextArea experienceroledescriptioninput;
+    private javax.swing.JTextField experienceroleinput;
+    private javax.swing.JTextField firstnameinput;
+    private javax.swing.JTextField githuburlinput;
     private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1403,29 +1406,24 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JTextArea jTextArea4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField lastnameinput;
+    private javax.swing.JTextField linkdininput;
+    private javax.swing.JButton personalcontinuebutton;
+    private javax.swing.JButton projectaddonemorebutton;
+    private javax.swing.JButton projectcontinuebutton;
+    private javax.swing.JButton projectdeletebutton;
+    private javax.swing.JTextArea projectdescriptioninput;
+    private javax.swing.JTextField projectnameinput;
+    private javax.swing.JTextField pucboardinput;
+    private javax.swing.JTextField puccollagenameinput;
+    private javax.swing.JTextField puccourseinput;
+    private javax.swing.JTextField pucpercentageinput;
+    private javax.swing.JTextField pucyearinput;
+    private javax.swing.JButton skilladdonemorebutton;
+    private javax.swing.JButton skilldeletebutton;
+    private javax.swing.JTextArea skilldescriptioninput;
+    private javax.swing.JTextField skillnameinput;
+    private javax.swing.JButton skillscontinuebutton;
     // End of variables declaration//GEN-END:variables
         
 }
