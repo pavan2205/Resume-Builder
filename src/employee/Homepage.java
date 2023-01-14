@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.*;
 /**
  *
- * @author prax
+ * @author prax and Pavan
  */
 //imoporting tabbedpaneui
 import java.util.*;
