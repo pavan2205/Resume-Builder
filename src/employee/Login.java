@@ -81,7 +81,7 @@ public class Login extends javax.swing.JFrame {
         jPanel6.setPreferredSize(new java.awt.Dimension(400, 300));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setText("Email Address");
+        jLabel4.setText("Username");
         jPanel6.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 100, 20));
 
         jTextField1.setBackground(new java.awt.Color(204, 255, 255));
@@ -177,19 +177,23 @@ signup.setVisible(true);// TODO add your handling code here:
        try{
            Class.forName("com.mysql.cj.jdbc.Driver");
            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?useSSL=false","root","pavan123");
-           String email=jTextField1.getText();
+           String username=jTextField1.getText();
            String password=jPasswordField1.getText();
            
            Statement stm=con.createStatement();
            
+           
            //mysql query
-           String sql="select * from register where email='"+email+"'and password='"+password+"'";
+           String sql="select * from register where username='"+username+"'and password='"+password+"'";
            ResultSet rs=stm.executeQuery(sql);
+           
            if(rs.next()){
                //if username and password is true than go to homepage
+               int id=rs.getInt(1);
                dispose(); //close login page
-               Homescreen home=new Homescreen();
-               home.show();
+               
+               Userprofile user=new Userprofile(id);
+               user.show();
            }
            else{
                

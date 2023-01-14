@@ -28,9 +28,19 @@ public class Homepage extends javax.swing.JFrame {
 
     /**
      * Creates new form NewJFrame
+     * @param id
      */
-    public Homepage() {
+    public Homepage(String id) {
         initComponents();
+                    jTabbedPane1.setUI(new BasicTabbedPaneUI(){
+             @Override
+             protected int calculateTabAreaHeight(int tab_placement, int run_count, int max_tab_height) {  
+//                if (jTabbedPane1.getTabCount() == 6)
+//                    return super.calculateTabAreaHeight(tab_placement, run_count, max_tab_height);  
+//                else  
+                    return 1;  
+                } 
+            });
         
     }
 
@@ -495,15 +505,7 @@ public class Homepage extends javax.swing.JFrame {
     private void hover(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hover
         // TODO add your handling code here:
             
-            jTabbedPane1.setUI(new BasicTabbedPaneUI(){
-             @Override
-             protected int calculateTabAreaHeight(int tab_placement, int run_count, int max_tab_height) {  
-//                if (jTabbedPane1.getTabCount() == 6)
-//                    return super.calculateTabAreaHeight(tab_placement, run_count, max_tab_height);  
-//                else  
-                    return 0;  
-                } 
-            });
+
         PersonalPanel.addMouseListener(new MouseAdapter(){
             @Override
             public void mouseEntered(MouseEvent e) {
@@ -631,7 +633,8 @@ public class Homepage extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Homepage().setVisible(true);
+                String id = null;
+                new Homepage(id).setVisible(true);
             }
         });
     }
