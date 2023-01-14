@@ -41,15 +41,8 @@ public class Userprofile extends javax.swing.JFrame {
            String sql="select * from register where rid="+id;
            ResultSet rs=stm.executeQuery(sql);
            
-           InputStream input;
-           FileOutputStream output=new FileOutputStream("");
+  
            if(rs.next()){
-             
-               input=rs.getBinaryStream(7);
-               byte [] buffer=new byte[1024];
-               while(input.read(buffer)>0){
-                   output.write(buffer);
-               }
                fname.setText(rs.getString(2));
                lname.setText(rs.getString(3));
                phone.setText(rs.getString(4));
