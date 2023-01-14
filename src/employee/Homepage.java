@@ -21,9 +21,7 @@ import javax.swing.text.View;
 
 
 
-
 public class Homepage extends javax.swing.JFrame {
-
 
 
     /**
@@ -114,63 +112,63 @@ public class Homepage extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         academiccontinuebutton = new javax.swing.JButton();
         SkillsContentPanel = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        skillnameinput = new javax.swing.JTextField();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        skilldeletebutton = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        skilldescriptioninput = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         skilladdonemorebutton = new javax.swing.JButton();
         skillscontinuebutton = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        skillsearchtextbox = new javax.swing.JTextField();
+        skillsearchbutton = new javax.swing.JButton();
+        jLabel28 = new javax.swing.JLabel();
+        skillnameinput = new javax.swing.JTextField();
+        jLabel29 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        skilldescriptioninput = new javax.swing.JTextArea();
+        skilldeletebutton = new javax.swing.JButton();
         ProjectsContentPanel = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jPanel6 = new javax.swing.JPanel();
-        jPanel7 = new javax.swing.JPanel();
-        projectnameinput = new javax.swing.JTextField();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        projectdeletebutton = new javax.swing.JButton();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        projectdescriptioninput = new javax.swing.JTextArea();
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         projectaddonemorebutton = new javax.swing.JButton();
         projectcontinuebutton = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        projectsearchtextfield = new javax.swing.JTextField();
+        Projectsearchbutton = new javax.swing.JButton();
+        jLabel30 = new javax.swing.JLabel();
+        projectnameinput = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        projectdescriptioninput = new javax.swing.JTextArea();
+        projectdeletebutton = new javax.swing.JButton();
         AchivementsContentPanel = new javax.swing.JPanel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jPanel8 = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
-        achivementinput = new javax.swing.JTextField();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        Achivementdeletebutton = new javax.swing.JButton();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        Achivementdescriptioninput = new javax.swing.JTextArea();
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
         achivementaddonemorebutton = new javax.swing.JButton();
         achivementcontinuebutton = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
+        achivementssearchtextbox = new javax.swing.JTextField();
+        achivementssearchbutton = new javax.swing.JButton();
+        jLabel38 = new javax.swing.JLabel();
+        achivementnameinput = new javax.swing.JTextField();
+        jLabel39 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        achivementdescriptioninput = new javax.swing.JTextArea();
+        achivementdeletebutton = new javax.swing.JButton();
         ExperienceContentPanel = new javax.swing.JPanel();
         jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         experiencecontinuebutton = new javax.swing.JButton();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        jPanel10 = new javax.swing.JPanel();
-        jPanel11 = new javax.swing.JPanel();
+        experienceaddonemorebutton = new javax.swing.JButton();
+        experiencelist = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        experienceroleinput = new javax.swing.JTextField();
+        companynameinput = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        experienceroledescriptioninput = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
         experiencedeletebutton = new javax.swing.JButton();
         experiencedurationdropdown = new javax.swing.JComboBox<>();
-        experienceaddonemorebutton = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        roledescriptioninput = new javax.swing.JTextArea();
+        experiencesearchtextbox = new javax.swing.JTextField();
+        experiencesearchbutton = new javax.swing.JButton();
 
         jButton12.setBackground(new java.awt.Color(0, 153, 255));
         jButton12.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
@@ -181,7 +179,7 @@ public class Homepage extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
-        createresumebutton.setBackground(new java.awt.Color(102, 204, 0));
+        createresumebutton.setBackground(new java.awt.Color(153, 153, 255));
         createresumebutton.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         createresumebutton.setText("create");
         createresumebutton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -214,7 +212,7 @@ public class Homepage extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 
-        PersonalPanel.setBackground(new java.awt.Color(255, 255, 255));
+        PersonalPanel.setBackground(new java.awt.Color(153, 153, 255));
         PersonalPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 hover(evt);
@@ -420,7 +418,7 @@ public class Homepage extends javax.swing.JFrame {
                 .addGap(137, 137, 137))
         );
 
-        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new java.awt.GridLayout(1, 0));
 
         PersonalContentPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -621,7 +619,7 @@ public class Homepage extends javax.swing.JFrame {
                 .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(degreecourseinput, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(degreeyearinput, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
                 .addComponent(academiccontinuebutton)
                 .addGap(54, 54, 54))
         );
@@ -629,73 +627,6 @@ public class Homepage extends javax.swing.JFrame {
         jTabbedPane1.addTab("tab2", AcademicContentPanel);
 
         SkillsContentPanel.setBackground(new java.awt.Color(255, 255, 255));
-
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel28.setText("Skill Name");
-
-        jLabel29.setText("Skill Description");
-
-        skilldeletebutton.setText("del");
-
-        skilldescriptioninput.setColumns(20);
-        skilldescriptioninput.setRows(5);
-        jScrollPane2.setViewportView(skilldescriptioninput);
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(skillnameinput)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel28)
-                            .addComponent(jLabel29))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addComponent(skilldeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jLabel28)
-                .addGap(8, 8, 8)
-                .addComponent(skillnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(jLabel29)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(skilldeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(13, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(356, Short.MAX_VALUE))
-        );
-
-        jScrollPane1.setViewportView(jPanel4);
 
         jLabel4.setText("Take your resume to the next level! and add your skills!");
 
@@ -707,11 +638,72 @@ public class Homepage extends javax.swing.JFrame {
         skilladdonemorebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
         skilladdonemorebutton.setForeground(new java.awt.Color(0, 153, 255));
         skilladdonemorebutton.setText("Add one more +");
+        skilladdonemorebutton.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         skillscontinuebutton.setBackground(new java.awt.Color(0, 153, 255));
         skillscontinuebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
         skillscontinuebutton.setForeground(new java.awt.Color(255, 255, 255));
         skillscontinuebutton.setText("Continue");
+
+        jPanel4.setBackground(new java.awt.Color(153, 153, 255));
+
+        skillsearchtextbox.setText("Enter the skill name");
+
+        skillsearchbutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        skillsearchbutton.setText("s");
+
+        jLabel28.setText("Skill Name");
+
+        jLabel29.setText("Skill Description");
+
+        skilldescriptioninput.setColumns(20);
+        skilldescriptioninput.setRows(5);
+        jScrollPane2.setViewportView(skilldescriptioninput);
+
+        skilldeletebutton.setText("del");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel28)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addComponent(skillsearchtextbox)
+                            .addGap(18, 18, 18)
+                            .addComponent(skillsearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
+                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel29)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(skillnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addComponent(skilldeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(skillsearchtextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(skillsearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel28)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(skillnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel29)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(skilldeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout SkillsContentPanelLayout = new javax.swing.GroupLayout(SkillsContentPanel);
         SkillsContentPanel.setLayout(SkillsContentPanelLayout);
@@ -719,20 +711,22 @@ public class Homepage extends javax.swing.JFrame {
             SkillsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SkillsContentPanelLayout.createSequentialGroup()
                 .addGroup(SkillsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SkillsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 726, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(SkillsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(SkillsContentPanelLayout.createSequentialGroup()
-                                .addGap(295, 295, 295)
-                                .addComponent(jLabel27))
-                            .addGroup(SkillsContentPanelLayout.createSequentialGroup()
-                                .addGap(87, 87, 87)
-                                .addComponent(skilladdonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 726, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addComponent(skillscontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(SkillsContentPanelLayout.createSequentialGroup()
                         .addGap(252, 252, 252)
-                        .addComponent(jLabel4)))
-                .addContainerGap(100, Short.MAX_VALUE))
+                        .addComponent(jLabel4))
+                    .addGroup(SkillsContentPanelLayout.createSequentialGroup()
+                        .addGap(67, 67, 67)
+                        .addGroup(SkillsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(skilladdonemorebutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(SkillsContentPanelLayout.createSequentialGroup()
+                        .addGap(295, 295, 295)
+                        .addGroup(SkillsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(SkillsContentPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel27)
+                                .addGap(267, 267, 267))
+                            .addComponent(skillscontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(148, Short.MAX_VALUE))
         );
         SkillsContentPanelLayout.setVerticalGroup(
             SkillsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -741,85 +735,18 @@ public class Homepage extends javax.swing.JFrame {
                 .addComponent(jLabel27)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
-                .addGap(12, 12, 12)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(44, 44, 44)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(skilladdonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
+                .addGap(57, 57, 57)
                 .addComponent(skillscontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab3", SkillsContentPanel);
 
         ProjectsContentPanel.setBackground(new java.awt.Color(255, 255, 255));
-
-        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel30.setText("Project Name");
-
-        jLabel31.setText("Project Description");
-
-        projectdeletebutton.setText("del");
-
-        projectdescriptioninput.setColumns(20);
-        projectdescriptioninput.setRows(5);
-        jScrollPane5.setViewportView(projectdescriptioninput);
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(projectnameinput)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel30)
-                            .addComponent(jLabel31))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 555, Short.MAX_VALUE))
-                .addGap(29, 29, 29)
-                .addComponent(projectdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addComponent(jLabel30)
-                .addGap(8, 8, 8)
-                .addComponent(projectnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(jLabel31)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(projectdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 13, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(64, Short.MAX_VALUE))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(356, Short.MAX_VALUE))
-        );
-
-        jScrollPane3.setViewportView(jPanel6);
 
         jLabel32.setText("Take your resume to the next level! and add your Projects!");
 
@@ -837,6 +764,66 @@ public class Homepage extends javax.swing.JFrame {
         projectcontinuebutton.setForeground(new java.awt.Color(255, 255, 255));
         projectcontinuebutton.setText("Continue");
 
+        jPanel5.setBackground(new java.awt.Color(153, 153, 255));
+
+        projectsearchtextfield.setText("Enter the project name");
+
+        Projectsearchbutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        Projectsearchbutton.setText("s");
+
+        jLabel30.setText("project name");
+
+        jLabel31.setText("project description");
+
+        projectdescriptioninput.setColumns(20);
+        projectdescriptioninput.setRows(5);
+        jScrollPane3.setViewportView(projectdescriptioninput);
+
+        projectdeletebutton.setText("del");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel30)
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel5Layout.createSequentialGroup()
+                            .addComponent(projectsearchtextfield)
+                            .addGap(18, 18, 18)
+                            .addComponent(Projectsearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel31)
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(projectnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addComponent(projectdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(projectsearchtextfield, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Projectsearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel30)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(projectnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel31)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(projectdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout ProjectsContentPanelLayout = new javax.swing.GroupLayout(ProjectsContentPanel);
         ProjectsContentPanel.setLayout(ProjectsContentPanelLayout);
         ProjectsContentPanelLayout.setHorizontalGroup(
@@ -844,106 +831,41 @@ public class Homepage extends javax.swing.JFrame {
             .addGroup(ProjectsContentPanelLayout.createSequentialGroup()
                 .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ProjectsContentPanelLayout.createSequentialGroup()
-                        .addGap(278, 278, 278)
-                        .addComponent(jLabel33))
+                        .addGap(70, 70, 70)
+                        .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ProjectsContentPanelLayout.createSequentialGroup()
+                                .addGap(618, 618, 618)
+                                .addComponent(projectcontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(projectaddonemorebutton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(ProjectsContentPanelLayout.createSequentialGroup()
-                        .addGap(87, 87, 87)
-                        .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(projectcontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(projectaddonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 726, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 726, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(291, 291, 291)
+                        .addComponent(jLabel32))
                     .addGroup(ProjectsContentPanelLayout.createSequentialGroup()
-                        .addGap(230, 230, 230)
-                        .addComponent(jLabel32)))
-                .addContainerGap(100, Short.MAX_VALUE))
+                        .addGap(325, 325, 325)
+                        .addComponent(jLabel33)))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
         ProjectsContentPanelLayout.setVerticalGroup(
             ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ProjectsContentPanelLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(27, 27, 27)
                 .addComponent(jLabel33)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel32)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(projectaddonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(projectaddonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(78, 78, 78)
                 .addComponent(projectcontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab4", ProjectsContentPanel);
 
         AchivementsContentPanel.setBackground(new java.awt.Color(255, 255, 255));
-
-        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel34.setText("Achivement name");
-
-        jLabel35.setText("Achivement description");
-
-        Achivementdeletebutton.setText("del");
-
-        Achivementdescriptioninput.setColumns(20);
-        Achivementdescriptioninput.setRows(5);
-        jScrollPane6.setViewportView(Achivementdescriptioninput);
-
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(achivementinput)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 562, Short.MAX_VALUE)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel34)
-                            .addComponent(jLabel35))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(18, 18, 18)
-                .addComponent(Achivementdeletebutton)
-                .addGap(9, 9, 9))
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addComponent(jLabel34)
-                .addGap(8, 8, 8)
-                .addComponent(achivementinput, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel35)
-                        .addGap(3, 3, 3)
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(Achivementdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(7, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(356, Short.MAX_VALUE))
-        );
-
-        jScrollPane4.setViewportView(jPanel8);
 
         jLabel36.setText("Take your resume to the next level! and add your Achivements!");
 
@@ -961,26 +883,90 @@ public class Homepage extends javax.swing.JFrame {
         achivementcontinuebutton.setForeground(new java.awt.Color(255, 255, 255));
         achivementcontinuebutton.setText("Continue");
 
+        jPanel6.setBackground(new java.awt.Color(153, 153, 255));
+
+        achivementssearchtextbox.setText("Achivements");
+
+        achivementssearchbutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        achivementssearchbutton.setText("s");
+
+        jLabel38.setText("Achivement name");
+
+        jLabel39.setText("Achivement description");
+
+        achivementdescriptioninput.setColumns(20);
+        achivementdescriptioninput.setRows(5);
+        jScrollPane5.setViewportView(achivementdescriptioninput);
+
+        achivementdeletebutton.setText("del");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel38)
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel6Layout.createSequentialGroup()
+                            .addComponent(achivementssearchtextbox)
+                            .addGap(18, 18, 18)
+                            .addComponent(achivementssearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
+                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel39)
+                                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(achivementnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addComponent(achivementdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(achivementssearchtextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(achivementssearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel38)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(achivementnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel39)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(achivementdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout AchivementsContentPanelLayout = new javax.swing.GroupLayout(AchivementsContentPanel);
         AchivementsContentPanel.setLayout(AchivementsContentPanelLayout);
         AchivementsContentPanelLayout.setHorizontalGroup(
             AchivementsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AchivementsContentPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel37)
-                .addGap(274, 274, 274))
-            .addGroup(AchivementsContentPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(AchivementsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AchivementsContentPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel37)
+                        .addGap(282, 282, 282))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AchivementsContentPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel36)
+                        .addGap(271, 271, 271))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AchivementsContentPanelLayout.createSequentialGroup()
+                .addGroup(AchivementsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(AchivementsContentPanelLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(achivementcontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(AchivementsContentPanelLayout.createSequentialGroup()
                         .addGap(87, 87, 87)
-                        .addGroup(AchivementsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(achivementcontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 726, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(achivementaddonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 726, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(AchivementsContentPanelLayout.createSequentialGroup()
-                        .addGap(200, 200, 200)
-                        .addComponent(jLabel36)))
-                .addContainerGap(100, Short.MAX_VALUE))
+                        .addGroup(AchivementsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(achivementaddonemorebutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(140, 140, 140))
         );
         AchivementsContentPanelLayout.setVerticalGroup(
             AchivementsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -989,13 +975,13 @@ public class Homepage extends javax.swing.JFrame {
                 .addComponent(jLabel37)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel36)
-                .addGap(12, 12, 12)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(45, 45, 45)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(achivementaddonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
+                .addGap(49, 49, 49)
                 .addComponent(achivementcontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab5", AchivementsContentPanel);
@@ -1014,86 +1000,83 @@ public class Homepage extends javax.swing.JFrame {
         experiencecontinuebutton.setForeground(new java.awt.Color(255, 255, 255));
         experiencecontinuebutton.setText("Continue");
 
-        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
+        experienceaddonemorebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        experienceaddonemorebutton.setForeground(new java.awt.Color(0, 153, 255));
+        experienceaddonemorebutton.setText("Add one more +");
 
-        jLabel1.setText("Role");
+        experiencelist.setBackground(new java.awt.Color(153, 153, 255));
+
+        jLabel1.setText("company");
 
         jLabel2.setText("Role Description");
-
-        experienceroledescriptioninput.setColumns(20);
-        experienceroledescriptioninput.setRows(5);
-        jScrollPane7.setViewportView(experienceroledescriptioninput);
 
         jLabel3.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
         jLabel3.setText("Duration:");
 
         experiencedeletebutton.setText("del");
 
-        experiencedurationdropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        experiencedurationdropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "1", "2", "3", "4", "5", "5+" }));
 
-        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
-        jPanel11.setLayout(jPanel11Layout);
-        jPanel11Layout.setHorizontalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGap(200, 200, 200)
+        roledescriptioninput.setColumns(20);
+        roledescriptioninput.setRows(5);
+        jScrollPane1.setViewportView(roledescriptioninput);
+
+        experiencesearchtextbox.setText("search experience by company");
+
+        experiencesearchbutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        experiencesearchbutton.setText("s");
+
+        javax.swing.GroupLayout experiencelistLayout = new javax.swing.GroupLayout(experiencelist);
+        experiencelist.setLayout(experiencelistLayout);
+        experiencelistLayout.setHorizontalGroup(
+            experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(experiencelistLayout.createSequentialGroup()
+                .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(experiencelistLayout.createSequentialGroup()
+                        .addGap(142, 142, 142)
                         .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(experiencedurationdropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(experienceroleinput, javax.swing.GroupLayout.PREFERRED_SIZE, 551, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(experiencedeletebutton)
-                .addGap(22, 22, 22))
+                    .addGroup(experiencelistLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(experiencesearchtextbox)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 551, Short.MAX_VALUE)
+                            .addComponent(jLabel1)
+                            .addComponent(companynameinput)
+                            .addComponent(jLabel2))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(experiencedeletebutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(experiencesearchbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
-        jPanel11Layout.setVerticalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(experienceroleinput, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(experiencedurationdropdown)
-                        .addComponent(experiencedeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel3))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel2)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
+        experiencelistLayout.setVerticalGroup(
+            experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, experiencelistLayout.createSequentialGroup()
+                .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(experiencelistLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(experiencedeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(experiencelistLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(experiencesearchtextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(experiencesearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(companynameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(experiencedurationdropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(19, 19, 19))
         );
-
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, 656, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
-        );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(85, Short.MAX_VALUE))
-        );
-
-        jScrollPane8.setViewportView(jPanel10);
-
-        experienceaddonemorebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
-        experienceaddonemorebutton.setForeground(new java.awt.Color(0, 153, 255));
-        experienceaddonemorebutton.setText("Add one more +");
 
         javax.swing.GroupLayout ExperienceContentPanelLayout = new javax.swing.GroupLayout(ExperienceContentPanel);
         ExperienceContentPanel.setLayout(ExperienceContentPanelLayout);
@@ -1101,23 +1084,20 @@ public class Homepage extends javax.swing.JFrame {
             ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ExperienceContentPanelLayout.createSequentialGroup()
                 .addGroup(ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(experiencecontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(ExperienceContentPanelLayout.createSequentialGroup()
-                            .addGroup(ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(ExperienceContentPanelLayout.createSequentialGroup()
-                                    .addGap(243, 243, 243)
-                                    .addComponent(jLabel41))
-                                .addGroup(ExperienceContentPanelLayout.createSequentialGroup()
-                                    .addGap(223, 223, 223)
-                                    .addComponent(jLabel40)))
-                            .addGap(159, 159, 159)))
                     .addGroup(ExperienceContentPanelLayout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addGroup(ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(experienceaddonemorebutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane8))))
-                .addContainerGap(131, Short.MAX_VALUE))
+                        .addGap(243, 243, 243)
+                        .addComponent(jLabel41))
+                    .addGroup(ExperienceContentPanelLayout.createSequentialGroup()
+                        .addGap(223, 223, 223)
+                        .addComponent(jLabel40))
+                    .addGroup(ExperienceContentPanelLayout.createSequentialGroup()
+                        .addGap(97, 97, 97)
+                        .addGroup(ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(experiencecontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(experiencelist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(experienceaddonemorebutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addContainerGap(195, Short.MAX_VALUE))
         );
         ExperienceContentPanelLayout.setVerticalGroup(
             ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1126,13 +1106,13 @@ public class Homepage extends javax.swing.JFrame {
                 .addComponent(jLabel41)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel40)
-                .addGap(26, 26, 26)
-                .addComponent(jScrollPane8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(experiencelist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(experienceaddonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(34, 34, 34)
                 .addComponent(experiencecontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53))
+                .addGap(119, 119, 119))
         );
 
         jTabbedPane1.addTab("tab6", ExperienceContentPanel);
@@ -1167,98 +1147,112 @@ public class Homepage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    private void setActiveState(JPanel panel){
+        PersonalPanel.setBackground(Color.white);
+        AcademicsPanel.setBackground(Color.white);
+        SkillsPanel.setBackground(Color.white);
+        ExperiencePanel.setBackground(Color.white);
+        ProjectsPanel.setBackground(Color.white);
+        AchivementsPanel.setBackground(Color.white);
+        
+        panel.setBackground(new Color(153,153,255));
+        
+    }
+    
     private void hover(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hover
         // TODO add your handling code here:
-            
-           
+    
+
         PersonalPanel.addMouseListener(new MouseAdapter(){
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                PersonalPanel.setBackground(new Color(153,153,255));
-            }
-            @Override
-            public void mouseExited(MouseEvent e){
-                PersonalPanel.setBackground(new Color(242,242,242));
-            }
+//            @Override
+//            public void mouseEntered(MouseEvent e) {
+////                PersonalPanel.setBackground(new Color(153,153,255));
+//            }
+//            @Override
+//            public void mouseExited(MouseEvent e){
+////                PersonalPanel.setBackground(new Color(255,255,255));
+//            }
             @Override
             public void mousePressed(MouseEvent e) {
-              
                jTabbedPane1.setSelectedIndex(0);
-               PersonalPanel.setBackground(new Color(204,155,242));
-               
-               
+               setActiveState(PersonalPanel);
+                 
             }
         });
         AcademicsPanel.addMouseListener(new MouseAdapter(){
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                AcademicsPanel.setBackground(new Color(153,153,255));
-                
-            }
-            @Override
-            public void mouseExited(MouseEvent e){
-                AcademicsPanel.setBackground(new Color(242,242,242));
-            }
+//            @Override
+//            public void mouseEntered(MouseEvent e) {
+////                AcademicsPanel.setBackground(new Color(153,153,255));
+//                
+//            }
+//            @Override
+//            public void mouseExited(MouseEvent e){
+////                AcademicsPanel.setBackground(new Color(255,255,255));
+//            }
             @Override
             public void mousePressed(MouseEvent e) {
                 jTabbedPane1.setSelectedIndex(1);
+                setActiveState(AcademicsPanel);
             }
         });
         AchivementsPanel.addMouseListener(new MouseAdapter(){
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                AchivementsPanel.setBackground(new Color(153,153,255));
-            }
-            @Override
-            public void mouseExited(MouseEvent e){
-                AchivementsPanel.setBackground(new Color(242,242,242));
-            }
+//            @Override
+//            public void mouseEntered(MouseEvent e) {
+////                AchivementsPanel.setBackground(new Color(153,153,255));
+//            }
+//            @Override
+//            public void mouseExited(MouseEvent e){
+////                AchivementsPanel.setBackground(new Color(255,255,255));
+//            }
             @Override
             public void mousePressed(MouseEvent e) {
                 jTabbedPane1.setSelectedIndex(4);
+                setActiveState(AchivementsPanel);
             }
         });
         SkillsPanel.addMouseListener(new MouseAdapter(){
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                SkillsPanel.setBackground(new Color(153,153,255));
-            }
-            @Override
-            public void mouseExited(MouseEvent e){
-                SkillsPanel.setBackground(new Color(242,242,242));
-            }
+//            @Override
+//            public void mouseEntered(MouseEvent e) {
+////                SkillsPanel.setBackground(new Color(153,153,255));
+//            }
+//            @Override
+//            public void mouseExited(MouseEvent e){
+////                SkillsPanel.setBackground(new Color(255,255,255));
+//            }
             @Override
             public void mousePressed(MouseEvent e) {
                 jTabbedPane1.setSelectedIndex(2);
+                setActiveState(SkillsPanel);
             }
         });
         ProjectsPanel.addMouseListener(new MouseAdapter(){
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                ProjectsPanel.setBackground(new Color(153,153,255));
-            }
-            @Override
-            public void mouseExited(MouseEvent e){
-                ProjectsPanel.setBackground(new Color(242,242,242));
-            }
+//            @Override
+//            public void mouseEntered(MouseEvent e) {
+////                ProjectsPanel.setBackground(new Color(153,153,255));
+//            }
+//            @Override
+//            public void mouseExited(MouseEvent e){
+////                ProjectsPanel.setBackground(new Color(255,255,255));
+//            }
             @Override
             public void mousePressed(MouseEvent e) {
                  jTabbedPane1.setSelectedIndex(3);
+                 setActiveState(ProjectsPanel);
             }
         });
         ExperiencePanel.addMouseListener(new MouseAdapter(){
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                ExperiencePanel.setBackground(new Color(153,153,255));
-            }
-            @Override
-            public void mouseExited(MouseEvent e){
-                ExperiencePanel.setBackground(new Color(242,242,242));
-            }
+//            @Override
+//            public void mouseEntered(MouseEvent e) {
+////                ExperiencePanel.setBackground(new Color(153,153,255));
+//            }
+//            @Override
+//            public void mouseExited(MouseEvent e){
+////                ExperiencePanel.setBackground(new Color(255,255,255));
+//            }
             @Override
             public void mousePressed(MouseEvent e) {
                 jTabbedPane1.setSelectedIndex(5);
+                setActiveState(ExperiencePanel);
             }
         });
     }//GEN-LAST:event_hover
@@ -1308,8 +1302,6 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JPanel AcademicContentPanel;
     private javax.swing.JLabel AcademicsLabel;
     private javax.swing.JPanel AcademicsPanel;
-    private javax.swing.JButton Achivementdeletebutton;
-    private javax.swing.JTextArea Achivementdescriptioninput;
     private javax.swing.JPanel AchivementsContentPanel;
     private javax.swing.JLabel AchivementsLabel;
     private javax.swing.JPanel AchivementsPanel;
@@ -1322,6 +1314,7 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JLabel PrajectsLabel;
     private javax.swing.JPanel ProjectsContentPanel;
     private javax.swing.JPanel ProjectsPanel;
+    private javax.swing.JButton Projectsearchbutton;
     private javax.swing.JButton Signoutbutton;
     private javax.swing.JPanel SkillsContentPanel;
     private javax.swing.JLabel SkillsLabel;
@@ -1329,8 +1322,13 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JButton academiccontinuebutton;
     private javax.swing.JButton achivementaddonemorebutton;
     private javax.swing.JButton achivementcontinuebutton;
-    private javax.swing.JTextField achivementinput;
+    private javax.swing.JButton achivementdeletebutton;
+    private javax.swing.JTextArea achivementdescriptioninput;
+    private javax.swing.JTextField achivementnameinput;
+    private javax.swing.JButton achivementssearchbutton;
+    private javax.swing.JTextField achivementssearchtextbox;
     private java.awt.Canvas canvas1;
+    private javax.swing.JTextField companynameinput;
     private javax.swing.JButton createresumebutton;
     private javax.swing.JTextField degreeboardinput;
     private javax.swing.JTextField degreecgpainput;
@@ -1342,8 +1340,9 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JButton experiencecontinuebutton;
     private javax.swing.JButton experiencedeletebutton;
     private javax.swing.JComboBox<String> experiencedurationdropdown;
-    private javax.swing.JTextArea experienceroledescriptioninput;
-    private javax.swing.JTextField experienceroleinput;
+    private javax.swing.JPanel experiencelist;
+    private javax.swing.JButton experiencesearchbutton;
+    private javax.swing.JTextField experiencesearchtextbox;
     private javax.swing.JTextField firstnameinput;
     private javax.swing.JTextField githuburlinput;
     private javax.swing.JButton jButton12;
@@ -1374,10 +1373,10 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
@@ -1387,24 +1386,15 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField lastnameinput;
     private javax.swing.JTextField linkdininput;
@@ -1414,16 +1404,20 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JButton projectdeletebutton;
     private javax.swing.JTextArea projectdescriptioninput;
     private javax.swing.JTextField projectnameinput;
+    private javax.swing.JTextField projectsearchtextfield;
     private javax.swing.JTextField pucboardinput;
     private javax.swing.JTextField puccollagenameinput;
     private javax.swing.JTextField puccourseinput;
     private javax.swing.JTextField pucpercentageinput;
     private javax.swing.JTextField pucyearinput;
+    private javax.swing.JTextArea roledescriptioninput;
     private javax.swing.JButton skilladdonemorebutton;
     private javax.swing.JButton skilldeletebutton;
     private javax.swing.JTextArea skilldescriptioninput;
     private javax.swing.JTextField skillnameinput;
     private javax.swing.JButton skillscontinuebutton;
+    private javax.swing.JButton skillsearchbutton;
+    private javax.swing.JTextField skillsearchtextbox;
     // End of variables declaration//GEN-END:variables
         
 }
