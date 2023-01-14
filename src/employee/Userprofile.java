@@ -23,12 +23,14 @@ import javax.swing.JOptionPane;
  */
 public class Userprofile extends javax.swing.JFrame {
 
+    private int id;
+
     /**
      * Creates new form Userprofile
      */
     public Userprofile(int id) {
         initComponents();
-        
+        this.id=id;
         try{
            Class.forName("com.mysql.cj.jdbc.Driver");
            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?useSSL=false","root","pavan123");
@@ -86,6 +88,7 @@ public class Userprofile extends javax.swing.JFrame {
         phone = new javax.swing.JLabel();
         lname = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+        resumebtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
@@ -138,7 +141,7 @@ public class Userprofile extends javax.swing.JFrame {
                                 .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lname, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 204, Short.MAX_VALUE)))
+                        .addGap(0, 159, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -163,21 +166,40 @@ public class Userprofile extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 255));
 
+        resumebtn.setText("Create New Resume");
+        resumebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resumebtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 204, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(resumebtn)
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 473, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(143, 143, 143)
+                .addComponent(resumebtn)
+                .addContainerGap(307, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel3);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void resumebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resumebtnActionPerformed
+        // TODO add your handling code here:
+        Homepage home=new Homepage(id);
+        home.show();
+    }//GEN-LAST:event_resumebtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -206,6 +228,8 @@ public class Userprofile extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel lname;
     private javax.swing.JLabel phone;
+    private javax.swing.JButton resumebtn;
     private javax.swing.JLabel username;
     // End of variables declaration//GEN-END:variables
+
 }
