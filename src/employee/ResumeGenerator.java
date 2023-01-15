@@ -33,7 +33,7 @@ public class ResumeGenerator extends javax.swing.JFrame {
         githuburllabel = new javax.swing.JLabel();
         Linkedinurllabel = new javax.swing.JLabel();
         Phonelabel = new javax.swing.JLabel();
-        maillabel = new javax.swing.JLabel();
+        Phonelabel1 = new javax.swing.JLabel();
         Lnamelabel1 = new javax.swing.JLabel();
         underlinepanel = new javax.swing.JPanel();
         Lnamelabel4 = new javax.swing.JLabel();
@@ -44,8 +44,8 @@ public class ResumeGenerator extends javax.swing.JFrame {
         underlinepanel3 = new javax.swing.JPanel();
         Lnamelabel7 = new javax.swing.JLabel();
         underlinepanel5 = new javax.swing.JPanel();
-        AchievementsList = new javax.swing.JList<>();
-        SkillList = new javax.swing.JList<>();
+        AchivementList = new javax.swing.JList<>();
+        SkillsList = new javax.swing.JList<>();
         AcademicList = new javax.swing.JList<>();
         ProjectList = new javax.swing.JList<>();
         ExperienceList = new javax.swing.JList<>();
@@ -76,9 +76,9 @@ public class ResumeGenerator extends javax.swing.JFrame {
         Phonelabel.setForeground(new java.awt.Color(255, 255, 255));
         Phonelabel.setText("Phone");
 
-        maillabel.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
-        maillabel.setForeground(new java.awt.Color(255, 255, 255));
-        maillabel.setText("mail");
+        Phonelabel1.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        Phonelabel1.setForeground(new java.awt.Color(255, 255, 255));
+        Phonelabel1.setText("mail");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -90,7 +90,7 @@ public class ResumeGenerator extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(maillabel, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Phonelabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(githuburllabel))
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -114,7 +114,7 @@ public class ResumeGenerator extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(githuburllabel)
-                    .addComponent(maillabel))
+                    .addComponent(Phonelabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Lnamelabel, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -229,15 +229,40 @@ public class ResumeGenerator extends javax.swing.JFrame {
 
         jPanel1.add(underlinepanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 760, 740, -1));
 
-        jPanel1.add(AchievementsList, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        AchivementList.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jPanel1.add(AchivementList, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 770, 740, 210));
 
-        jPanel1.add(SkillList, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        SkillsList.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jPanel1.add(SkillsList, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 350, 230));
 
-        jPanel1.add(AcademicList, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        AcademicList.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jPanel1.add(AcademicList, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 350, 230));
 
-        jPanel1.add(ProjectList, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        ProjectList.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jPanel1.add(ProjectList, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 350, 230));
 
-        jPanel1.add(ExperienceList, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        ExperienceList.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jPanel1.add(ExperienceList, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 490, 350, 230));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 10, -1, 1000));
 
@@ -282,7 +307,7 @@ public class ResumeGenerator extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JList<String> AcademicList;
-    private javax.swing.JList<String> AchievementsList;
+    private javax.swing.JList<String> AchivementList;
     private javax.swing.JList<String> ExperienceList;
     private javax.swing.JLabel Fnamelabel1;
     private javax.swing.JLabel Linkedinurllabel;
@@ -293,12 +318,12 @@ public class ResumeGenerator extends javax.swing.JFrame {
     private javax.swing.JLabel Lnamelabel6;
     private javax.swing.JLabel Lnamelabel7;
     private javax.swing.JLabel Phonelabel;
+    private javax.swing.JLabel Phonelabel1;
     private javax.swing.JList<String> ProjectList;
-    private javax.swing.JList<String> SkillList;
+    private javax.swing.JList<String> SkillsList;
     private javax.swing.JLabel githuburllabel;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel maillabel;
     private javax.swing.JPanel underlinepanel;
     private javax.swing.JPanel underlinepanel1;
     private javax.swing.JPanel underlinepanel2;
