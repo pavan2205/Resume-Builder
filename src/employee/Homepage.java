@@ -469,11 +469,14 @@ public class Homepage extends javax.swing.JFrame {
         jButton12.setText("Continue");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 255, 255));
+        setMaximumSize(new java.awt.Dimension(1920, 1080));
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
 
         createresumebutton.setBackground(new java.awt.Color(153, 153, 255));
         createresumebutton.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        createresumebutton.setForeground(new java.awt.Color(255, 255, 255));
         createresumebutton.setText("create");
         createresumebutton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         createresumebutton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -503,7 +506,7 @@ public class Homepage extends javax.swing.JFrame {
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel3.setBackground(new java.awt.Color(0, 204, 204));
 
         PersonalPanel.setBackground(new java.awt.Color(153, 153, 255));
         PersonalPanel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -615,8 +618,14 @@ public class Homepage extends javax.swing.JFrame {
 
         Signoutbutton.setBackground(new java.awt.Color(153, 153, 255));
         Signoutbutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        Signoutbutton.setForeground(new java.awt.Color(255, 255, 255));
         Signoutbutton.setText("sign out");
         Signoutbutton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        Signoutbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SignoutbuttonActionPerformed(evt);
+            }
+        });
 
         AchivementsPanel.setBackground(new java.awt.Color(255, 255, 255));
         AchivementsPanel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -715,25 +724,20 @@ public class Homepage extends javax.swing.JFrame {
         jPanel2.setLayout(new java.awt.GridLayout(1, 0));
 
         PersonalContentPanel.setBackground(new java.awt.Color(255, 255, 255));
-        PersonalContentPanel.setLayout(null);
-        PersonalContentPanel.add(firstnameinput);
-        firstnameinput.setBounds(227, 156, 380, 52);
+        PersonalContentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PersonalContentPanel.add(firstnameinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, 380, 52));
 
         jLabel6.setText("First Name");
-        PersonalContentPanel.add(jLabel6);
-        jLabel6.setBounds(227, 132, 87, 16);
+        PersonalContentPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 87, -1));
 
         jLabel8.setText("Last Name");
-        PersonalContentPanel.add(jLabel8);
-        jLabel8.setBounds(227, 226, 56, 16);
-        PersonalContentPanel.add(lastnameinput);
-        lastnameinput.setBounds(227, 250, 380, 54);
+        PersonalContentPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, -1, -1));
+        PersonalContentPanel.add(lastnameinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 290, 380, 54));
 
         jLabel9.setFont(new java.awt.Font("Liberation Sans", 1, 48)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 153, 255));
         jLabel9.setText("Add your name");
-        PersonalContentPanel.add(jLabel9);
-        jLabel9.setBounds(242, 13, 347, 62);
+        PersonalContentPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
 
         personalcontinuebutton.setBackground(new java.awt.Color(0, 153, 255));
         personalcontinuebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
@@ -744,68 +748,91 @@ public class Homepage extends javax.swing.JFrame {
                 personalcontinuebuttonActionPerformed(evt);
             }
         });
-        PersonalContentPanel.add(personalcontinuebutton);
-        personalcontinuebutton.setBounds(350, 540, 127, 39);
+        PersonalContentPanel.add(personalcontinuebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 580, 127, -1));
 
         jLabel10.setText("Now you are ready! now add your name and personal details!");
-        PersonalContentPanel.add(jLabel10);
-        jLabel10.setBounds(210, 75, 326, 16);
+        PersonalContentPanel.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 322, -1));
 
         jLabel11.setText("Email");
-        PersonalContentPanel.add(jLabel11);
-        jLabel11.setBounds(227, 316, 50, 16);
-        PersonalContentPanel.add(emailinput);
-        emailinput.setBounds(227, 340, 380, 51);
-        PersonalContentPanel.add(githuburlinput);
-        githuburlinput.setBounds(89, 421, 265, 49);
-        PersonalContentPanel.add(linkdininput);
-        linkdininput.setBounds(471, 421, 298, 49);
+        PersonalContentPanel.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 50, -1));
+
+        emailinput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailinputActionPerformed(evt);
+            }
+        });
+        PersonalContentPanel.add(emailinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 380, 380, 51));
+        PersonalContentPanel.add(githuburlinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 460, 265, 49));
+        PersonalContentPanel.add(linkdininput, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 460, 298, 49));
 
         jLabel12.setText("Github URL(Optional)");
-        PersonalContentPanel.add(jLabel12);
-        jLabel12.setBounds(89, 397, 160, 16);
+        PersonalContentPanel.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 440, 160, -1));
 
         jLabel13.setText("Linkdin URL(Optional)");
-        PersonalContentPanel.add(jLabel13);
-        jLabel13.setBounds(471, 397, 170, 16);
+        PersonalContentPanel.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 170, -1));
 
         jTabbedPane1.addTab("tab1", PersonalContentPanel);
 
         AcademicContentPanel.setBackground(new java.awt.Color(255, 255, 255));
+        AcademicContentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setFont(new java.awt.Font("Liberation Sans", 1, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 153, 255));
         jLabel5.setText("Add your academic details");
+        AcademicContentPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 469, -1));
 
         jLabel14.setText("You are done with personal details,now you can continue with your academic details!");
+        AcademicContentPanel.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 60, -1, 21));
+        AcademicContentPanel.add(puccollagenameinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 357, 45));
 
         jLabel15.setText("Degree Collage name");
+        AcademicContentPanel.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, -1, -1));
+        AcademicContentPanel.add(pucpercentageinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 160, 145, 43));
+        AcademicContentPanel.add(degreecgpainput, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 420, 145, 43));
+        AcademicContentPanel.add(degreecollageinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 420, 357, 43));
 
         jLabel16.setText("percentage%");
+        AcademicContentPanel.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 140, -1, -1));
 
         jLabel17.setText("PUC Collage name ");
+        AcademicContentPanel.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, -1, -1));
 
         jLabel18.setText("CGPA");
+        AcademicContentPanel.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 400, -1, -1));
+        AcademicContentPanel.add(pucboardinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 160, 209, 45));
 
         jLabel19.setText("Board");
+        AcademicContentPanel.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 140, -1, -1));
+        AcademicContentPanel.add(degreeboardinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 420, 209, 45));
 
         jLabel20.setText("Board");
+        AcademicContentPanel.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 400, -1, -1));
+        AcademicContentPanel.add(puccourseinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 311, 48));
 
         jLabel21.setText("Course");
+        AcademicContentPanel.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, -1, -1));
 
         jLabel22.setText("Year");
+        AcademicContentPanel.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, -1, -1));
 
         jLabel23.setText("course");
+        AcademicContentPanel.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 470, -1, 24));
 
         jLabel24.setText("Year");
+        AcademicContentPanel.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 470, -1, -1));
+        AcademicContentPanel.add(degreecourseinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, 311, 48));
+        AcademicContentPanel.add(pucyearinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, 158, 48));
+        AcademicContentPanel.add(degreeyearinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 500, 158, 48));
 
         jLabel25.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(0, 153, 255));
         jLabel25.setText("PUC");
+        AcademicContentPanel.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, -1, 58));
 
         jLabel26.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(0, 153, 255));
         jLabel26.setText("DEGREE");
+        AcademicContentPanel.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, -1, -1));
 
         academicscontinuebutton.setBackground(new java.awt.Color(0, 153, 255));
         academicscontinuebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
@@ -816,127 +843,21 @@ public class Homepage extends javax.swing.JFrame {
                 academicscontinuebuttonActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout AcademicContentPanelLayout = new javax.swing.GroupLayout(AcademicContentPanel);
-        AcademicContentPanel.setLayout(AcademicContentPanelLayout);
-        AcademicContentPanelLayout.setHorizontalGroup(
-            AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AcademicContentPanelLayout.createSequentialGroup()
-                .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AcademicContentPanelLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel26)
-                            .addGroup(AcademicContentPanelLayout.createSequentialGroup()
-                                .addComponent(jLabel25)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(puccollagenameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel17)
-                                    .addComponent(puccourseinput, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel21)
-                                    .addComponent(jLabel15)
-                                    .addComponent(degreecollageinput, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel23)
-                                    .addComponent(degreecourseinput, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(AcademicContentPanelLayout.createSequentialGroup()
-                                        .addGap(4, 4, 4)
-                                        .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel22)
-                                            .addComponent(pucyearinput, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(degreeyearinput, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel24)))
-                                    .addGroup(AcademicContentPanelLayout.createSequentialGroup()
-                                        .addGap(71, 71, 71)
-                                        .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel19)
-                                            .addComponent(jLabel20)
-                                            .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(pucboardinput, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(degreeboardinput, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(29, 29, 29)
-                                        .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(degreecgpainput, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel16)
-                                            .addComponent(pucpercentageinput, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel18)))))
-                            .addGroup(AcademicContentPanelLayout.createSequentialGroup()
-                                .addGap(108, 108, 108)
-                                .addComponent(jLabel14))))
-                    .addGroup(AcademicContentPanelLayout.createSequentialGroup()
-                        .addGap(169, 169, 169)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(AcademicContentPanelLayout.createSequentialGroup()
-                        .addGap(332, 332, 332)
-                        .addComponent(academicscontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(79, Short.MAX_VALUE))
-        );
-        AcademicContentPanelLayout.setVerticalGroup(
-            AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AcademicContentPanelLayout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AcademicContentPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45)
-                        .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel19)
-                            .addComponent(jLabel17)
-                            .addComponent(jLabel16))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(puccollagenameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pucpercentageinput, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pucboardinput, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(AcademicContentPanelLayout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel21)
-                    .addComponent(jLabel22))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(puccourseinput, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pucyearinput, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56)
-                .addComponent(jLabel26)
-                .addGap(18, 18, 18)
-                .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel18)
-                    .addComponent(jLabel20))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(degreecollageinput, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(degreecgpainput, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(degreeboardinput, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel24))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(AcademicContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(degreecourseinput, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(degreeyearinput, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(66, 66, 66)
-                .addComponent(academicscontinuebutton)
-                .addContainerGap(108, Short.MAX_VALUE))
-        );
+        AcademicContentPanel.add(academicscontinuebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 610, 127, -1));
 
         jTabbedPane1.addTab("tab2", AcademicContentPanel);
 
         SkillsContentPanel.setBackground(new java.awt.Color(255, 255, 255));
+        SkillsContentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setText("Take your resume to the next level! and add your skills!");
+        SkillsContentPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, -1, -1));
 
         jLabel27.setBackground(new java.awt.Color(255, 255, 255));
         jLabel27.setFont(new java.awt.Font("Liberation Sans", 1, 36)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(0, 153, 255));
         jLabel27.setText("Add your skills");
+        SkillsContentPanel.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 30, -1, -1));
 
         skilladdonemorebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
         skilladdonemorebutton.setForeground(new java.awt.Color(0, 153, 255));
@@ -947,6 +868,7 @@ public class Homepage extends javax.swing.JFrame {
                 skilladdonemorebuttonActionPerformed(evt);
             }
         });
+        SkillsContentPanel.add(skilladdonemorebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 500, 734, 54));
 
         skillscontinuebutton.setBackground(new java.awt.Color(0, 153, 255));
         skillscontinuebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
@@ -957,6 +879,7 @@ public class Homepage extends javax.swing.JFrame {
                 skillscontinuebuttonActionPerformed(evt);
             }
         });
+        SkillsContentPanel.add(skillscontinuebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 610, 195, 47));
 
         jPanel4.setBackground(new java.awt.Color(153, 153, 255));
 
@@ -1028,6 +951,8 @@ public class Homepage extends javax.swing.JFrame {
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
+        SkillsContentPanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, -1, -1));
+
         skillsupdatebutton.setBackground(new java.awt.Color(0, 153, 255));
         skillsupdatebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
         skillsupdatebutton.setForeground(new java.awt.Color(255, 255, 255));
@@ -1037,50 +962,7 @@ public class Homepage extends javax.swing.JFrame {
                 skillsupdatebuttonActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout SkillsContentPanelLayout = new javax.swing.GroupLayout(SkillsContentPanel);
-        SkillsContentPanel.setLayout(SkillsContentPanelLayout);
-        SkillsContentPanelLayout.setHorizontalGroup(
-            SkillsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SkillsContentPanelLayout.createSequentialGroup()
-                .addGroup(SkillsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(SkillsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(SkillsContentPanelLayout.createSequentialGroup()
-                            .addGap(252, 252, 252)
-                            .addComponent(jLabel4))
-                        .addGroup(SkillsContentPanelLayout.createSequentialGroup()
-                            .addGap(67, 67, 67)
-                            .addGroup(SkillsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(skilladdonemorebutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(SkillsContentPanelLayout.createSequentialGroup()
-                            .addGap(295, 295, 295)
-                            .addComponent(jLabel27)
-                            .addGap(267, 267, 267)))
-                    .addGroup(SkillsContentPanelLayout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(skillsupdatebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(skillscontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(148, Short.MAX_VALUE))
-        );
-        SkillsContentPanelLayout.setVerticalGroup(
-            SkillsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SkillsContentPanelLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(jLabel27)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
-                .addGap(44, 44, 44)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(skilladdonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57)
-                .addGroup(SkillsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(skillscontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(skillsupdatebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(112, Short.MAX_VALUE))
-        );
+        SkillsContentPanel.add(skillsupdatebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 610, 195, 47));
 
         jTabbedPane1.addTab("tab3", SkillsContentPanel);
 
@@ -1197,58 +1079,55 @@ public class Homepage extends javax.swing.JFrame {
         ProjectsContentPanelLayout.setHorizontalGroup(
             ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ProjectsContentPanelLayout.createSequentialGroup()
-                .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ProjectsContentPanelLayout.createSequentialGroup()
-                        .addGap(291, 291, 291)
-                        .addComponent(jLabel32))
-                    .addGroup(ProjectsContentPanelLayout.createSequentialGroup()
-                        .addGap(325, 325, 325)
-                        .addComponent(jLabel33))
-                    .addGroup(ProjectsContentPanelLayout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(ProjectsContentPanelLayout.createSequentialGroup()
+                            .addGap(503, 503, 503)
+                            .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel32)
+                                .addComponent(jLabel33)))
+                        .addGroup(ProjectsContentPanelLayout.createSequentialGroup()
+                            .addGap(279, 279, 279)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(ProjectsContentPanelLayout.createSequentialGroup()
                             .addComponent(projectupdatebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(projectaddonemorebutton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addContainerGap(161, Short.MAX_VALUE))
-            .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ProjectsContentPanelLayout.createSequentialGroup()
-                    .addContainerGap(698, Short.MAX_VALUE)
-                    .addComponent(projectcontinuebutton1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(72, 72, 72)))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(projectcontinuebutton1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(projectaddonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 734, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(615, Short.MAX_VALUE))
         );
         ProjectsContentPanelLayout.setVerticalGroup(
             ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ProjectsContentPanelLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addGap(21, 21, 21)
                 .addComponent(jLabel33)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel32)
-                .addGap(18, 18, 18)
+                .addGap(57, 57, 57)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(projectaddonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(87, 87, 87)
-                .addComponent(projectupdatebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(120, Short.MAX_VALUE))
-            .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ProjectsContentPanelLayout.createSequentialGroup()
-                    .addContainerGap(591, Short.MAX_VALUE)
-                    .addComponent(projectcontinuebutton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(119, 119, 119)))
+                .addGap(59, 59, 59)
+                .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(projectupdatebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(projectcontinuebutton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(309, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab4", ProjectsContentPanel);
 
         AchivementsContentPanel.setBackground(new java.awt.Color(255, 255, 255));
+        AchivementsContentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel36.setText("Take your resume to the next level! and add your Achivements!");
+        AchivementsContentPanel.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 80, -1, -1));
 
         jLabel37.setBackground(new java.awt.Color(255, 255, 255));
         jLabel37.setFont(new java.awt.Font("Liberation Sans", 1, 36)); // NOI18N
         jLabel37.setForeground(new java.awt.Color(0, 153, 255));
-        jLabel37.setText("Add your Achivements");
+        jLabel37.setText("Add your Achievements");
+        AchivementsContentPanel.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, -1, -1));
 
         achivementaddonemorebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
         achivementaddonemorebutton.setForeground(new java.awt.Color(0, 153, 255));
@@ -1258,6 +1137,7 @@ public class Homepage extends javax.swing.JFrame {
                 achivementaddonemorebuttonActionPerformed(evt);
             }
         });
+        AchivementsContentPanel.add(achivementaddonemorebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 488, 750, 54));
 
         achivementcontinuebutton.setBackground(new java.awt.Color(0, 153, 255));
         achivementcontinuebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
@@ -1268,6 +1148,7 @@ public class Homepage extends javax.swing.JFrame {
                 achivementcontinuebuttonActionPerformed(evt);
             }
         });
+        AchivementsContentPanel.add(achivementcontinuebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 600, 195, 47));
 
         jPanel6.setBackground(new java.awt.Color(153, 153, 255));
 
@@ -1316,7 +1197,7 @@ public class Homepage extends javax.swing.JFrame {
                                 .addComponent(achivementnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(18, 18, 18)
                             .addComponent(achivementdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1336,8 +1217,10 @@ public class Homepage extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(achivementdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        AchivementsContentPanel.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 750, 310));
 
         achivementupdatebutton.setBackground(new java.awt.Color(0, 153, 255));
         achivementupdatebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
@@ -1348,59 +1231,21 @@ public class Homepage extends javax.swing.JFrame {
                 achivementupdatebuttonActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout AchivementsContentPanelLayout = new javax.swing.GroupLayout(AchivementsContentPanel);
-        AchivementsContentPanel.setLayout(AchivementsContentPanelLayout);
-        AchivementsContentPanelLayout.setHorizontalGroup(
-            AchivementsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AchivementsContentPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(AchivementsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AchivementsContentPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel37)
-                        .addGap(282, 282, 282))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AchivementsContentPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel36)
-                        .addGap(271, 271, 271))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AchivementsContentPanelLayout.createSequentialGroup()
-                .addGap(87, 87, 87)
-                .addGroup(AchivementsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(AchivementsContentPanelLayout.createSequentialGroup()
-                        .addComponent(achivementupdatebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(achivementcontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(achivementaddonemorebutton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(140, 140, 140))
-        );
-        AchivementsContentPanelLayout.setVerticalGroup(
-            AchivementsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AchivementsContentPanelLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(jLabel37)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel36)
-                .addGap(45, 45, 45)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(achivementaddonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49)
-                .addGroup(AchivementsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(achivementcontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(achivementupdatebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(119, Short.MAX_VALUE))
-        );
+        AchivementsContentPanel.add(achivementupdatebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 600, 195, 47));
 
         jTabbedPane1.addTab("tab5", AchivementsContentPanel);
 
         ExperienceContentPanel.setBackground(new java.awt.Color(255, 255, 255));
+        ExperienceContentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel40.setText("Take your resume to the next level! and add your Experience!");
+        ExperienceContentPanel.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, -1, -1));
 
         jLabel41.setBackground(new java.awt.Color(255, 255, 255));
         jLabel41.setFont(new java.awt.Font("Liberation Sans", 1, 36)); // NOI18N
         jLabel41.setForeground(new java.awt.Color(0, 153, 255));
         jLabel41.setText("Add your Experience");
+        ExperienceContentPanel.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, -1, -1));
 
         experienceupdatebutton.setBackground(new java.awt.Color(0, 153, 255));
         experienceupdatebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
@@ -1411,6 +1256,7 @@ public class Homepage extends javax.swing.JFrame {
                 experienceupdatebuttonActionPerformed(evt);
             }
         });
+        ExperienceContentPanel.add(experienceupdatebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 620, 195, 47));
 
         experienceaddonemorebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
         experienceaddonemorebutton.setForeground(new java.awt.Color(0, 153, 255));
@@ -1420,6 +1266,7 @@ public class Homepage extends javax.swing.JFrame {
                 experienceaddonemorebuttonActionPerformed(evt);
             }
         });
+        ExperienceContentPanel.add(experienceaddonemorebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 510, 720, 54));
 
         experiencelist.setBackground(new java.awt.Color(153, 153, 255));
 
@@ -1457,30 +1304,33 @@ public class Homepage extends javax.swing.JFrame {
         experiencelist.setLayout(experiencelistLayout);
         experiencelistLayout.setHorizontalGroup(
             experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(experiencelistLayout.createSequentialGroup()
-                .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, experiencelistLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(experiencelistLayout.createSequentialGroup()
-                        .addGap(142, 142, 142)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(experiencedurationdropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(experiencelistLayout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(experiencesearchtextbox)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 551, Short.MAX_VALUE)
-                            .addComponent(jLabel1)
+                        .addGap(6, 6, 6)
+                        .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(experiencelistLayout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(28, 28, 28)
+                                .addComponent(jLabel3)
+                                .addGap(12, 12, 12)
+                                .addComponent(experiencedurationdropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 293, Short.MAX_VALUE))
                             .addComponent(companynameinput)
-                            .addComponent(jLabel2))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(experiencedeletebutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(experiencesearchbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(20, Short.MAX_VALUE))
+                            .addComponent(jScrollPane1))
+                        .addGap(18, 18, 18)
+                        .addComponent(experiencedeletebutton))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, experiencelistLayout.createSequentialGroup()
+                        .addComponent(experiencesearchtextbox)
+                        .addGap(18, 18, 18)
+                        .addComponent(experiencesearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20))
         );
         experiencelistLayout.setVerticalGroup(
             experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, experiencelistLayout.createSequentialGroup()
+            .addGroup(experiencelistLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(experiencesearchtextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1488,20 +1338,25 @@ public class Homepage extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(experiencelistLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(experiencedeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(24, Short.MAX_VALUE))
                     .addGroup(experiencelistLayout.createSequentialGroup()
                         .addComponent(companynameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
+                            .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel3)
+                                .addComponent(jLabel2))
                             .addComponent(experiencedurationdropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(experiencedeletebutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(19, 19, 19))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(14, 14, 14))))
         );
+
+        ExperienceContentPanel.add(experiencelist, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 171, 720, 330));
 
         experiencecontinuebutton.setBackground(new java.awt.Color(0, 153, 255));
         experiencecontinuebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
@@ -1512,52 +1367,7 @@ public class Homepage extends javax.swing.JFrame {
                 experiencecontinuebuttonActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout ExperienceContentPanelLayout = new javax.swing.GroupLayout(ExperienceContentPanel);
-        ExperienceContentPanel.setLayout(ExperienceContentPanelLayout);
-        ExperienceContentPanelLayout.setHorizontalGroup(
-            ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ExperienceContentPanelLayout.createSequentialGroup()
-                .addGroup(ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ExperienceContentPanelLayout.createSequentialGroup()
-                        .addGap(243, 243, 243)
-                        .addComponent(jLabel41))
-                    .addGroup(ExperienceContentPanelLayout.createSequentialGroup()
-                        .addGap(223, 223, 223)
-                        .addComponent(jLabel40))
-                    .addGroup(ExperienceContentPanelLayout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addGroup(ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(experiencelist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(experienceaddonemorebutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(experienceupdatebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(199, Short.MAX_VALUE))
-            .addGroup(ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ExperienceContentPanelLayout.createSequentialGroup()
-                    .addContainerGap(581, Short.MAX_VALUE)
-                    .addComponent(experiencecontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(189, 189, 189)))
-        );
-        ExperienceContentPanelLayout.setVerticalGroup(
-            ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ExperienceContentPanelLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(jLabel41)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel40)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(experiencelist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(experienceaddonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(experienceupdatebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(108, 108, 108))
-            .addGroup(ExperienceContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ExperienceContentPanelLayout.createSequentialGroup()
-                    .addContainerGap(601, Short.MAX_VALUE)
-                    .addComponent(experiencecontinuebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(109, 109, 109)))
-        );
+        ExperienceContentPanel.add(experiencecontinuebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 620, 195, 47));
 
         jTabbedPane1.addTab("tab6", ExperienceContentPanel);
 
@@ -1568,25 +1378,25 @@ public class Homepage extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(0, 0, 0)
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGap(0, 0, 0))
         );
 
         pack();
@@ -2012,7 +1822,7 @@ public class Homepage extends javax.swing.JFrame {
 
                 //search for aid
                Statement ps7 = con.createStatement();
-               String query1="select * from skills where cvid="+cvid;
+               String query1="select * from skills where cvid="+cvid+" and skillname='"+skillname+"'";
 
                ResultSet rs5=ps7.executeQuery(query1);
                int sid=0;
@@ -2237,7 +2047,7 @@ public class Homepage extends javax.swing.JFrame {
 
                 //search for aid
                Statement ps7 = con.createStatement();
-               String query1="select * from projects where cvid="+cvid;
+               String query1="select * from projects where cvid="+cvid+" and projectname='"+projectname+"'";
 
                ResultSet rs5=ps7.executeQuery(query1);
                int projectid=0;
@@ -2277,7 +2087,7 @@ public class Homepage extends javax.swing.JFrame {
 
                 //search for aid
                Statement ps7 = con.createStatement();
-               String query1="select * from achievements where cvid="+cvid;
+               String query1="select * from achievements where cvid="+cvid+" and achievementname='"+achivementname+"'";
 
                ResultSet rs5=ps7.executeQuery(query1);
                int achieveid=0;
@@ -2469,7 +2279,7 @@ public class Homepage extends javax.swing.JFrame {
 
                 //search for aid
                Statement ps7 = con.createStatement();
-               String query1="select * from experience where cvid="+cvid;
+               String query1="select * from experience where cvid="+cvid+" and companyname='"+companyname+"'";
 
                ResultSet rs5=ps7.executeQuery(query1);
                int exid=0;
@@ -2658,6 +2468,17 @@ public class Homepage extends javax.swing.JFrame {
 
         jTabbedPane1.setSelectedIndex(4);
     }//GEN-LAST:event_experiencecontinuebuttonActionPerformed
+
+    private void emailinputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailinputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailinputActionPerformed
+
+    private void SignoutbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignoutbuttonActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        Login login=new Login();
+        login.show();
+    }//GEN-LAST:event_SignoutbuttonActionPerformed
 
     /**
      * @param args the command line arguments

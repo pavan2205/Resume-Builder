@@ -40,6 +40,7 @@ public class Signup extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel5 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -67,9 +68,22 @@ public class Signup extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1910, 1000));
+        getContentPane().setLayout(new java.awt.FlowLayout());
+
+        jPanel5.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel5.setMaximumSize(new java.awt.Dimension(1920, 1080));
+        jPanel5.setMinimumSize(new java.awt.Dimension(700, 610));
+        jPanel5.setPreferredSize(new java.awt.Dimension(1600, 1000));
+        jPanel5.setVerifyInputWhenFocusTarget(false);
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(153, 255, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(580, 500));
+        jPanel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jPanel1.setMaximumSize(new java.awt.Dimension(1920, 1080));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1000, 600));
+        jPanel1.setPreferredSize(new java.awt.Dimension(600, 600));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel3.setBackground(new java.awt.Color(153, 255, 255));
         jPanel3.setPreferredSize(new java.awt.Dimension(600, 30));
@@ -93,7 +107,7 @@ public class Signup extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel3);
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 5, -1, -1));
 
         jPanel6.setBackground(new java.awt.Color(153, 255, 255));
         jPanel6.setPreferredSize(new java.awt.Dimension(600, 400));
@@ -177,7 +191,7 @@ public class Signup extends javax.swing.JFrame {
         avatarIcon.setPreferredSize(new java.awt.Dimension(80, 80));
         jPanel6.add(avatarIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 80, 80));
 
-        jPanel1.add(jPanel6);
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, -1, -1));
 
         jPanel4.setBackground(new java.awt.Color(153, 255, 255));
         jPanel4.setPreferredSize(new java.awt.Dimension(600, 100));
@@ -211,18 +225,21 @@ public class Signup extends javax.swing.JFrame {
                 .addGap(0, 84, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel4);
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 445, -1, -1));
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.WEST);
+        jPanel5.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setPreferredSize(new java.awt.Dimension(400, 482));
-        jPanel2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 80));
+        jPanel2.setMaximumSize(new java.awt.Dimension(700, 600));
+        jPanel2.setPreferredSize(new java.awt.Dimension(500, 600));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/icons/signup-image.jpg"))); // NOI18N
-        jPanel2.add(jLabel7);
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, -1, -1));
 
-        getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
+        jPanel5.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 100, -1, -1));
+
+        getContentPane().add(jPanel5);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -371,6 +388,7 @@ public class Signup extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JTextField lname;
     private javax.swing.JPasswordField password;

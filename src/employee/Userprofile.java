@@ -73,6 +73,8 @@ public class Userprofile extends javax.swing.JFrame {
 
         evaluatorQuadCurve2D1 = new org.jdesktop.swing.animation.timing.evaluators.EvaluatorQuadCurve2D();
         customUI1 = new necesario.CustomUI();
+        kGradientPanel1 = new keeptoo.KGradientPanel();
+        kGradientPanel2 = new keeptoo.KGradientPanel();
         jPanel2 = new javax.swing.JPanel();
         avatar = new javax.swing.JLabel();
         fname = new javax.swing.JLabel();
@@ -83,10 +85,28 @@ public class Userprofile extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         resumebtn = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
+        javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
+        kGradientPanel1.setLayout(kGradientPanel1Layout);
+        kGradientPanel1Layout.setHorizontalGroup(
+            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        kGradientPanel1Layout.setVerticalGroup(
+            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
-        jPanel2.setBackground(new java.awt.Color(204, 255, 255));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1920, 1080));
+        setPreferredSize(new java.awt.Dimension(1920, 1080));
+
+        kGradientPanel2.setkEndColor(new java.awt.Color(255, 153, 255));
+        kGradientPanel2.setkGradientFocus(600);
+        kGradientPanel2.setkStartColor(new java.awt.Color(153, 204, 255));
+        kGradientPanel2.setPreferredSize(new java.awt.Dimension(1920, 1080));
+
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel2.setPreferredSize(new java.awt.Dimension(700, 700));
 
         avatar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/icons/signin-image.jpg"))); // NOI18N
 
@@ -134,7 +154,7 @@ public class Userprofile extends javax.swing.JFrame {
                                 .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lname, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 159, Short.MAX_VALUE)))
+                        .addGap(0, 237, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -152,12 +172,11 @@ public class Userprofile extends javax.swing.JFrame {
                 .addComponent(phone, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(290, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel2);
-
         jPanel3.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel3.setPreferredSize(new java.awt.Dimension(500, 700));
 
         resumebtn.setText("Create New Resume");
         resumebtn.addActionListener(new java.awt.event.ActionListener() {
@@ -173,17 +192,49 @@ public class Userprofile extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(52, 52, 52)
                 .addComponent(resumebtn)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(312, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(143, 143, 143)
                 .addComponent(resumebtn)
-                .addContainerGap(307, Short.MAX_VALUE))
+                .addContainerGap(534, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel3);
+        javax.swing.GroupLayout kGradientPanel2Layout = new javax.swing.GroupLayout(kGradientPanel2);
+        kGradientPanel2.setLayout(kGradientPanel2Layout);
+        kGradientPanel2Layout.setHorizontalGroup(
+            kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                .addGap(206, 206, 206)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(514, Short.MAX_VALUE))
+        );
+        kGradientPanel2Layout.setVerticalGroup(
+            kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                .addGap(82, 82, 82)
+                .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(298, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(kGradientPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(804, 804, 804))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(kGradientPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -219,6 +270,8 @@ public class Userprofile extends javax.swing.JFrame {
     private javax.swing.JLabel fname;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private keeptoo.KGradientPanel kGradientPanel1;
+    private keeptoo.KGradientPanel kGradientPanel2;
     private javax.swing.JLabel lname;
     private javax.swing.JLabel phone;
     private javax.swing.JButton resumebtn;
