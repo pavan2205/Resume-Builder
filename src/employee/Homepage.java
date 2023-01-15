@@ -38,19 +38,22 @@ public class Homepage extends javax.swing.JFrame {
     public Homepage(int id) {
         this.id=id;
         initComponents();
+        
          //fetch  rid , cvid
         try{
         Class.forName("com.mysql.cj.jdbc.Driver");
            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?useSSL=false","root","pavan123");
            String query="";
-           PreparedStatement ps;
+           PreparedStatement ps,ps2;
            Statement ps1 = con.createStatement();
+           Statement ps4=con.createStatement();
            String query1="select * from resumes where rid="+id;
 
            ResultSet rs=ps1.executeQuery(query1);
            if(rs.next()){
                cvid=rs.getInt(1);
            }
+           System.out.print(cvid);
 
            int count=0;
            while(rs.next()){
@@ -59,10 +62,15 @@ public class Homepage extends javax.swing.JFrame {
 
            if(count<1){
                    query="INSERT INTO resumes(rid)values(?)";
-                   ps=con.prepareStatement(query);
-                   ps.setInt(1,id);
-                   if(ps.executeUpdate()>0){
+                   ps2=con.prepareStatement(query);
+                   ps2.setInt(1,id);
+                   if(ps2.executeUpdate()>0){
+                       String query9="select * from resumes where rid="+id;
 
+                        ResultSet rs8=ps4.executeQuery(query9);
+                        if(rs8.next()){
+               cvid=rs8.getInt(1);
+           }
                    }
            }
            con.close();

@@ -10,6 +10,7 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.imageio.ImageIO;
@@ -41,10 +42,12 @@ public class Userprofile extends javax.swing.JFrame {
            String sql="select * from register where rid="+id;
            ResultSet rs=stm.executeQuery(sql);
            
-  
+           String fname,lname;
            if(rs.next()){
-               fname.setText(rs.getString(2));
-               lname.setText(rs.getString(3));
+               fname=rs.getString(2);
+               lname=rs.getString(3);
+               String nam=fname+" "+lname;
+               name.setText(nam);
                phone.setText(rs.getString(4));
                email.setText(rs.getString(5));
                
@@ -77,11 +80,10 @@ public class Userprofile extends javax.swing.JFrame {
         kGradientPanel2 = new keeptoo.KGradientPanel();
         jPanel2 = new javax.swing.JPanel();
         avatar = new javax.swing.JLabel();
-        fname = new javax.swing.JLabel();
+        name = new javax.swing.JLabel();
         username = new javax.swing.JLabel();
         email = new javax.swing.JLabel();
         phone = new javax.swing.JLabel();
-        lname = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         resumebtn = new javax.swing.JButton();
 
@@ -110,10 +112,10 @@ public class Userprofile extends javax.swing.JFrame {
 
         avatar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/icons/signin-image.jpg"))); // NOI18N
 
-        fname.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        fname.setText("fname");
-        fname.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fname.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        name.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        name.setText("fname");
+        name.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        name.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         username.setBackground(new java.awt.Color(204, 204, 204));
         username.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
@@ -124,11 +126,6 @@ public class Userprofile extends javax.swing.JFrame {
         email.setText("pavannaik2205@gmail.com");
 
         phone.setText("7898461231");
-
-        lname.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lname.setText("watson");
-        lname.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lname.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -142,19 +139,16 @@ public class Userprofile extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(212, 212, 212)
-                                .addComponent(avatar, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(222, 222, 222)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(phone, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(236, 236, 236)
-                                .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lname, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 237, Short.MAX_VALUE)))
+                                .addGap(212, 212, 212)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(avatar, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(0, 279, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -163,9 +157,7 @@ public class Userprofile extends javax.swing.JFrame {
                 .addGap(73, 73, 73)
                 .addComponent(avatar, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lname, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
@@ -175,7 +167,7 @@ public class Userprofile extends javax.swing.JFrame {
                 .addContainerGap(290, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
         jPanel3.setPreferredSize(new java.awt.Dimension(500, 700));
 
         resumebtn.setText("Create New Resume");
@@ -267,12 +259,11 @@ public class Userprofile extends javax.swing.JFrame {
     private necesario.CustomUI customUI1;
     private javax.swing.JLabel email;
     private org.jdesktop.swing.animation.timing.evaluators.EvaluatorQuadCurve2D evaluatorQuadCurve2D1;
-    private javax.swing.JLabel fname;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private keeptoo.KGradientPanel kGradientPanel1;
     private keeptoo.KGradientPanel kGradientPanel2;
-    private javax.swing.JLabel lname;
+    private javax.swing.JLabel name;
     private javax.swing.JLabel phone;
     private javax.swing.JButton resumebtn;
     private javax.swing.JLabel username;
