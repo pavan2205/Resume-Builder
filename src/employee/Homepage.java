@@ -17,6 +17,7 @@ import javax.swing.*;
 import javax.swing.plaf.*;
 import javax.swing.plaf.basic.*;
 import javax.swing.text.View;
+import javax.swing.border.Border;
 import java.sql.*;
 
 
@@ -26,6 +27,7 @@ public class Homepage extends javax.swing.JFrame {
 
   private int id ;
   private int cvid;
+  boolean redirect;
   private boolean chk1=false;
   private boolean chk2=false;
   private boolean chk3=false;
@@ -35,10 +37,11 @@ public class Homepage extends javax.swing.JFrame {
     /**
      * Creates new form NewJFrame
      */
+  
     public Homepage(int id) {
         this.id=id;
-        initComponents();
         
+        initComponents();
          //fetch  rid , cvid
         try{
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -46,6 +49,7 @@ public class Homepage extends javax.swing.JFrame {
            String query="";
            PreparedStatement ps,ps2;
            Statement ps1 = con.createStatement();
+           Statement ps3 = con.createStatement();
            Statement ps4=con.createStatement();
            String query1="select * from resumes where rid="+id;
 
@@ -53,13 +57,13 @@ public class Homepage extends javax.swing.JFrame {
            if(rs.next()){
                cvid=rs.getInt(1);
            }
-           System.out.print(cvid);
 
            int count=0;
-           while(rs.next()){
+           ResultSet rs2=ps3.executeQuery(query1);
+           while(rs2.next()){
                count++;
            }
-
+           System.out.println(count);
            if(count<1){
                    query="INSERT INTO resumes(rid)values(?)";
                    ps2=con.prepareStatement(query);
@@ -112,6 +116,7 @@ public class Homepage extends javax.swing.JFrame {
                    githuburlinput.setText(rs2.getString(6));
                    linkdininput.setText(rs2.getString(7));
                }
+               
            }
 
 
@@ -480,7 +485,7 @@ public class Homepage extends javax.swing.JFrame {
         setBackground(new java.awt.Color(204, 255, 255));
         setMaximumSize(new java.awt.Dimension(1920, 1080));
 
-        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
 
         createresumebutton.setBackground(new java.awt.Color(153, 153, 255));
         createresumebutton.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
@@ -488,6 +493,11 @@ public class Homepage extends javax.swing.JFrame {
         createresumebutton.setText("create");
         createresumebutton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         createresumebutton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        createresumebutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createresumebuttonActionPerformed(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Liberation Sans", 0, 48)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 51, 51));
@@ -514,7 +524,7 @@ public class Homepage extends javax.swing.JFrame {
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(0, 204, 204));
+        jPanel3.setBackground(new java.awt.Color(153, 153, 153));
 
         PersonalPanel.setBackground(new java.awt.Color(153, 153, 255));
         PersonalPanel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -558,16 +568,16 @@ public class Homepage extends javax.swing.JFrame {
         AcademicsPanelLayout.setHorizontalGroup(
             AcademicsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AcademicsPanelLayout.createSequentialGroup()
-                .addGap(93, 93, 93)
+                .addGap(83, 83, 83)
                 .addComponent(AcademicsLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         AcademicsPanelLayout.setVerticalGroup(
             AcademicsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AcademicsPanelLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(17, 17, 17)
                 .addComponent(AcademicsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         SkillsPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -611,17 +621,17 @@ public class Homepage extends javax.swing.JFrame {
         ProjectsPanel.setLayout(ProjectsPanelLayout);
         ProjectsPanelLayout.setHorizontalGroup(
             ProjectsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ProjectsPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(ProjectsPanelLayout.createSequentialGroup()
+                .addGap(92, 92, 92)
                 .addComponent(PrajectsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(84, 84, 84))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ProjectsPanelLayout.setVerticalGroup(
             ProjectsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ProjectsPanelLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ProjectsPanelLayout.createSequentialGroup()
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addComponent(PrajectsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addGap(17, 17, 17))
         );
 
         Signoutbutton.setBackground(new java.awt.Color(153, 153, 255));
@@ -643,23 +653,23 @@ public class Homepage extends javax.swing.JFrame {
         });
 
         AchivementsLabel.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
-        AchivementsLabel.setText("Achivements");
+        AchivementsLabel.setText("Achievements");
 
         javax.swing.GroupLayout AchivementsPanelLayout = new javax.swing.GroupLayout(AchivementsPanel);
         AchivementsPanel.setLayout(AchivementsPanelLayout);
         AchivementsPanelLayout.setHorizontalGroup(
             AchivementsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AchivementsPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(AchivementsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77))
+            .addGroup(AchivementsPanelLayout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addComponent(AchivementsLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         AchivementsPanelLayout.setVerticalGroup(
             AchivementsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AchivementsPanelLayout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
+            .addGroup(AchivementsPanelLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
                 .addComponent(AchivementsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         ExperiencePanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -676,17 +686,17 @@ public class Homepage extends javax.swing.JFrame {
         ExperiencePanel.setLayout(ExperiencePanelLayout);
         ExperiencePanelLayout.setHorizontalGroup(
             ExperiencePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ExperiencePanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(ExperiencePanelLayout.createSequentialGroup()
+                .addGap(84, 84, 84)
                 .addComponent(ExperienceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(84, 84, 84))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ExperiencePanelLayout.setVerticalGroup(
             ExperiencePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ExperiencePanelLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ExperiencePanelLayout.createSequentialGroup()
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addComponent(ExperienceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addGap(17, 17, 17))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -711,7 +721,6 @@ public class Homepage extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(PersonalPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(AcademicsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -733,14 +742,14 @@ public class Homepage extends javax.swing.JFrame {
 
         PersonalContentPanel.setBackground(new java.awt.Color(255, 255, 255));
         PersonalContentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        PersonalContentPanel.add(firstnameinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, 380, 52));
+        PersonalContentPanel.add(firstnameinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 380, 52));
 
         jLabel6.setText("First Name");
-        PersonalContentPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 87, -1));
+        PersonalContentPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 87, -1));
 
         jLabel8.setText("Last Name");
-        PersonalContentPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, -1, -1));
-        PersonalContentPanel.add(lastnameinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 290, 380, 54));
+        PersonalContentPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, -1, -1));
+        PersonalContentPanel.add(lastnameinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 270, 380, 54));
 
         jLabel9.setFont(new java.awt.Font("Liberation Sans", 1, 48)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 153, 255));
@@ -756,7 +765,7 @@ public class Homepage extends javax.swing.JFrame {
                 personalcontinuebuttonActionPerformed(evt);
             }
         });
-        PersonalContentPanel.add(personalcontinuebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 580, 127, -1));
+        PersonalContentPanel.add(personalcontinuebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 570, 127, -1));
 
         jLabel10.setText("Now you are ready! now add your name and personal details!");
         PersonalContentPanel.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 322, -1));
@@ -769,15 +778,15 @@ public class Homepage extends javax.swing.JFrame {
                 emailinputActionPerformed(evt);
             }
         });
-        PersonalContentPanel.add(emailinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 380, 380, 51));
-        PersonalContentPanel.add(githuburlinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 460, 265, 49));
-        PersonalContentPanel.add(linkdininput, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 460, 298, 49));
+        PersonalContentPanel.add(emailinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 370, 380, 51));
+        PersonalContentPanel.add(githuburlinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 490, 265, 49));
+        PersonalContentPanel.add(linkdininput, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 490, 298, 49));
 
         jLabel12.setText("Github URL(Optional)");
-        PersonalContentPanel.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 440, 160, -1));
+        PersonalContentPanel.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 160, -1));
 
         jLabel13.setText("Linkdin URL(Optional)");
-        PersonalContentPanel.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 170, -1));
+        PersonalContentPanel.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 470, 170, -1));
 
         jTabbedPane1.addTab("tab1", PersonalContentPanel);
 
@@ -827,7 +836,7 @@ public class Homepage extends javax.swing.JFrame {
         AcademicContentPanel.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 470, -1, 24));
 
         jLabel24.setText("Year");
-        AcademicContentPanel.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 470, -1, -1));
+        AcademicContentPanel.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 480, -1, -1));
         AcademicContentPanel.add(degreecourseinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, 311, 48));
         AcademicContentPanel.add(pucyearinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, 158, 48));
         AcademicContentPanel.add(degreeyearinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 500, 158, 48));
@@ -1369,7 +1378,7 @@ public class Homepage extends javax.swing.JFrame {
         experiencecontinuebutton.setBackground(new java.awt.Color(0, 153, 255));
         experiencecontinuebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
         experiencecontinuebutton.setForeground(new java.awt.Color(255, 255, 255));
-        experiencecontinuebutton.setText("Continue");
+        experiencecontinuebutton.setText("Save");
         experiencecontinuebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 experiencecontinuebuttonActionPerformed(evt);
@@ -1409,20 +1418,46 @@ public class Homepage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    private void setActiveState(JPanel panel){
+    private void setActiveState(JPanel panel,int index){
         PersonalPanel.setBackground(Color.white);
         AcademicsPanel.setBackground(Color.white);
         SkillsPanel.setBackground(Color.white);
         ExperiencePanel.setBackground(Color.white);
         ProjectsPanel.setBackground(Color.white);
         AchivementsPanel.setBackground(Color.white);
+        switch (index) {
+            case 0 -> {
+                panel.setBackground(new Color(153,153,255));
+                jTabbedPane1.setSelectedIndex(index);
+            }
+            case 1 -> {
+                panel.setBackground(new Color(153,153,255));
+                jTabbedPane1.setSelectedIndex(index);
+            }
+            case 2 -> {
+                panel.setBackground(new Color(153,153,255));
+                jTabbedPane1.setSelectedIndex(index);
+            }
+            case 3 -> {
+                panel.setBackground(new Color(153,153,255));
+                jTabbedPane1.setSelectedIndex(index);
+            }
+            case 4 -> {
+                panel.setBackground(new Color(153,153,255));
+                jTabbedPane1.setSelectedIndex(index);
+            }
+            case 5 -> {
+                panel.setBackground(new Color(153,153,255));
+                jTabbedPane1.setSelectedIndex(index);
+            }
+            default -> System.out.println("not a valid option");
+        }
         
-        panel.setBackground(new Color(153,153,255));
         
     }
     
     private void hover(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hover
-        // TODO add your handling code here:
+//         TODO add your handling code here:
     
 
         PersonalPanel.addMouseListener(new MouseAdapter(){
@@ -1436,8 +1471,8 @@ public class Homepage extends javax.swing.JFrame {
 //            }
             @Override
             public void mousePressed(MouseEvent e) {
-               jTabbedPane1.setSelectedIndex(0);
-               setActiveState(PersonalPanel);
+//               jTabbedPane1.setSelectedIndex(0);
+               setActiveState(PersonalPanel,0);
                  
             }
         });
@@ -1453,8 +1488,8 @@ public class Homepage extends javax.swing.JFrame {
 //            }
             @Override
             public void mousePressed(MouseEvent e) {
-                jTabbedPane1.setSelectedIndex(1);
-                setActiveState(AcademicsPanel);
+//                jTabbedPane1.setSelectedIndex(1);
+                setActiveState(AcademicsPanel,1);
             }
         });
         AchivementsPanel.addMouseListener(new MouseAdapter(){
@@ -1468,8 +1503,8 @@ public class Homepage extends javax.swing.JFrame {
 //            }
             @Override
             public void mousePressed(MouseEvent e) {
-                jTabbedPane1.setSelectedIndex(4);
-                setActiveState(AchivementsPanel);
+//                jTabbedPane1.setSelectedIndex(4);
+                setActiveState(AchivementsPanel,4);
             }
         });
         SkillsPanel.addMouseListener(new MouseAdapter(){
@@ -1483,8 +1518,8 @@ public class Homepage extends javax.swing.JFrame {
 //            }
             @Override
             public void mousePressed(MouseEvent e) {
-                jTabbedPane1.setSelectedIndex(2);
-                setActiveState(SkillsPanel);
+//                jTabbedPane1.setSelectedIndex(2);
+                setActiveState(SkillsPanel,2);
             }
         });
         ProjectsPanel.addMouseListener(new MouseAdapter(){
@@ -1498,8 +1533,8 @@ public class Homepage extends javax.swing.JFrame {
 //            }
             @Override
             public void mousePressed(MouseEvent e) {
-                 jTabbedPane1.setSelectedIndex(3);
-                 setActiveState(ProjectsPanel);
+//                 jTabbedPane1.setSelectedIndex();
+                 setActiveState(ProjectsPanel,3);
             }
         });
         ExperiencePanel.addMouseListener(new MouseAdapter(){
@@ -1513,8 +1548,8 @@ public class Homepage extends javax.swing.JFrame {
 //            }
             @Override
             public void mousePressed(MouseEvent e) {
-                jTabbedPane1.setSelectedIndex(5);
-                setActiveState(ExperiencePanel);
+//                jTabbedPane1.setSelectedIndex(5);
+                setActiveState(ExperiencePanel,5);
             }
         });
         
@@ -1692,17 +1727,22 @@ public class Homepage extends javax.swing.JFrame {
             }
         }
 
-        jTabbedPane1.setSelectedIndex(2);
+        setActiveState(SkillsPanel,2);
         
     }//GEN-LAST:event_academicscontinuebuttonActionPerformed
 
     private void skillscontinuebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_skillscontinuebuttonActionPerformed
         // TODO add your handling code here:
-        if(chk3){
+        String skillname=skillnameinput.getText();
+        String skilldesc=skilldescriptioninput.getText();
+            
+        if(skillname==null && skilldesc==null){
+                setActiveState(ProjectsPanel,3);
+        }
+        else if(chk3){
 
         try{
-            String skillname=skillnameinput.getText();
-            String skilldesc=skilldescriptioninput.getText();
+            
            
 
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -1717,20 +1757,22 @@ public class Homepage extends javax.swing.JFrame {
 
 
           int count =ps7.executeUpdate();
-
+          setActiveState(ProjectsPanel,3);
         }
         catch(Exception e){
             System.out.println(e.getMessage());
         }
+        finally{
+            chk3=false;
         }
-
-
+        }
+        
+        
         else{
 
 
           try{
-            String skillname=skillnameinput.getText();
-            String skilldesc=skilldescriptioninput.getText();
+            
          
 
                 Class.forName("com.mysql.cj.jdbc.Driver");
@@ -1738,7 +1780,7 @@ public class Homepage extends javax.swing.JFrame {
 
                 //search for aid
                Statement ps7 = con.createStatement();
-               String query1="select * from skills where cvid="+cvid;
+               String query1="select * from skills where cvid="+cvid+" and skillname='"+skillname+"'";
 
                ResultSet rs5=ps7.executeQuery(query1);
                int sid=0;
@@ -1756,13 +1798,14 @@ public class Homepage extends javax.swing.JFrame {
           
 
                 int count1 =ps3.executeUpdate();
+                setActiveState(ProjectsPanel,3);
             }
             catch(Exception e){
                 System.out.println(e.getMessage());
             }
         }
 
-        jTabbedPane1.setSelectedIndex(3);
+        
     }//GEN-LAST:event_skillscontinuebuttonActionPerformed
 
     private void skillsearchbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_skillsearchbuttonActionPerformed
@@ -1788,7 +1831,7 @@ public class Homepage extends javax.swing.JFrame {
     private void skilladdonemorebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_skilladdonemorebuttonActionPerformed
         // TODO add your handling code here:
 
-
+        if(chk3){
         try{
             String skillname=skillnameinput.getText();
             String skilldesc=skilldescriptioninput.getText();
@@ -1812,8 +1855,15 @@ public class Homepage extends javax.swing.JFrame {
             System.out.println(e.getMessage());
         }
         
+        
         skillnameinput.setText(null);
         skilldescriptioninput.setText(null);
+        }
+        else{
+            skillnameinput.setText(null);
+            skilldescriptioninput.setText(null);
+            chk3=true;
+        }
     }//GEN-LAST:event_skilladdonemorebuttonActionPerformed
 
     private void skillsupdatebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_skillsupdatebuttonActionPerformed
@@ -1847,11 +1897,15 @@ public class Homepage extends javax.swing.JFrame {
                 ps3.setString(3, skilldesc);
           
 
-                int count1 =ps3.executeUpdate();
+                int count1 =ps3.executeUpdate();     
             }
             catch(Exception e){
                 System.out.println(e.getMessage());
             }
+            
+        }
+        else{
+            JOptionPane.showMessageDialog(this,"There is nothing to Update");
         }
         skillnameinput.setText(null);
         skilldescriptioninput.setText(null);
@@ -1893,6 +1947,7 @@ public class Homepage extends javax.swing.JFrame {
 
     private void projectaddonemorebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_projectaddonemorebuttonActionPerformed
         // TODO add your handling code here:
+        if(chk4){
         try{
             String projectname=projectnameinput.getText();
             String projectdesc=projectdescriptioninput.getText();
@@ -1918,6 +1973,12 @@ public class Homepage extends javax.swing.JFrame {
         
         projectnameinput.setText(null);
         projectdescriptioninput.setText(null);
+        }
+        else{
+            projectnameinput.setText(null);
+        projectdescriptioninput.setText(null);
+        chk4=true;
+        }
     }//GEN-LAST:event_projectaddonemorebuttonActionPerformed
 
     private void ProjectsearchbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProjectsearchbuttonActionPerformed
@@ -1975,18 +2036,23 @@ public class Homepage extends javax.swing.JFrame {
 
     private void projectcontinuebutton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_projectcontinuebutton1ActionPerformed
         // TODO add your handling code here:
-        if(chk4){
+          String projectname=projectnameinput.getText();
+            String projectdesc=projectdescriptioninput.getText();
+        if(projectname==null && projectdesc==null){
+            setActiveState(AchivementsPanel,4);
+        }
+        
+        else if(chk4){
 
         try{
-           String projectname=projectnameinput.getText();
-            String projectdesc=projectdescriptioninput.getText();
+         
            
 
             Class.forName("com.mysql.cj.jdbc.Driver");
            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?useSSL=false","root","pavan123");
 
            PreparedStatement ps7;
-           String query="insert into projects(cvid,projectname,projectdescription) values(?,?,?)";
+           String query="insert into projects(cvid,projectname,projectdesc) values(?,?,?)";
            ps7=con.prepareStatement(query);
            ps7.setInt(1, cvid);
            ps7.setString(2, projectname);
@@ -1994,10 +2060,13 @@ public class Homepage extends javax.swing.JFrame {
 
 
           int count =ps7.executeUpdate();
-
+           setActiveState(AchivementsPanel,4);
         }
         catch(Exception e){
             System.out.println(e.getMessage());
+        }
+        finally{
+            chk4=false;
         }
         }
 
@@ -2006,16 +2075,12 @@ public class Homepage extends javax.swing.JFrame {
 
 
           try{
-            String projectname=projectnameinput.getText();
-            String projectdesc=projectdescriptioninput.getText();
-         
-
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?useSSL=false","root","pavan123");
 
                 //search for aid
                Statement ps7 = con.createStatement();
-               String query1="select * from projects where cvid="+cvid;
+               String query1="select * from projects where cvid="+cvid+" and projectname='"+projectname+"'";
 
                ResultSet rs5=ps7.executeQuery(query1);
                int projectid=0;
@@ -2031,15 +2096,15 @@ public class Homepage extends javax.swing.JFrame {
                 ps3.setString(2, projectname);
                 ps3.setString(3, projectdesc);
           
-
-                int count1 =ps3.executeUpdate();
+                int count1 =ps3.executeUpdate(); 
+                setActiveState(AchivementsPanel,4);
             }
             catch(Exception e){
                 System.out.println(e.getMessage());
             }
         }
 
-        jTabbedPane1.setSelectedIndex(4);
+       
     }//GEN-LAST:event_projectcontinuebutton1ActionPerformed
 
     private void projectupdatebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_projectupdatebuttonActionPerformed
@@ -2077,6 +2142,9 @@ public class Homepage extends javax.swing.JFrame {
             catch(Exception e){
                 System.out.println(e.getMessage());
             }
+        }
+        else{
+            JOptionPane.showMessageDialog(this,"There is nothing to Update");
         }
         projectnameinput.setText(null);
         projectdescriptioninput.setText(null);
@@ -2118,17 +2186,25 @@ public class Homepage extends javax.swing.JFrame {
                 System.out.println(e.getMessage());
             }
         }
+        else{
+            JOptionPane.showMessageDialog(this,"There is nothing to Update");
+        }
         achivementnameinput.setText(null);
         achivementdescriptioninput.setText(null);
     }//GEN-LAST:event_achivementupdatebuttonActionPerformed
 
     private void achivementcontinuebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_achivementcontinuebuttonActionPerformed
-        // TODO add your handling code here:
-        if(chk5){
+        // TODO add your handling code here
+         String achivementname=achivementnameinput.getText();
+         String achivementdesc=achivementdescriptioninput.getText();
+        if(achivementname==null && achivementdesc==null){
+            setActiveState(ExperiencePanel,5);
+        }
+        
+        else if(chk5){
 
         try{
-           String achivementname=achivementnameinput.getText();
-            String achivementdesc=achivementdescriptioninput.getText();
+          
            
 
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -2143,10 +2219,14 @@ public class Homepage extends javax.swing.JFrame {
 
 
           int count =ps7.executeUpdate();
+          setActiveState(ExperiencePanel,5);
 
         }
         catch(Exception e){
             System.out.println(e.getMessage());
+        }
+        finally{
+            chk5=false;
         }
         }
 
@@ -2155,16 +2235,13 @@ public class Homepage extends javax.swing.JFrame {
 
 
           try{
-            String achivementname=achivementnameinput.getText();
-            String achivementdesc=achivementdescriptioninput.getText();
-         
-
+          
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?useSSL=false","root","pavan123");
 
                 //search for aid
                Statement ps7 = con.createStatement();
-               String query1="select * from achievements where cvid="+cvid;
+               String query1="select * from achievements where cvid="+cvid+" and achievementname='"+achivementname+"'";
 
                ResultSet rs5=ps7.executeQuery(query1);
                int achieveid=0;
@@ -2182,13 +2259,14 @@ public class Homepage extends javax.swing.JFrame {
           
 
                 int count1 =ps3.executeUpdate();
+                setActiveState(ExperiencePanel,5);
             }
             catch(Exception e){
                 System.out.println(e.getMessage());
             }
         }
 
-        jTabbedPane1.setSelectedIndex(4);
+        
     }//GEN-LAST:event_achivementcontinuebuttonActionPerformed
 
     private void achivementssearchbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_achivementssearchbuttonActionPerformed
@@ -2246,6 +2324,7 @@ public class Homepage extends javax.swing.JFrame {
 
     private void achivementaddonemorebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_achivementaddonemorebuttonActionPerformed
         // TODO add your handling code here:
+        if(chk5){
         try{
             String achivementname=achivementnameinput.getText();
             String achivementdesc=achivementdescriptioninput.getText();
@@ -2271,6 +2350,12 @@ public class Homepage extends javax.swing.JFrame {
         
         achivementnameinput.setText(null);
         achivementdescriptioninput.setText(null);
+        }
+        else{
+              achivementnameinput.setText(null);
+        achivementdescriptioninput.setText(null);
+        chk5=true;
+        }
     }//GEN-LAST:event_achivementaddonemorebuttonActionPerformed
 
     private void experienceupdatebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_experienceupdatebuttonActionPerformed
@@ -2374,6 +2459,7 @@ public class Homepage extends javax.swing.JFrame {
 
     private void experienceaddonemorebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_experienceaddonemorebuttonActionPerformed
         // TODO add your handling code here:
+        if(chk6){
         try{
             String companyname=companynameinput.getText();
             String roledesc=roledescriptioninput.getText();
@@ -2402,16 +2488,27 @@ public class Homepage extends javax.swing.JFrame {
         companynameinput.setText(null);
         roledescriptioninput.setText(null);
         experiencedurationdropdown.setSelectedItem(null);
+        }
+        else{
+            companynameinput.setText(null);
+        roledescriptioninput.setText(null);
+        experiencedurationdropdown.setSelectedItem(null);
+        chk6=true;
+        }
     }//GEN-LAST:event_experienceaddonemorebuttonActionPerformed
 
     private void experiencecontinuebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_experiencecontinuebuttonActionPerformed
-        // TODO add your handling code here:
-        if(chk6){
-
-        try{
-           String companyname=companynameinput.getText();
+        // TODO add your handling code here
+        String companyname=companynameinput.getText();
             String roledesc=roledescriptioninput.getText();
             String duration=experiencedurationdropdown.getSelectedItem().toString();
+           
+        if(companyname==null && roledesc==null || duration==null){
+            
+        }
+        else if(chk6){
+
+        try{
            
 
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -2432,6 +2529,9 @@ public class Homepage extends javax.swing.JFrame {
         catch(Exception e){
             System.out.println(e.getMessage());
         }
+        finally{
+            chk6=false;
+        }
         }
 
 
@@ -2439,17 +2539,14 @@ public class Homepage extends javax.swing.JFrame {
 
 
           try{
-            String companyname=companynameinput.getText();
-            String roledesc=roledescriptioninput.getText();
-            String duration=experiencedurationdropdown.getSelectedItem().toString();
-         
+            
 
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?useSSL=false","root","pavan123");
 
                 //search for aid
                Statement ps7 = con.createStatement();
-               String query1="select * from experience where cvid="+cvid;
+               String query1="select * from experience where cvid="+cvid+" and companyname='"+companyname+"'";
 
                ResultSet rs5=ps7.executeQuery(query1);
                int exid=0;
@@ -2473,8 +2570,7 @@ public class Homepage extends javax.swing.JFrame {
                 System.out.println(e.getMessage());
             }
         }
-
-        jTabbedPane1.setSelectedIndex(4);
+        JOptionPane.showMessageDialog(this, "Saved Successfully");
     }//GEN-LAST:event_experiencecontinuebuttonActionPerformed
 
     private void emailinputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailinputActionPerformed
@@ -2488,6 +2584,14 @@ public class Homepage extends javax.swing.JFrame {
         login.show();
     }//GEN-LAST:event_SignoutbuttonActionPerformed
 
+    private void createresumebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createresumebuttonActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        ResumeGenerator rg=new ResumeGenerator(id,cvid);
+        rg.show();
+    }//GEN-LAST:event_createresumebuttonActionPerformed
+    
+    
     /**
      * @param args the command line arguments
      */

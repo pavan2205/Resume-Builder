@@ -4,7 +4,10 @@
  */
 package employee;
 
+import java.awt.Component;
+import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Insets;
 import java.awt.image.BufferedImage;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -17,30 +20,66 @@ import javax.imageio.ImageIO;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.border.Border;
 
 /**
  *
  * @author pavan
  */
+
 public class Userprofile extends javax.swing.JFrame {
 
     private int id;
-
+    private int cvid;
     /**
      * Creates new form Userprofile
      */
+    
+    
+    
+    private static class RoundedBorder implements Border {
+        
+        private int radius;
+        
+        RoundedBorder(int radius) {
+            this.radius = radius;
+        }
+        @Override
+        public Insets getBorderInsets(Component c) {
+            return new Insets(this.radius+1, this.radius+1, this.radius+2, this.radius);
+        }
+
+        @Override
+        public boolean isBorderOpaque() {
+            return true;
+        }
+
+        @Override
+        public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
+            g.drawRoundRect(x,y,width-1,height-1,radius,radius);
+        }
+    }
+    
+    
     public Userprofile(int id) {
         initComponents();
+        jPanel2.setBorder(new RoundedBorder(20));
+        jPanel3.setBorder(new RoundedBorder(20));
         this.id=id;
         try{
            Class.forName("com.mysql.cj.jdbc.Driver");
            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?useSSL=false","root","pavan123");
            Statement stm=con.createStatement();
+           Statement stm1=con.createStatement();
            
            
            //mysql query
            String sql="select * from register where rid="+id;
+           String query2="select * from resumes where rid="+id;
            ResultSet rs=stm.executeQuery(sql);
+           ResultSet rs1=stm1.executeQuery(query2);
+           
+          
            
            String fname,lname;
            if(rs.next()){
@@ -50,7 +89,23 @@ public class Userprofile extends javax.swing.JFrame {
                name.setText(nam);
                phone.setText(rs.getString(4));
                email.setText(rs.getString(5));
+               username.setText(rs.getString(8));
                
+           }
+           
+            int count=0;
+           
+           while(rs1.next()){
+               count++;
+               cvid=rs1.getInt(1);
+               System.out.println("cvid=="+cvid);
+           }
+           
+           if(count==0){
+                resumeCard.setVisible(false);
+           }
+           else{
+               resumebtn.setVisible(false);
            }
            
         }
@@ -64,7 +119,7 @@ public class Userprofile extends javax.swing.JFrame {
         
     }
 
-
+      
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -77,7 +132,7 @@ public class Userprofile extends javax.swing.JFrame {
         evaluatorQuadCurve2D1 = new org.jdesktop.swing.animation.timing.evaluators.EvaluatorQuadCurve2D();
         customUI1 = new necesario.CustomUI();
         kGradientPanel1 = new keeptoo.KGradientPanel();
-        kGradientPanel2 = new keeptoo.KGradientPanel();
+        userPanel = new keeptoo.KGradientPanel();
         jPanel2 = new javax.swing.JPanel();
         avatar = new javax.swing.JLabel();
         name = new javax.swing.JLabel();
@@ -86,6 +141,10 @@ public class Userprofile extends javax.swing.JFrame {
         phone = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         resumebtn = new javax.swing.JButton();
+        resumeCard = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
         kGradientPanel1.setLayout(kGradientPanel1Layout);
@@ -102,10 +161,10 @@ public class Userprofile extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(1920, 1080));
         setPreferredSize(new java.awt.Dimension(1920, 1080));
 
-        kGradientPanel2.setkEndColor(new java.awt.Color(255, 153, 255));
-        kGradientPanel2.setkGradientFocus(600);
-        kGradientPanel2.setkStartColor(new java.awt.Color(153, 204, 255));
-        kGradientPanel2.setPreferredSize(new java.awt.Dimension(1920, 1080));
+        userPanel.setkEndColor(new java.awt.Color(255, 153, 255));
+        userPanel.setkGradientFocus(600);
+        userPanel.setkStartColor(new java.awt.Color(153, 204, 255));
+        userPanel.setPreferredSize(new java.awt.Dimension(1920, 1080));
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setPreferredSize(new java.awt.Dimension(700, 700));
@@ -134,22 +193,17 @@ public class Userprofile extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(271, 271, 271)
-                        .addComponent(username, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(222, 222, 222)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(222, 222, 222)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(phone, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(212, 212, 212)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(avatar, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addGap(0, 279, Short.MAX_VALUE)))
-                .addContainerGap())
+                            .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(phone, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(203, 203, 203)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(avatar, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(199, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -158,13 +212,13 @@ public class Userprofile extends javax.swing.JFrame {
                 .addComponent(avatar, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
+                .addGap(31, 31, 31)
                 .addComponent(phone, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(290, Short.MAX_VALUE))
+                .addContainerGap(277, Short.MAX_VALUE))
         );
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
@@ -177,39 +231,90 @@ public class Userprofile extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Edit");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Preview");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Resume 1");
+
+        javax.swing.GroupLayout resumeCardLayout = new javax.swing.GroupLayout(resumeCard);
+        resumeCard.setLayout(resumeCardLayout);
+        resumeCardLayout.setHorizontalGroup(
+            resumeCardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, resumeCardLayout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 148, Short.MAX_VALUE)
+                .addGroup(resumeCardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton2)
+                    .addComponent(jButton1))
+                .addGap(21, 21, 21))
+        );
+        resumeCardLayout.setVerticalGroup(
+            resumeCardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(resumeCardLayout.createSequentialGroup()
+                .addGroup(resumeCardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(resumeCardLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1))
+                    .addGroup(resumeCardLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton2)
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(52, 52, 52)
-                .addComponent(resumebtn)
-                .addContainerGap(312, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(resumeCard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(152, 152, 152)
+                        .addComponent(resumebtn)))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(143, 143, 143)
+                .addGap(149, 149, 149)
                 .addComponent(resumebtn)
-                .addContainerGap(534, Short.MAX_VALUE))
+                .addGap(100, 100, 100)
+                .addComponent(resumeCard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(308, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout kGradientPanel2Layout = new javax.swing.GroupLayout(kGradientPanel2);
-        kGradientPanel2.setLayout(kGradientPanel2Layout);
-        kGradientPanel2Layout.setHorizontalGroup(
-            kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout userPanelLayout = new javax.swing.GroupLayout(userPanel);
+        userPanel.setLayout(userPanelLayout);
+        userPanelLayout.setHorizontalGroup(
+            userPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(userPanelLayout.createSequentialGroup()
                 .addGap(206, 206, 206)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(514, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 614, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(70, 70, 70)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 559, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(471, Short.MAX_VALUE))
         );
-        kGradientPanel2Layout.setVerticalGroup(
-            kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel2Layout.createSequentialGroup()
+        userPanelLayout.setVerticalGroup(
+            userPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(userPanelLayout.createSequentialGroup()
                 .addGap(82, 82, 82)
-                .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(userPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(298, Short.MAX_VALUE))
@@ -220,12 +325,12 @@ public class Userprofile extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(kGradientPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(userPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(804, 804, 804))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(kGradientPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(userPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -236,6 +341,19 @@ public class Userprofile extends javax.swing.JFrame {
         Homepage home=new Homepage(id);
         home.show();
     }//GEN-LAST:event_resumebtnActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        ResumeGenerator resume=new ResumeGenerator(id,cvid,1);
+        resume.show();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Homepage home=new Homepage(id);
+        home.show();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -259,13 +377,17 @@ public class Userprofile extends javax.swing.JFrame {
     private necesario.CustomUI customUI1;
     private javax.swing.JLabel email;
     private org.jdesktop.swing.animation.timing.evaluators.EvaluatorQuadCurve2D evaluatorQuadCurve2D1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private keeptoo.KGradientPanel kGradientPanel1;
-    private keeptoo.KGradientPanel kGradientPanel2;
     private javax.swing.JLabel name;
     private javax.swing.JLabel phone;
+    private javax.swing.JPanel resumeCard;
     private javax.swing.JButton resumebtn;
+    private keeptoo.KGradientPanel userPanel;
     private javax.swing.JLabel username;
     // End of variables declaration//GEN-END:variables
 

@@ -51,19 +51,19 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <Component id="kGradientPanel2" min="-2" max="-2" attributes="0"/>
+              <Component id="userPanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="804" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="kGradientPanel2" min="-2" max="-2" attributes="0"/>
+          <Component id="userPanel" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="keeptoo.KGradientPanel" name="kGradientPanel2">
+    <Container class="keeptoo.KGradientPanel" name="userPanel">
       <Properties>
         <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="ff" type="rgb"/>
@@ -82,10 +82,10 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="206" max="-2" attributes="0"/>
-                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="514" max="32767" attributes="0"/>
+                  <Component id="jPanel2" min="-2" pref="614" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                  <Component id="jPanel3" min="-2" pref="559" max="-2" attributes="0"/>
+                  <EmptySpace pref="471" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -119,30 +119,22 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="271" max="-2" attributes="0"/>
-                              <Component id="username" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="222" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="222" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="email" min="-2" pref="192" max="-2" attributes="0"/>
-                                          <Component id="phone" alignment="0" min="-2" pref="193" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="212" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="avatar" min="-2" pref="176" max="-2" attributes="0"/>
-                                          <Component id="name" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                                  <Component id="email" min="-2" pref="192" max="-2" attributes="0"/>
+                                  <Component id="phone" alignment="0" min="-2" pref="193" max="-2" attributes="0"/>
+                                  <Component id="username" alignment="0" min="-2" pref="117" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="279" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="203" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="avatar" min="-2" pref="176" max="-2" attributes="0"/>
+                                  <Component id="name" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace pref="199" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -153,13 +145,13 @@
                       <Component id="avatar" min="-2" pref="164" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="name" min="-2" pref="38" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="username" min="-2" pref="28" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Component id="phone" min="-2" pref="28" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="email" min="-2" pref="31" max="-2" attributes="0"/>
-                      <EmptySpace pref="290" max="32767" attributes="0"/>
+                      <EmptySpace pref="277" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -226,17 +218,25 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                      <Component id="resumebtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="312" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="resumeCard" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="152" max="-2" attributes="0"/>
+                              <Component id="resumebtn" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="42" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
                       <Component id="resumebtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="534" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+                      <Component id="resumeCard" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="308" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -250,6 +250,68 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="resumebtnActionPerformed"/>
               </Events>
             </Component>
+            <Container class="javax.swing.JPanel" name="resumeCard">
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" pref="187" max="-2" attributes="0"/>
+                          <EmptySpace pref="148" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="jLabel1" min="-2" pref="38" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="28" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JButton" name="jButton1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Edit"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="jButton2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Preview"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel1">
+                  <Properties>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="Resume 1"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
       </SubComponents>

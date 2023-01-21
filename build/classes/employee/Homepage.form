@@ -80,7 +80,7 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="cc" red="0" type="rgb"/>
+          <Color blue="99" green="99" red="99" type="rgb"/>
         </Property>
       </Properties>
 
@@ -131,6 +131,9 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createresumebuttonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">
           <Properties>
@@ -148,7 +151,7 @@
     <Container class="javax.swing.JPanel" name="jPanel3">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="cc" red="0" type="rgb"/>
+          <Color blue="99" green="99" red="99" type="rgb"/>
         </Property>
       </Properties>
 
@@ -177,7 +180,6 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="PersonalPanel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="AcademicsPanel" min="-2" max="-2" attributes="0"/>
@@ -252,7 +254,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
                       <Component id="AcademicsLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -261,9 +263,9 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                       <Component id="AcademicsLabel" min="-2" pref="27" max="-2" attributes="0"/>
-                      <EmptySpace pref="18" max="32767" attributes="0"/>
+                      <EmptySpace pref="20" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -333,19 +335,19 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
                       <Component id="PrajectsLabel" min="-2" pref="80" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace pref="19" max="32767" attributes="0"/>
                       <Component id="PrajectsLabel" min="-2" pref="32" max="-2" attributes="0"/>
-                      <EmptySpace pref="15" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -396,19 +398,19 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                      <Component id="AchivementsLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="AchivementsLabel" min="-2" pref="110" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="19" max="32767" attributes="0"/>
-                      <Component id="AchivementsLabel" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                      <Component id="AchivementsLabel" min="-2" pref="32" max="-2" attributes="0"/>
+                      <EmptySpace pref="19" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -419,7 +421,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Liberation Sans" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Achivements"/>
+                <Property name="text" type="java.lang.String" value="Achievements"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -437,19 +439,19 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="ExperienceLabel" min="-2" pref="98" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                      <Component id="ExperienceLabel" min="-2" pref="98" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace pref="19" max="32767" attributes="0"/>
                       <Component id="ExperienceLabel" min="-2" pref="32" max="-2" attributes="0"/>
-                      <EmptySpace pref="15" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -504,7 +506,7 @@
                 <Component class="javax.swing.JTextField" name="firstnameinput">
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="450" y="190" width="380" height="52"/>
+                      <AbsoluteConstraints x="450" y="170" width="380" height="52"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -514,7 +516,7 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="450" y="170" width="87" height="-1"/>
+                      <AbsoluteConstraints x="450" y="150" width="87" height="-1"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -524,14 +526,14 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="450" y="260" width="-1" height="-1"/>
+                      <AbsoluteConstraints x="450" y="240" width="-1" height="-1"/>
                     </Constraint>
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="lastnameinput">
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="450" y="290" width="380" height="54"/>
+                      <AbsoluteConstraints x="450" y="270" width="380" height="54"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -569,7 +571,7 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="580" y="580" width="127" height="-1"/>
+                      <AbsoluteConstraints x="580" y="570" width="127" height="-1"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -599,21 +601,21 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="450" y="380" width="380" height="51"/>
+                      <AbsoluteConstraints x="450" y="370" width="380" height="51"/>
                     </Constraint>
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="githuburlinput">
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="320" y="460" width="265" height="49"/>
+                      <AbsoluteConstraints x="320" y="490" width="265" height="49"/>
                     </Constraint>
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="linkdininput">
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="700" y="460" width="298" height="49"/>
+                      <AbsoluteConstraints x="700" y="490" width="298" height="49"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -623,7 +625,7 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="320" y="440" width="160" height="-1"/>
+                      <AbsoluteConstraints x="320" y="470" width="160" height="-1"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -633,7 +635,7 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="700" y="440" width="170" height="-1"/>
+                      <AbsoluteConstraints x="700" y="470" width="170" height="-1"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -828,7 +830,7 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="500" y="470" width="-1" height="-1"/>
+                      <AbsoluteConstraints x="500" y="480" width="-1" height="-1"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -1890,7 +1892,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Continue"/>
+                    <Property name="text" type="java.lang.String" value="Save"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="experiencecontinuebuttonActionPerformed"/>
