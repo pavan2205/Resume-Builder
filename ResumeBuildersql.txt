@@ -1,0 +1,87 @@
+#register table
+create table register(
+rid bigint not null auto_increment,
+fname varchar(100),
+lname varchar(100),
+phone varchar(100),
+email varchar(100),
+password varchar(100),
+avatar longblob,
+username varchar(100),
+primary key(rid));
+
+#resumes
+create table resumes(
+cvid int not null auto_increment,
+rid bigint,
+primary key(cvid),
+foreign key(rid) references register(rid));
+
+#skills
+create table skills(
+sid int not null auto_increment,
+cvid int,
+skillname varchar(100),
+skilldesc varchar(500),
+primary key(sid),
+foreign key(cvid) references resumes(cvid));
+
+#achievements
+create table achievements(
+achievementid int not null auto_increment,
+cvid int,
+achievementname varchar(100),
+achievementdesc varchar(1000),
+primary key(achievementid),
+foreign key(cvid) references resumes(cvid));
+
+#experiences
+create table experience(
+exid int not null auto_increment,
+cvid int,
+companyname varchar(100),
+experiencedesc varchar(1000),
+experienceduration varchar(100)
+primary key(exid),
+foreign key(cvid) references resumes(cvid));
+
+#projects
+create table projects(
+projectid int not null auto_increment,
+cvid int,
+projectname varchar(100),
+projectdesc varchar(500),
+primary key(projectid),
+foreign key(cvid) references resumes(cvid));
+
+#personal
+create table personal(
+pid int not null auto_increment,
+cvid int,
+fname varchar(100),
+lname varchar(100),
+email varchar(100),
+github varchar(100),
+linkedln varchar(100),
+primary key(pid),
+foreign key(cvid) references resumes(cvid));
+
+
+#academic
+create table academics(
+aid int not null auto_increment,
+cvid int,
+pcname varchar(100),
+pcboard varchar(100),
+pcpercentage varchar(100),
+pccourse varchar(100),
+pcyear varchar(100),
+dcname varchar(100),
+dcboard varchar(100),
+dccgpa varchar(100),
+dccourse varchar(100),
+dcyear varchar(100),
+primary key(aid),
+foreign key(cvid) references resumes(cvid));
+
+
