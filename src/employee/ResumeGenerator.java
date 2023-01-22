@@ -40,17 +40,150 @@ public class ResumeGenerator extends javax.swing.JFrame {
     DefaultListModel  skillmodel=new DefaultListModel ();
     JList skillList;
     
-     
+     public ResumeGenerator(int rid,int cvid,int redirect) {
+        this.redirect=redirect;
+        this.cvid=cvid;
+        this.rid=rid;
+      
+        initComponents();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+           Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?useSSL=false","root","pavan123");
+
+           Statement ps1 = con.createStatement();
+           Statement ps2=con.createStatement();
+           Statement ps3=con.createStatement();
+           Statement ps4=con.createStatement();
+           Statement ps5=con.createStatement();
+           Statement ps6=con.createStatement();
+           Statement ps7=con.createStatement();
+           
+           String query1="select * from personal where cvid="+cvid;
+           String query2="select * from academics where cvid="+cvid;
+           String query3="select * from skills where cvid="+cvid;
+           String query4="select * from projects where cvid="+cvid;
+           String query5="select * from achievements where cvid="+cvid;
+           String query6="select * from experience where cvid="+cvid;
+           String query7="select * from register where rid="+rid;
+
+           ResultSet rs1=ps1.executeQuery(query1);
+           ResultSet rs2=ps2.executeQuery(query2);
+           ResultSet rs3=ps3.executeQuery(query3);
+           ResultSet rs4=ps4.executeQuery(query4);
+           ResultSet rs5=ps5.executeQuery(query5);
+           ResultSet rs6=ps6.executeQuery(query6);
+           ResultSet rs7=ps7.executeQuery(query7);
+           
+           
+           //fetch personal content
+           if(rs1.next()){
+               Fnamelabel1.setText(rs1.getString(3));
+               Lnamelabel.setText(rs1.getString(4));
+               email.setText(rs1.getString(5));
+               Githuburllabel.setText(rs1.getString(6));
+               Linkedinurllabel.setText(rs1.getString(7));
+           }
+           if(rs7.next()){
+               phone.setText(rs7.getString(4));
+           }
+           
+           //fetch academics content
+           if(rs2.next()){
+               pcname.setText(rs2.getString(3));
+               pcboard.setText(rs2.getString(4));
+               pcpercentage.setText(rs2.getString(5));
+               pccourse.setText(rs2.getString(6));
+               pcyear.setText(rs2.getString(7));
+               dcname.setText(rs2.getString(8));
+               dcboard.setText(rs2.getString(9));
+               dccgpa.setText(rs2.getString(10));
+               dccourse.setText(rs2.getString(11));
+               dcyear.setText(rs2.getString(12));
+               
+           }
+           
+           
+           
+           
+          //fetch skills contents
+        ArrayList<String> skillList = new ArrayList<String>();
+        
+        while(rs3.next()){
+            String s1=rs3.getString(3);
+            
+            String s2=rs3.getString(4);
+            String s3="<html>&bull;<b>"+s1+"</b><br>&nbsp;&nbsp;"+s2+"</html>";
+            skillList.add(s3);
+        }
+        
+        SkillsList.setModel(new javax.swing.AbstractListModel<String>() {
+            
+            public int getSize() { return skillList.size(); }
+            public String getElementAt(int i) { return skillList.get(i); }
+        });
+        
+        
+        
+        
+        //fetch projects contents
+        ArrayList<String> projectList = new ArrayList<String>();
+        
+        while(rs4.next()){
+            String s1=rs4.getString(3);
+            String s2=rs4.getString(4);
+            String s3="<html>&bull;<b>"+s1+"</b><br>&nbsp;&nbsp;"+s2+"</html>";
+            projectList.add(s3);
+        }
+        ProjectList.setModel(new javax.swing.AbstractListModel<String>() {
+            public int getSize() { return projectList.size(); }
+            public String getElementAt(int i) { return projectList.get(i); }
+        });
+        
+        
+        
+        //fetch achievements contents
+        ArrayList<String> achievementList = new ArrayList<String>();
+        
+        while(rs5.next()){
+            String s1=rs5.getString(3);
+            String s2=rs5.getString(4);
+            String s3="<html>&bull;<b>"+s1+"</b><br>&nbsp;&nbsp;"+s2+"</html>";
+            achievementList.add(s3);
+        }
+        AchivementList.setModel(new javax.swing.AbstractListModel<String>() {
+            public int getSize() { return achievementList.size(); }
+            public String getElementAt(int i) { return achievementList.get(i); }
+        });
+        
+        
+        
+        //fetch experience contents
+        ArrayList<String> experinceList = new ArrayList<String>();
+        
+        while(rs6.next()){
+            String s1=rs6.getString(3);
+            String s2=rs6.getString(4);
+            String s3="<html>&bull;<b>"+s1+"</b><br>&nbsp;&nbsp;"+s2+"</html>";
+            experinceList.add(s3);
+        }
+        ExperienceList.setModel(new javax.swing.AbstractListModel<String>() {
+            public int getSize() { return experinceList.size(); }
+            public String getElementAt(int i) { return experinceList.get(i); }
+        });
+        
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        
+    }
     
     public ResumeGenerator(int rid,int cvid) {
         this.cvid=cvid;
         this.rid=rid;
       
         initComponents();
-        
-     
-        
-        
+       
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?useSSL=false","root","pavan123");
@@ -189,143 +322,7 @@ public class ResumeGenerator extends javax.swing.JFrame {
     
     
     
-    public ResumeGenerator(int rid,int cvid,int redirect) {
-        this.redirect=redirect;
-        this.cvid=cvid;
-        this.rid=rid;
-      
-        initComponents();
-        try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
-           Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?useSSL=false","root","pavan123");
-
-           Statement ps1 = con.createStatement();
-           Statement ps2=con.createStatement();
-           Statement ps3=con.createStatement();
-           Statement ps4=con.createStatement();
-           Statement ps5=con.createStatement();
-           Statement ps6=con.createStatement();
-           Statement ps7=con.createStatement();
-           
-           String query1="select * from personal where cvid="+cvid;
-           String query2="select * from academics where cvid="+cvid;
-           String query3="select * from skills where cvid="+cvid;
-           String query4="select * from projects where cvid="+cvid;
-           String query5="select * from achievements where cvid="+cvid;
-           String query6="select * from experience where cvid="+cvid;
-           String query7="select * from register where rid="+rid;
-
-           ResultSet rs1=ps1.executeQuery(query1);
-           ResultSet rs2=ps2.executeQuery(query2);
-           ResultSet rs3=ps3.executeQuery(query3);
-           ResultSet rs4=ps4.executeQuery(query4);
-           ResultSet rs5=ps5.executeQuery(query5);
-           ResultSet rs6=ps6.executeQuery(query6);
-           ResultSet rs7=ps7.executeQuery(query7);
-           
-           
-           //fetch personal content
-           if(rs1.next()){
-               Fnamelabel1.setText(rs1.getString(3));
-               Lnamelabel.setText(rs1.getString(4));
-               email.setText(rs1.getString(5));
-               Githuburllabel.setText(rs1.getString(6));
-               Linkedinurllabel.setText(rs1.getString(7));
-           }
-           if(rs7.next()){
-               phone.setText(rs7.getString(4));
-           }
-           
-           //fetch academics content
-           if(rs2.next()){
-               pcname.setText(rs2.getString(3));
-               pcboard.setText(rs2.getString(4));
-               pcpercentage.setText(rs2.getString(5));
-               pccourse.setText(rs2.getString(6));
-               pcyear.setText(rs2.getString(7));
-               dcname.setText(rs2.getString(8));
-               dcboard.setText(rs2.getString(9));
-               dccgpa.setText(rs2.getString(10));
-               dccourse.setText(rs2.getString(11));
-               dcyear.setText(rs2.getString(12));
-               
-           }
-           
-           
-           
-           
-          //fetch skills contents
-        ArrayList<String> skillList = new ArrayList<String>();
-        
-        while(rs3.next()){
-            String s1=rs3.getString(3);
-            
-            String s2=rs3.getString(4);
-            String s3="<html>&bull;<b>"+s1+"</b><br>&nbsp;&nbsp;"+s2+"</html>";
-            skillList.add(s3);
-        }
-        
-        SkillsList.setModel(new javax.swing.AbstractListModel<String>() {
-            
-            public int getSize() { return skillList.size(); }
-            public String getElementAt(int i) { return skillList.get(i); }
-        });
-        
-        
-        
-        
-        //fetch projects contents
-        ArrayList<String> projectList = new ArrayList<String>();
-        
-        while(rs4.next()){
-            String s1=rs4.getString(3);
-            String s2=rs4.getString(4);
-            String s3="<html>&bull;<b>"+s1+"</b><br>&nbsp;&nbsp;"+s2+"</html>";
-            projectList.add(s3);
-        }
-        ProjectList.setModel(new javax.swing.AbstractListModel<String>() {
-            public int getSize() { return projectList.size(); }
-            public String getElementAt(int i) { return projectList.get(i); }
-        });
-        
-        
-        
-        //fetch achievements contents
-        ArrayList<String> achievementList = new ArrayList<String>();
-        
-        while(rs5.next()){
-            String s1=rs5.getString(3);
-            String s2=rs5.getString(4);
-            String s3="<html>&bull;<b>"+s1+"</b><br>&nbsp;&nbsp;"+s2+"</html>";
-            achievementList.add(s3);
-        }
-        AchivementList.setModel(new javax.swing.AbstractListModel<String>() {
-            public int getSize() { return achievementList.size(); }
-            public String getElementAt(int i) { return achievementList.get(i); }
-        });
-        
-        
-        
-        //fetch experience contents
-        ArrayList<String> experinceList = new ArrayList<String>();
-        
-        while(rs6.next()){
-            String s1=rs6.getString(3);
-            String s2=rs6.getString(4);
-            String s3="<html>&bull;<b>"+s1+"</b><br>&nbsp;&nbsp;"+s2+"</html>";
-            experinceList.add(s3);
-        }
-        ExperienceList.setModel(new javax.swing.AbstractListModel<String>() {
-            public int getSize() { return experinceList.size(); }
-            public String getElementAt(int i) { return experinceList.get(i); }
-        });
-        
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-        
-    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.

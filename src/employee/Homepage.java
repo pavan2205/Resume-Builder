@@ -63,7 +63,7 @@ public class Homepage extends javax.swing.JFrame {
            while(rs2.next()){
                count++;
            }
-           System.out.println(count);
+           
            if(count<1){
                    query="INSERT INTO resumes(rid)values(?)";
                    ps2=con.prepareStatement(query);
@@ -171,7 +171,7 @@ public class Homepage extends javax.swing.JFrame {
         }
         String check2=puccollagenameinput.getText();
         chk2=check2.isEmpty();
-        System.out.print(chk2);
+       
         
         
         
@@ -485,7 +485,8 @@ public class Homepage extends javax.swing.JFrame {
         setBackground(new java.awt.Color(204, 255, 255));
         setMaximumSize(new java.awt.Dimension(1920, 1080));
 
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(51, 204, 255));
+        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 153, 255), 5, true));
 
         createresumebutton.setBackground(new java.awt.Color(153, 153, 255));
         createresumebutton.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
@@ -499,8 +500,8 @@ public class Homepage extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Liberation Sans", 0, 48)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel7.setFont(new java.awt.Font("Agency FB", 1, 48)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("ResumeBuilder.io");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -524,16 +525,17 @@ public class Homepage extends javax.swing.JFrame {
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel3.setBackground(new java.awt.Color(51, 204, 255));
 
-        PersonalPanel.setBackground(new java.awt.Color(153, 153, 255));
+        PersonalPanel.setBackground(new java.awt.Color(102, 153, 255));
+        PersonalPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         PersonalPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 hover(evt);
             }
         });
 
-        PersonalLabel.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        PersonalLabel.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         PersonalLabel.setText("personal");
 
         javax.swing.GroupLayout PersonalPanelLayout = new javax.swing.GroupLayout(PersonalPanel);
@@ -553,14 +555,15 @@ public class Homepage extends javax.swing.JFrame {
                 .addGap(20, 20, 20))
         );
 
-        AcademicsPanel.setBackground(new java.awt.Color(255, 255, 255));
+        AcademicsPanel.setBackground(new java.awt.Color(178, 229, 255));
+        AcademicsPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         AcademicsPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 hover(evt);
             }
         });
 
-        AcademicsLabel.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        AcademicsLabel.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         AcademicsLabel.setText("Academics");
 
         javax.swing.GroupLayout AcademicsPanelLayout = new javax.swing.GroupLayout(AcademicsPanel);
@@ -580,14 +583,15 @@ public class Homepage extends javax.swing.JFrame {
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        SkillsPanel.setBackground(new java.awt.Color(255, 255, 255));
+        SkillsPanel.setBackground(new java.awt.Color(178, 229, 255));
+        SkillsPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         SkillsPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 hover(evt);
             }
         });
 
-        SkillsLabel.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        SkillsLabel.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         SkillsLabel.setText("Skills");
 
         javax.swing.GroupLayout SkillsPanelLayout = new javax.swing.GroupLayout(SkillsPanel);
@@ -595,7 +599,7 @@ public class Homepage extends javax.swing.JFrame {
         SkillsPanelLayout.setHorizontalGroup(
             SkillsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SkillsPanelLayout.createSequentialGroup()
-                .addGap(109, 109, 109)
+                .addGap(102, 102, 102)
                 .addComponent(SkillsLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -607,14 +611,15 @@ public class Homepage extends javax.swing.JFrame {
                 .addGap(14, 14, 14))
         );
 
-        ProjectsPanel.setBackground(new java.awt.Color(255, 255, 255));
+        ProjectsPanel.setBackground(new java.awt.Color(178, 229, 255));
+        ProjectsPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         ProjectsPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 hover(evt);
             }
         });
 
-        PrajectsLabel.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        PrajectsLabel.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         PrajectsLabel.setText("Projects");
 
         javax.swing.GroupLayout ProjectsPanelLayout = new javax.swing.GroupLayout(ProjectsPanel);
@@ -645,14 +650,15 @@ public class Homepage extends javax.swing.JFrame {
             }
         });
 
-        AchivementsPanel.setBackground(new java.awt.Color(255, 255, 255));
+        AchivementsPanel.setBackground(new java.awt.Color(178, 229, 255));
+        AchivementsPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         AchivementsPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 hover(evt);
             }
         });
 
-        AchivementsLabel.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        AchivementsLabel.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         AchivementsLabel.setText("Achievements");
 
         javax.swing.GroupLayout AchivementsPanelLayout = new javax.swing.GroupLayout(AchivementsPanel);
@@ -660,7 +666,7 @@ public class Homepage extends javax.swing.JFrame {
         AchivementsPanelLayout.setHorizontalGroup(
             AchivementsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AchivementsPanelLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
+                .addGap(70, 70, 70)
                 .addComponent(AchivementsLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -672,14 +678,15 @@ public class Homepage extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        ExperiencePanel.setBackground(new java.awt.Color(255, 255, 255));
+        ExperiencePanel.setBackground(new java.awt.Color(178, 229, 255));
+        ExperiencePanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         ExperiencePanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 hover(evt);
             }
         });
 
-        ExperienceLabel.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        ExperienceLabel.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         ExperienceLabel.setText("Experience");
 
         javax.swing.GroupLayout ExperiencePanelLayout = new javax.swing.GroupLayout(ExperiencePanel);
@@ -687,16 +694,16 @@ public class Homepage extends javax.swing.JFrame {
         ExperiencePanelLayout.setHorizontalGroup(
             ExperiencePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ExperiencePanelLayout.createSequentialGroup()
-                .addGap(84, 84, 84)
-                .addComponent(ExperienceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(76, 76, 76)
+                .addComponent(ExperienceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ExperiencePanelLayout.setVerticalGroup(
             ExperiencePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ExperiencePanelLayout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
+                .addContainerGap(20, Short.MAX_VALUE)
                 .addComponent(ExperienceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
+                .addGap(16, 16, 16))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -742,6 +749,13 @@ public class Homepage extends javax.swing.JFrame {
 
         PersonalContentPanel.setBackground(new java.awt.Color(255, 255, 255));
         PersonalContentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        firstnameinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        firstnameinput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                firstnameinputActionPerformed(evt);
+            }
+        });
         PersonalContentPanel.add(firstnameinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 380, 52));
 
         jLabel6.setText("First Name");
@@ -749,6 +763,8 @@ public class Homepage extends javax.swing.JFrame {
 
         jLabel8.setText("Last Name");
         PersonalContentPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, -1, -1));
+
+        lastnameinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         PersonalContentPanel.add(lastnameinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 270, 380, 54));
 
         jLabel9.setFont(new java.awt.Font("Liberation Sans", 1, 48)); // NOI18N
@@ -773,14 +789,19 @@ public class Homepage extends javax.swing.JFrame {
         jLabel11.setText("Email");
         PersonalContentPanel.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 50, -1));
 
+        emailinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         emailinput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailinputActionPerformed(evt);
             }
         });
         PersonalContentPanel.add(emailinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 370, 380, 51));
-        PersonalContentPanel.add(githuburlinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 490, 265, 49));
-        PersonalContentPanel.add(linkdininput, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 490, 298, 49));
+
+        githuburlinput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        PersonalContentPanel.add(githuburlinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 490, 410, 49));
+
+        linkdininput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        PersonalContentPanel.add(linkdininput, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 490, 400, 49));
 
         jLabel12.setText("Github URL(Optional)");
         PersonalContentPanel.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 160, -1));
@@ -800,45 +821,85 @@ public class Homepage extends javax.swing.JFrame {
 
         jLabel14.setText("You are done with personal details,now you can continue with your academic details!");
         AcademicContentPanel.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 60, -1, 21));
+
+        puccollagenameinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         AcademicContentPanel.add(puccollagenameinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 357, 45));
 
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(102, 102, 102));
         jLabel15.setText("Degree Collage name");
         AcademicContentPanel.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, -1, -1));
+
+        pucpercentageinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         AcademicContentPanel.add(pucpercentageinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 160, 145, 43));
+
+        degreecgpainput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         AcademicContentPanel.add(degreecgpainput, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 420, 145, 43));
+
+        degreecollageinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         AcademicContentPanel.add(degreecollageinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 420, 357, 43));
 
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(102, 102, 102));
         jLabel16.setText("percentage%");
         AcademicContentPanel.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 140, -1, -1));
 
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(102, 102, 102));
         jLabel17.setText("PUC Collage name ");
         AcademicContentPanel.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, -1, -1));
 
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(102, 102, 102));
         jLabel18.setText("CGPA");
         AcademicContentPanel.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 400, -1, -1));
+
+        pucboardinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         AcademicContentPanel.add(pucboardinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 160, 209, 45));
 
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(102, 102, 102));
         jLabel19.setText("Board");
         AcademicContentPanel.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 140, -1, -1));
+
+        degreeboardinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         AcademicContentPanel.add(degreeboardinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 420, 209, 45));
 
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(102, 102, 102));
         jLabel20.setText("Board");
         AcademicContentPanel.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 400, -1, -1));
+
+        puccourseinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         AcademicContentPanel.add(puccourseinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 311, 48));
 
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(102, 102, 102));
         jLabel21.setText("Course");
         AcademicContentPanel.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, -1, -1));
 
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(102, 102, 102));
         jLabel22.setText("Year");
         AcademicContentPanel.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, -1, -1));
 
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(102, 102, 102));
         jLabel23.setText("course");
         AcademicContentPanel.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 470, -1, 24));
 
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(102, 102, 102));
         jLabel24.setText("Year");
         AcademicContentPanel.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 480, -1, -1));
+
+        degreecourseinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         AcademicContentPanel.add(degreecourseinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, 311, 48));
+
+        pucyearinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         AcademicContentPanel.add(pucyearinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, 158, 48));
+
+        degreeyearinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         AcademicContentPanel.add(degreeyearinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 500, 158, 48));
 
         jLabel25.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
@@ -885,7 +946,7 @@ public class Homepage extends javax.swing.JFrame {
                 skilladdonemorebuttonActionPerformed(evt);
             }
         });
-        SkillsContentPanel.add(skilladdonemorebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 500, 734, 54));
+        SkillsContentPanel.add(skilladdonemorebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 510, 734, 54));
 
         skillscontinuebutton.setBackground(new java.awt.Color(0, 153, 255));
         skillscontinuebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
@@ -898,11 +959,14 @@ public class Homepage extends javax.swing.JFrame {
         });
         SkillsContentPanel.add(skillscontinuebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 610, 195, 47));
 
-        jPanel4.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel4.setBackground(new java.awt.Color(153, 204, 255));
 
+        skillsearchtextbox.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         skillsearchtextbox.setText("Enter the skill name");
 
+        skillsearchbutton.setBackground(new java.awt.Color(102, 153, 255));
         skillsearchbutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        skillsearchbutton.setForeground(new java.awt.Color(255, 255, 255));
         skillsearchbutton.setText("s");
         skillsearchbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -912,13 +976,19 @@ public class Homepage extends javax.swing.JFrame {
 
         jLabel28.setText("Skill Name");
 
+        skillnameinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
         jLabel29.setText("Skill Description");
 
         skilldescriptioninput.setColumns(20);
+        skilldescriptioninput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         skilldescriptioninput.setRows(5);
         jScrollPane2.setViewportView(skilldescriptioninput);
 
-        skilldeletebutton.setText("del");
+        skilldeletebutton.setBackground(new java.awt.Color(102, 153, 255));
+        skilldeletebutton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        skilldeletebutton.setForeground(new java.awt.Color(255, 255, 255));
+        skilldeletebutton.setText("Del");
         skilldeletebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 skilldeletebuttonActionPerformed(evt);
@@ -1011,11 +1081,14 @@ public class Homepage extends javax.swing.JFrame {
             }
         });
 
-        jPanel5.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel5.setBackground(new java.awt.Color(153, 204, 255));
 
+        projectsearchtextfield.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         projectsearchtextfield.setText("Enter the project name");
 
+        Projectsearchbutton.setBackground(new java.awt.Color(102, 153, 255));
         Projectsearchbutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        Projectsearchbutton.setForeground(new java.awt.Color(255, 255, 255));
         Projectsearchbutton.setText("s");
         Projectsearchbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1025,13 +1098,19 @@ public class Homepage extends javax.swing.JFrame {
 
         jLabel30.setText("project name");
 
+        projectnameinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
         jLabel31.setText("project description");
 
         projectdescriptioninput.setColumns(20);
+        projectdescriptioninput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         projectdescriptioninput.setRows(5);
         jScrollPane3.setViewportView(projectdescriptioninput);
 
-        projectdeletebutton.setText("del");
+        projectdeletebutton.setBackground(new java.awt.Color(102, 153, 255));
+        projectdeletebutton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        projectdeletebutton.setForeground(new java.awt.Color(255, 255, 255));
+        projectdeletebutton.setText("Del");
         projectdeletebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 projectdeletebuttonActionPerformed(evt);
@@ -1048,7 +1127,7 @@ public class Homepage extends javax.swing.JFrame {
                     .addComponent(jLabel30)
                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(jPanel5Layout.createSequentialGroup()
-                            .addComponent(projectsearchtextfield)
+                            .addComponent(projectsearchtextfield, javax.swing.GroupLayout.DEFAULT_SIZE, 604, Short.MAX_VALUE)
                             .addGap(18, 18, 18)
                             .addComponent(Projectsearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
@@ -1056,8 +1135,8 @@ public class Homepage extends javax.swing.JFrame {
                                 .addComponent(jLabel31)
                                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(projectnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
-                            .addComponent(projectdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(projectdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -1112,7 +1191,7 @@ public class Homepage extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(projectcontinuebutton1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(projectaddonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 734, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(615, Short.MAX_VALUE))
+                .addContainerGap(609, Short.MAX_VALUE))
         );
         ProjectsContentPanelLayout.setVerticalGroup(
             ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1129,7 +1208,7 @@ public class Homepage extends javax.swing.JFrame {
                 .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(projectupdatebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(projectcontinuebutton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(309, Short.MAX_VALUE))
+                .addContainerGap(276, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab4", ProjectsContentPanel);
@@ -1167,11 +1246,14 @@ public class Homepage extends javax.swing.JFrame {
         });
         AchivementsContentPanel.add(achivementcontinuebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 600, 195, 47));
 
-        jPanel6.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel6.setBackground(new java.awt.Color(153, 204, 255));
 
+        achivementssearchtextbox.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         achivementssearchtextbox.setText("Achivements");
 
+        achivementssearchbutton.setBackground(new java.awt.Color(102, 153, 255));
         achivementssearchbutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        achivementssearchbutton.setForeground(new java.awt.Color(255, 255, 255));
         achivementssearchbutton.setText("s");
         achivementssearchbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1181,12 +1263,18 @@ public class Homepage extends javax.swing.JFrame {
 
         jLabel38.setText("Achivement name");
 
+        achivementnameinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
         jLabel39.setText("Achivement description");
 
         achivementdescriptioninput.setColumns(20);
+        achivementdescriptioninput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         achivementdescriptioninput.setRows(5);
         jScrollPane5.setViewportView(achivementdescriptioninput);
 
+        achivementdeletebutton.setBackground(new java.awt.Color(102, 153, 255));
+        achivementdeletebutton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        achivementdeletebutton.setForeground(new java.awt.Color(255, 255, 255));
         achivementdeletebutton.setText("del");
         achivementdeletebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1200,21 +1288,21 @@ public class Homepage extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel38)
-                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel38)
                         .addGroup(jPanel6Layout.createSequentialGroup()
-                            .addComponent(achivementssearchtextbox)
-                            .addGap(18, 18, 18)
-                            .addComponent(achivementssearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
-                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel39)
-                                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(achivementnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
-                            .addComponent(achivementdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(achivementssearchtextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 604, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(achivementssearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel39)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(achivementnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(achivementdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1224,20 +1312,20 @@ public class Homepage extends javax.swing.JFrame {
                     .addComponent(achivementssearchtextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(achivementssearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addComponent(jLabel38)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jLabel38)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(achivementnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel39)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(achivementdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(achivementdeletebutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        AchivementsContentPanel.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 750, 310));
+        AchivementsContentPanel.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 750, 330));
 
         achivementupdatebutton.setBackground(new java.awt.Color(0, 153, 255));
         achivementupdatebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
@@ -1283,17 +1371,22 @@ public class Homepage extends javax.swing.JFrame {
                 experienceaddonemorebuttonActionPerformed(evt);
             }
         });
-        ExperienceContentPanel.add(experienceaddonemorebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 510, 720, 54));
+        ExperienceContentPanel.add(experienceaddonemorebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 510, 730, 54));
 
-        experiencelist.setBackground(new java.awt.Color(153, 153, 255));
+        experiencelist.setBackground(new java.awt.Color(153, 204, 255));
 
         jLabel1.setText("company");
+
+        companynameinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         jLabel2.setText("Role Description");
 
         jLabel3.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
         jLabel3.setText("Duration:");
 
+        experiencedeletebutton.setBackground(new java.awt.Color(102, 153, 255));
+        experiencedeletebutton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        experiencedeletebutton.setForeground(new java.awt.Color(255, 255, 255));
         experiencedeletebutton.setText("del");
         experiencedeletebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1301,15 +1394,25 @@ public class Homepage extends javax.swing.JFrame {
             }
         });
 
+        experiencedurationdropdown.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         experiencedurationdropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "1", "2", "3", "4", "5", "5+" }));
+        experiencedurationdropdown.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                experiencedurationdropdownActionPerformed(evt);
+            }
+        });
 
         roledescriptioninput.setColumns(20);
+        roledescriptioninput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         roledescriptioninput.setRows(5);
         jScrollPane1.setViewportView(roledescriptioninput);
 
+        experiencesearchtextbox.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         experiencesearchtextbox.setText("search experience by company");
 
+        experiencesearchbutton.setBackground(new java.awt.Color(102, 153, 255));
         experiencesearchbutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        experiencesearchbutton.setForeground(new java.awt.Color(255, 255, 255));
         experiencesearchbutton.setText("s");
         experiencesearchbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1352,25 +1455,24 @@ public class Homepage extends javax.swing.JFrame {
                 .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(experiencesearchtextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(experiencesearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(experiencelistLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(experiencedeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(24, Short.MAX_VALUE))
-                    .addGroup(experiencelistLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(companynameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                         .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel3)
                                 .addComponent(jLabel2))
                             .addComponent(experiencedurationdropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14))))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(experiencelistLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(experiencedeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(14, 14, 14))
         );
 
         ExperienceContentPanel.add(experiencelist, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 171, 720, 330));
@@ -1419,35 +1521,36 @@ public class Homepage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     private void setActiveState(JPanel panel,int index){
-        PersonalPanel.setBackground(Color.white);
-        AcademicsPanel.setBackground(Color.white);
-        SkillsPanel.setBackground(Color.white);
-        ExperiencePanel.setBackground(Color.white);
-        ProjectsPanel.setBackground(Color.white);
-        AchivementsPanel.setBackground(Color.white);
+        PersonalPanel.setBackground(new Color(178,229,255));
+        AcademicsPanel.setBackground(new Color(178,229,255));
+        SkillsPanel.setBackground(new Color(178,229,255));
+        ExperiencePanel.setBackground(new Color(178,229,255));
+        ProjectsPanel.setBackground(new Color(178,229,255));
+        AchivementsPanel.setBackground(new Color(178,229,255));
         switch (index) {
             case 0 -> {
-                panel.setBackground(new Color(153,153,255));
+                panel.setBackground(new Color(102,153,255));
                 jTabbedPane1.setSelectedIndex(index);
+                
             }
             case 1 -> {
-                panel.setBackground(new Color(153,153,255));
+                panel.setBackground(new Color(102,153,255));
                 jTabbedPane1.setSelectedIndex(index);
             }
             case 2 -> {
-                panel.setBackground(new Color(153,153,255));
+                panel.setBackground(new Color(102,153,255));
                 jTabbedPane1.setSelectedIndex(index);
             }
             case 3 -> {
-                panel.setBackground(new Color(153,153,255));
+                panel.setBackground(new Color(102,153,255));
                 jTabbedPane1.setSelectedIndex(index);
             }
             case 4 -> {
-                panel.setBackground(new Color(153,153,255));
+                panel.setBackground(new Color(102,153,255));
                 jTabbedPane1.setSelectedIndex(index);
             }
             case 5 -> {
-                panel.setBackground(new Color(153,153,255));
+                panel.setBackground(new Color(102,153,255));
                 jTabbedPane1.setSelectedIndex(index);
             }
             default -> System.out.println("not a valid option");
@@ -2598,6 +2701,14 @@ public class Homepage extends javax.swing.JFrame {
         ResumeGenerator rg=new ResumeGenerator(id,cvid);
         rg.show();
     }//GEN-LAST:event_createresumebuttonActionPerformed
+
+    private void firstnameinputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstnameinputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_firstnameinputActionPerformed
+
+    private void experiencedurationdropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_experiencedurationdropdownActionPerformed
+         // TODO add your handling code here:
+    }//GEN-LAST:event_experiencedurationdropdownActionPerformed
     
     
     /**
