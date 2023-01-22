@@ -16,7 +16,7 @@ import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
 import java.io.File;
 
 public class PDFGenerator {
-    public void CreatePdf() throws Exception {
+    public void CreatePdf(int cvid) throws Exception {
         // Create a new document
         PDDocument document = new PDDocument();
         
@@ -27,7 +27,7 @@ public class PDFGenerator {
         document.addPage(page);
         String path = System.getProperty("user.home") + File.separator +"Desktop";
         // Create a file object for the image
-        File imageFile = new File(path+File.separator+"resume.jpeg");
+        File imageFile = new File(path+File.separator+"resume"+cvid+".jpeg");
         
         // Create an image object from the file
         PDImageXObject image = PDImageXObject.createFromFile(imageFile.getAbsolutePath(), document);

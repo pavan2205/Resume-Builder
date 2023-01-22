@@ -1761,6 +1761,7 @@ public class Homepage extends javax.swing.JFrame {
         }
         catch(Exception e){
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(this, e);
         }
         finally{
             chk3=false;
@@ -1853,6 +1854,7 @@ public class Homepage extends javax.swing.JFrame {
         }
         catch(Exception e){
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(this, e);
         }
         
         
@@ -1969,6 +1971,7 @@ public class Homepage extends javax.swing.JFrame {
         }
         catch(Exception e){
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(this, e);
         }
         
         projectnameinput.setText(null);
@@ -2064,6 +2067,7 @@ public class Homepage extends javax.swing.JFrame {
         }
         catch(Exception e){
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(this, e);
         }
         finally{
             chk4=false;
@@ -2224,6 +2228,7 @@ public class Homepage extends javax.swing.JFrame {
         }
         catch(Exception e){
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(this, e);
         }
         finally{
             chk5=false;
@@ -2346,6 +2351,7 @@ public class Homepage extends javax.swing.JFrame {
         }
         catch(Exception e){
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(this, e);
         }
         
         achivementnameinput.setText(null);
@@ -2483,6 +2489,7 @@ public class Homepage extends javax.swing.JFrame {
         }
         catch(Exception e){
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(this, e);
         }
         
         companynameinput.setText(null);
@@ -2528,6 +2535,7 @@ public class Homepage extends javax.swing.JFrame {
         }
         catch(Exception e){
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(this, e);
         }
         finally{
             chk6=false;

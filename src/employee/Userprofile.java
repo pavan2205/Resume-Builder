@@ -4,11 +4,14 @@
  */
 package employee;
 
+import com.mysql.cj.jdbc.Blob;
 import java.awt.Component;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Insets;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.sql.Connection;
@@ -35,7 +38,16 @@ public class Userprofile extends javax.swing.JFrame {
      * Creates new form Userprofile
      */
     
-    
+    public static BufferedImage resize(BufferedImage img, int newW, int newH) { 
+    Image tmp = img.getScaledInstance(newW, newH, Image.SCALE_SMOOTH);
+    BufferedImage dimg = new BufferedImage(newW, newH, BufferedImage.TYPE_INT_ARGB);
+
+    Graphics2D g2d = dimg.createGraphics();
+    g2d.drawImage(tmp, 0, 0, null);
+    g2d.dispose();
+
+    return dimg;
+}  
     
     private static class RoundedBorder implements Border {
         
@@ -90,7 +102,13 @@ public class Userprofile extends javax.swing.JFrame {
                phone.setText(rs.getString(4));
                email.setText(rs.getString(5));
                username.setText(rs.getString(8));
-               
+               java.sql.Blob blob = rs.getBlob(7);
+
+                int blobLength = (int) blob.length();
+
+                byte[] blobAsBytes = blob.getBytes(1, blobLength);
+                final BufferedImage bufferedImage = ImageIO.read(new ByteArrayInputStream(blobAsBytes));
+                avatar.setIcon(new ImageIcon(resize(bufferedImage,130,150)));
            }
            
             int count=0;

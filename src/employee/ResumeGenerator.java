@@ -16,6 +16,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
@@ -690,8 +692,14 @@ public class ResumeGenerator extends javax.swing.JFrame {
     }//GEN-LAST:event_backActionPerformed
 
     private void printActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printActionPerformed
-        // TODO add your handling code here:
-       saveImage(resumePanel);
+        try {
+            // TODO add your handling code here:
+            saveImage(resumePanel);
+            PDFGenerator pdf=new PDFGenerator();
+            pdf.CreatePdf(cvid);
+        } catch (Exception ex) {
+            Logger.getLogger(ResumeGenerator.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_printActionPerformed
 
     private void saveImage(JPanel panel){ 

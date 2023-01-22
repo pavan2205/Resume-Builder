@@ -5,17 +5,23 @@
 package employee;
 
 import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
+import javax.sql.rowset.serial.*;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -277,7 +283,7 @@ public class Signup extends javax.swing.JFrame {
            ps.setString(3, phon);
            ps.setString(4, emai);
            ps.setString(5, passwor);
-           ps.setBytes(6,avatar);
+           ps.setBlob(6, new SerialBlob(avatar));
            ps.setString(7, usernam);
            
            
@@ -310,26 +316,41 @@ public class Signup extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void uploadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uploadButtonActionPerformed
-        // TODO add your handling code here:
-        JFileChooser chooser=new JFileChooser();
-        chooser.showOpenDialog(null);
-        File f=chooser.getSelectedFile();
-        ImageIcon icon=new ImageIcon(new ImageIcon(f.toString()).getImage().getScaledInstance(80, 80,Image.SCALE_DEFAULT));
-        avatarIcon.setIcon(icon);
-        filename=f.getAbsolutePath();
+        try{                                             
+            // TODO add your handling code here:
+            JFileChooser chooser=new JFileChooser();
+            chooser.showOpenDialog(null);
+            File f=chooser.getSelectedFile();
+            ImageIcon icon=new ImageIcon(new ImageIcon(f.toString()).getImage().getScaledInstance(80, 80,Image.SCALE_DEFAULT));
+            avatarIcon.setIcon(icon);
+           
+//            File image=new File(filename);
+//            FileInputStream fis= new  FileInputStream(image);
+//            ByteArrayOutputStream bos=new ByteArrayOutputStream();
+//            byte[] buf=new byte[1024];
+//            for (int readNum; (readNum=fis.read(buf) ) !=-1;){
+//                bos.write(buf,0,readNum);
+//            }
+             File imageFile = new File(f.getAbsolutePath());
+        BufferedImage image = ImageIO.read(imageFile);
+
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+       
+if (imageFile.getName().endsWith(".jpg")) {
+    ImageIO.write(image, "jpg", baos);
+} else if (imageFile.getName().endsWith(".jpeg")) {
+   ImageIO.write(image, "jpeg", baos);
+}else{
+    ImageIO.write(image, "png", baos);
+}
         
-        try{
-            File image=new File(filename);
-            FileInputStream fis= new  FileInputStream(image);
-            ByteArrayOutputStream bos=new ByteArrayOutputStream();
-            byte[] buf=new byte[1024];
-            for (int readNum; (readNum=fis.read(buf) ) !=-1;){
-                bos.write(buf,0,readNum);
-            }
-            avatar=bos.toByteArray();
+        baos.flush();
+        avatar = baos.toByteArray();
+
         }
-        catch(Exception e){
-        };
+        catch(IOException ex){
+            Logger.getLogger(Signup.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_uploadButtonActionPerformed
 
     private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
@@ -401,6 +422,6 @@ public class Signup extends javax.swing.JFrame {
     private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables
 
-byte[] avatar=null;
+byte [] avatar=null;
 String filename=null;
 }
