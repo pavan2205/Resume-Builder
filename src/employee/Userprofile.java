@@ -38,6 +38,7 @@ import javax.swing.JPanel;
 import java.awt.Graphics;
 import java.awt.Shape;
 import java.awt.geom.RoundRectangle2D;
+import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 /**
  *
@@ -163,6 +164,7 @@ public class Userprofile extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
         newResumePanel = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -198,6 +200,11 @@ public class Userprofile extends javax.swing.JFrame {
         avatar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         avatar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/icons/signin-image.jpg"))); // NOI18N
         avatar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 255), 5, true));
+        avatar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                avatarKeyPressed(evt);
+            }
+        });
 
         contentCard.setBackground(new java.awt.Color(102, 204, 255));
         contentCard.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 7, true));
@@ -315,8 +322,8 @@ public class Userprofile extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(0, 153, 255));
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/pen.png"))); // NOI18N
+        jButton6.setBackground(new java.awt.Color(255, 51, 51));
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/delete.png"))); // NOI18N
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -328,18 +335,28 @@ public class Userprofile extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Resume");
 
+        jButton7.setBackground(new java.awt.Color(0, 153, 255));
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/pen.png"))); // NOI18N
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout resumeCardLayout = new javax.swing.GroupLayout(resumeCard);
         resumeCard.setLayout(resumeCardLayout);
         resumeCardLayout.setHorizontalGroup(
             resumeCardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, resumeCardLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
+                .addGap(10, 10, 10))
         );
         resumeCardLayout.setVerticalGroup(
             resumeCardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -348,7 +365,8 @@ public class Userprofile extends javax.swing.JFrame {
                 .addGroup(resumeCardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
@@ -404,9 +422,9 @@ public class Userprofile extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                    .addContainerGap(85, Short.MAX_VALUE)
+                    .addContainerGap(49, Short.MAX_VALUE)
                     .addComponent(resumeCard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(58, Short.MAX_VALUE)))
+                    .addContainerGap(43, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -459,14 +477,34 @@ public class Userprofile extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-         Homepage home=new Homepage(id);
-        home.show();
+         
+        ImageIcon icon = new ImageIcon("C:\\Users\\pavan\\OneDrive\\Documents\\NetBeansProjects\\Employee\\src\\employee\\delete_gif.gif");
+        int result = JOptionPane.showConfirmDialog(null, "Are you sure?", "Warning!!!", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, icon);
+       
+        if(result==0){
+            try{
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?useSSL=false","root","pavan123");
+                PreparedStatement ps;
+                String query="delete from resumes where cvid="+cvid;
+                ps=con.prepareStatement(query);
+                int count=ps.executeUpdate();
+                newResumePanel.setVisible(true);
+                resumeCard.setVisible(false);
+                
+            }
+            catch(Exception e){
+                System.out.println(e.getMessage());
+            }
+        }
+        
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Homepage home=new Homepage(id);
-        home.show();
+       dispose();
+       Homepage home=new Homepage(id);
+       home.show();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -475,6 +513,16 @@ public class Userprofile extends javax.swing.JFrame {
         Login log=new Login();
         log.show();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+         Homepage home=new Homepage(id);
+        home.show();
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void avatarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_avatarKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_avatarKeyPressed
 
     /**
      * @param args the command line arguments
@@ -505,6 +553,7 @@ public class Userprofile extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;

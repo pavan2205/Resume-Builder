@@ -42,6 +42,29 @@ public class Homepage extends javax.swing.JFrame {
         this.id=id;
         
         initComponents();
+        
+////        fetch from register fname,lname and email 
+//        try{
+//        Class.forName("com.mysql.cj.jdbc.Driver");
+//           Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?useSSL=false","root","pavan123");
+//           
+//           Statement ps11 = con.createStatement();
+//            String query13="select * from register where rid="+id;
+//               ResultSet rs12=ps11.executeQuery(query13);
+//               if(rs12.next()){
+//                   firstnameinput.setText(rs12.getString(2));
+//                   lastnameinput.setText(rs12.getString(3));
+//                   emailinput.setText(rs12.getString(5));
+//               }
+//               con.close();
+//
+//        }catch(Exception e){
+//            System.out.println(e.getMessage());
+//        }
+        
+        
+        
+        
          //fetch  rid , cvid
         try{
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -115,6 +138,7 @@ public class Homepage extends javax.swing.JFrame {
                    emailinput.setText(rs2.getString(5));
                    githuburlinput.setText(rs2.getString(6));
                    linkdininput.setText(rs2.getString(7));
+                   phoneinput.setText(rs2.getString(8));
                }
                
            }
@@ -124,7 +148,7 @@ public class Homepage extends javax.swing.JFrame {
         catch(Exception e){
             System.out.println(e.getMessage());
         }
-        String check1=firstnameinput.getText();
+        String check1=emailinput.getText();
         chk1=check1.isEmpty();
 
 
@@ -387,6 +411,8 @@ public class Homepage extends javax.swing.JFrame {
         linkdininput = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        phoneinput = new javax.swing.JTextField();
         AcademicContentPanel = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
@@ -642,7 +668,7 @@ public class Homepage extends javax.swing.JFrame {
         Signoutbutton.setBackground(new java.awt.Color(153, 153, 255));
         Signoutbutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
         Signoutbutton.setForeground(new java.awt.Color(255, 255, 255));
-        Signoutbutton.setText("sign out");
+        Signoutbutton.setText("Back");
         Signoutbutton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         Signoutbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -756,16 +782,16 @@ public class Homepage extends javax.swing.JFrame {
                 firstnameinputActionPerformed(evt);
             }
         });
-        PersonalContentPanel.add(firstnameinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 380, 52));
+        PersonalContentPanel.add(firstnameinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 380, 52));
 
         jLabel6.setText("First Name");
-        PersonalContentPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 87, -1));
+        PersonalContentPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 130, 87, -1));
 
         jLabel8.setText("Last Name");
-        PersonalContentPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, -1, -1));
+        PersonalContentPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 220, -1, -1));
 
         lastnameinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        PersonalContentPanel.add(lastnameinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 270, 380, 54));
+        PersonalContentPanel.add(lastnameinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, 380, 54));
 
         jLabel9.setFont(new java.awt.Font("Liberation Sans", 1, 48)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 153, 255));
@@ -781,13 +807,13 @@ public class Homepage extends javax.swing.JFrame {
                 personalcontinuebuttonActionPerformed(evt);
             }
         });
-        PersonalContentPanel.add(personalcontinuebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 570, 127, -1));
+        PersonalContentPanel.add(personalcontinuebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 610, 127, -1));
 
         jLabel10.setText("Now you are ready! now add your name and personal details!");
         PersonalContentPanel.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 322, -1));
 
         jLabel11.setText("Email");
-        PersonalContentPanel.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 50, -1));
+        PersonalContentPanel.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 320, 50, -1));
 
         emailinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         emailinput.addActionListener(new java.awt.event.ActionListener() {
@@ -795,19 +821,30 @@ public class Homepage extends javax.swing.JFrame {
                 emailinputActionPerformed(evt);
             }
         });
-        PersonalContentPanel.add(emailinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 370, 380, 51));
+        PersonalContentPanel.add(emailinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 380, 51));
 
         githuburlinput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        PersonalContentPanel.add(githuburlinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 490, 410, 49));
+        PersonalContentPanel.add(githuburlinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 530, 410, 49));
 
         linkdininput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        PersonalContentPanel.add(linkdininput, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 490, 400, 49));
+        PersonalContentPanel.add(linkdininput, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 530, 400, 49));
 
         jLabel12.setText("Github URL(Optional)");
-        PersonalContentPanel.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 160, -1));
+        PersonalContentPanel.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 510, 160, -1));
 
         jLabel13.setText("Linkdin URL(Optional)");
-        PersonalContentPanel.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 470, 170, -1));
+        PersonalContentPanel.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 510, 170, -1));
+
+        jLabel34.setText("Phone");
+        PersonalContentPanel.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 420, 50, -1));
+
+        phoneinput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        phoneinput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                phoneinputActionPerformed(evt);
+            }
+        });
+        PersonalContentPanel.add(phoneinput, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 440, 380, 51));
 
         jTabbedPane1.addTab("tab1", PersonalContentPanel);
 
@@ -967,7 +1004,7 @@ public class Homepage extends javax.swing.JFrame {
         skillsearchbutton.setBackground(new java.awt.Color(102, 153, 255));
         skillsearchbutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
         skillsearchbutton.setForeground(new java.awt.Color(255, 255, 255));
-        skillsearchbutton.setText("s");
+        skillsearchbutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/search (1).png"))); // NOI18N
         skillsearchbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 skillsearchbuttonActionPerformed(evt);
@@ -980,15 +1017,15 @@ public class Homepage extends javax.swing.JFrame {
 
         jLabel29.setText("Skill Description");
 
-        skilldescriptioninput.setColumns(20);
-        skilldescriptioninput.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        skilldescriptioninput.setColumns(10);
+        skilldescriptioninput.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         skilldescriptioninput.setRows(5);
         jScrollPane2.setViewportView(skilldescriptioninput);
 
         skilldeletebutton.setBackground(new java.awt.Color(102, 153, 255));
         skilldeletebutton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         skilldeletebutton.setForeground(new java.awt.Color(255, 255, 255));
-        skilldeletebutton.setText("Del");
+        skilldeletebutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/delete (1).png"))); // NOI18N
         skilldeletebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 skilldeletebuttonActionPerformed(evt);
@@ -1001,30 +1038,33 @@ public class Homepage extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel28)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel4Layout.createSequentialGroup()
-                            .addComponent(skillsearchtextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(skillsearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel29)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(skillnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(skilldeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel28)
+                            .addComponent(skillsearchtextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(skillsearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel29)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(skillnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(skilldeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(skillsearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(skillsearchtextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(skillsearchtextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(skillsearchbutton)
+                        .addGap(29, 29, 29)))
                 .addComponent(jLabel28)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -1038,7 +1078,7 @@ public class Homepage extends javax.swing.JFrame {
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
-        SkillsContentPanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, -1, -1));
+        SkillsContentPanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, -1, -1));
 
         skillsupdatebutton.setBackground(new java.awt.Color(0, 153, 255));
         skillsupdatebutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
@@ -1089,7 +1129,7 @@ public class Homepage extends javax.swing.JFrame {
         Projectsearchbutton.setBackground(new java.awt.Color(102, 153, 255));
         Projectsearchbutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
         Projectsearchbutton.setForeground(new java.awt.Color(255, 255, 255));
-        Projectsearchbutton.setText("s");
+        Projectsearchbutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/search (1).png"))); // NOI18N
         Projectsearchbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProjectsearchbuttonActionPerformed(evt);
@@ -1110,7 +1150,7 @@ public class Homepage extends javax.swing.JFrame {
         projectdeletebutton.setBackground(new java.awt.Color(102, 153, 255));
         projectdeletebutton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         projectdeletebutton.setForeground(new java.awt.Color(255, 255, 255));
-        projectdeletebutton.setText("Del");
+        projectdeletebutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/delete (1).png"))); // NOI18N
         projectdeletebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 projectdeletebuttonActionPerformed(evt);
@@ -1124,20 +1164,27 @@ public class Homepage extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel30)
-                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jPanel5Layout.createSequentialGroup()
-                            .addComponent(projectsearchtextfield, javax.swing.GroupLayout.DEFAULT_SIZE, 604, Short.MAX_VALUE)
-                            .addGap(18, 18, 18)
-                            .addComponent(Projectsearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel30)
+                        .addContainerGap(637, Short.MAX_VALUE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                                .addComponent(projectsearchtextfield, javax.swing.GroupLayout.PREFERRED_SIZE, 604, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18))
                             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel31)
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(projectnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(projectdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
-                .addContainerGap(25, Short.MAX_VALUE))
+                                .addGroup(jPanel5Layout.createSequentialGroup()
+                                    .addComponent(jLabel31)
+                                    .addGap(522, 522, 522))
+                                .addGroup(jPanel5Layout.createSequentialGroup()
+                                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jScrollPane3)
+                                        .addComponent(projectnameinput))
+                                    .addGap(18, 18, 18))))
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(projectdeletebutton, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
+                            .addComponent(Projectsearchbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(17, Short.MAX_VALUE))))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1147,16 +1194,16 @@ public class Homepage extends javax.swing.JFrame {
                     .addComponent(projectsearchtextfield, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Projectsearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addComponent(jLabel30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel30)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(projectnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel31)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(projectdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(projectdeletebutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
@@ -1191,7 +1238,7 @@ public class Homepage extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(projectcontinuebutton1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(projectaddonemorebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 734, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(609, Short.MAX_VALUE))
+                .addContainerGap(2868, Short.MAX_VALUE))
         );
         ProjectsContentPanelLayout.setVerticalGroup(
             ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1208,7 +1255,7 @@ public class Homepage extends javax.swing.JFrame {
                 .addGroup(ProjectsContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(projectupdatebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(projectcontinuebutton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(276, Short.MAX_VALUE))
+                .addContainerGap(1730, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab4", ProjectsContentPanel);
@@ -1254,7 +1301,7 @@ public class Homepage extends javax.swing.JFrame {
         achivementssearchbutton.setBackground(new java.awt.Color(102, 153, 255));
         achivementssearchbutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
         achivementssearchbutton.setForeground(new java.awt.Color(255, 255, 255));
-        achivementssearchbutton.setText("s");
+        achivementssearchbutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/search (1).png"))); // NOI18N
         achivementssearchbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 achivementssearchbuttonActionPerformed(evt);
@@ -1275,7 +1322,7 @@ public class Homepage extends javax.swing.JFrame {
         achivementdeletebutton.setBackground(new java.awt.Color(102, 153, 255));
         achivementdeletebutton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         achivementdeletebutton.setForeground(new java.awt.Color(255, 255, 255));
-        achivementdeletebutton.setText("del");
+        achivementdeletebutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/delete (1).png"))); // NOI18N
         achivementdeletebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 achivementdeletebuttonActionPerformed(evt);
@@ -1288,20 +1335,27 @@ public class Homepage extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(jLabel38)
-                        .addGroup(jPanel6Layout.createSequentialGroup()
-                            .addComponent(achivementssearchtextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 604, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(achivementssearchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel39)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(achivementnameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(achivementdeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jPanel6Layout.createSequentialGroup()
+                                    .addComponent(jLabel39)
+                                    .addGap(506, 506, 506))
+                                .addGroup(jPanel6Layout.createSequentialGroup()
+                                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jScrollPane5)
+                                        .addComponent(achivementnameinput))
+                                    .addGap(27, 27, 27)))
+                            .addComponent(achivementssearchtextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 604, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(achivementssearchbutton, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+                            .addComponent(achivementdeletebutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
@@ -1387,7 +1441,7 @@ public class Homepage extends javax.swing.JFrame {
         experiencedeletebutton.setBackground(new java.awt.Color(102, 153, 255));
         experiencedeletebutton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         experiencedeletebutton.setForeground(new java.awt.Color(255, 255, 255));
-        experiencedeletebutton.setText("del");
+        experiencedeletebutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/delete (1).png"))); // NOI18N
         experiencedeletebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 experiencedeletebuttonActionPerformed(evt);
@@ -1413,7 +1467,7 @@ public class Homepage extends javax.swing.JFrame {
         experiencesearchbutton.setBackground(new java.awt.Color(102, 153, 255));
         experiencesearchbutton.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
         experiencesearchbutton.setForeground(new java.awt.Color(255, 255, 255));
-        experiencesearchbutton.setText("s");
+        experiencesearchbutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/search (1).png"))); // NOI18N
         experiencesearchbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 experiencesearchbuttonActionPerformed(evt);
@@ -1436,11 +1490,13 @@ public class Homepage extends javax.swing.JFrame {
                                 .addComponent(jLabel3)
                                 .addGap(12, 12, 12)
                                 .addComponent(experiencedurationdropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 293, Short.MAX_VALUE))
-                            .addComponent(companynameinput)
-                            .addComponent(jScrollPane1))
-                        .addGap(18, 18, 18)
-                        .addComponent(experiencedeletebutton))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, experiencelistLayout.createSequentialGroup()
+                                .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 590, Short.MAX_VALUE)
+                                    .addComponent(companynameinput))
+                                .addGap(24, 24, 24)))
+                        .addComponent(experiencedeletebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, experiencelistLayout.createSequentialGroup()
                         .addComponent(experiencesearchtextbox)
@@ -1461,7 +1517,7 @@ public class Homepage extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(companynameinput, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                         .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(experiencelistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel3)
@@ -1668,12 +1724,13 @@ public class Homepage extends javax.swing.JFrame {
             String email=emailinput.getText();
             String github=githuburlinput.getText();
             String linkedin=linkdininput.getText();
+            String phone=phoneinput.getText();
 
             Class.forName("com.mysql.cj.jdbc.Driver");
            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?useSSL=false","root","pavan123");
 
            PreparedStatement ps;
-           String query="insert into personal(cvid,fname,lname,email,github,linkedln) values(?,?,?,?,?,?)";
+           String query="insert into personal(cvid,fname,lname,email,github,linkedln,phone) values(?,?,?,?,?,?,?)";
            ps=con.prepareStatement(query);
            ps.setInt(1, cvid);
            ps.setString(2, fname);
@@ -1681,6 +1738,7 @@ public class Homepage extends javax.swing.JFrame {
            ps.setString(4, email);
            ps.setString(5, github);
            ps.setString(6, linkedin);
+           ps.setString(7, phone);
 
 
           int count =ps.executeUpdate();
@@ -1701,6 +1759,7 @@ public class Homepage extends javax.swing.JFrame {
                 String email=emailinput.getText();
                 String github=githuburlinput.getText();
                 String linkedin=linkdininput.getText();
+                String phone=phoneinput.getText();
 
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?useSSL=false","root","pavan123");
@@ -1717,7 +1776,7 @@ public class Homepage extends javax.swing.JFrame {
 
                 PreparedStatement ps;
                // String query="update personal set(cvid,fname,lname,email,github,linkedln) values(?,?,?,?,?,?) where pid="+pid;
-                String query="update personal set cvid=?,fname=?,lname=?,email=?,github=?,linkedln=? where pid="+pid;
+                String query="update personal set cvid=?,fname=?,lname=?,email=?,github=?,linkedln=?,phone=? where pid="+pid;
                 ps=con.prepareStatement(query);
                 ps.setInt(1, cvid);
                 ps.setString(2, fname);
@@ -1725,6 +1784,7 @@ public class Homepage extends javax.swing.JFrame {
                 ps.setString(4, email);
                 ps.setString(5, github);
                 ps.setString(6, linkedin);
+                ps.setString(7, phone);
 
                 int count =ps.executeUpdate();
             }
@@ -1732,7 +1792,7 @@ public class Homepage extends javax.swing.JFrame {
                 System.out.println(e.getMessage());
             }
         }
-        jTabbedPane1.setSelectedIndex(1);
+        setActiveState(AcademicsPanel,1);
     }//GEN-LAST:event_personalcontinuebuttonActionPerformed
 
     private void academicscontinuebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_academicscontinuebuttonActionPerformed
@@ -2197,7 +2257,7 @@ public class Homepage extends javax.swing.JFrame {
 
                 PreparedStatement ps3;
                // String query="update personal set(cvid,fname,lname,email,github,linkedln) values(?,?,?,?,?,?) where pid="+aid;
-                String query="update skills set cvid=?,projectname=?,projectdesc=? where projectid="+projectid;
+                String query="update projects set cvid=?,projectname=?,projectdesc=? where projectid="+projectid;
                 ps3=con.prepareStatement(query);
                 ps3.setInt(1, cvid);
                 ps3.setString(2, projectname);
@@ -2691,8 +2751,8 @@ public class Homepage extends javax.swing.JFrame {
     private void SignoutbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignoutbuttonActionPerformed
         // TODO add your handling code here:
         dispose();
-        Login login=new Login();
-        login.show();
+        Userprofile user=new Userprofile(id);
+        user.show();
     }//GEN-LAST:event_SignoutbuttonActionPerformed
 
     private void createresumebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createresumebuttonActionPerformed
@@ -2709,6 +2769,10 @@ public class Homepage extends javax.swing.JFrame {
     private void experiencedurationdropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_experiencedurationdropdownActionPerformed
          // TODO add your handling code here:
     }//GEN-LAST:event_experiencedurationdropdownActionPerformed
+
+    private void phoneinputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phoneinputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_phoneinputActionPerformed
     
     
     /**
@@ -2826,6 +2890,7 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
@@ -2852,6 +2917,7 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JTextField lastnameinput;
     private javax.swing.JTextField linkdininput;
     private javax.swing.JButton personalcontinuebutton;
+    private javax.swing.JTextField phoneinput;
     private javax.swing.JButton projectaddonemorebutton;
     private javax.swing.JButton projectcontinuebutton1;
     private javax.swing.JButton projectdeletebutton;

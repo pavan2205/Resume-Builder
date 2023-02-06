@@ -42,7 +42,7 @@ public class PDFGenerator {
         contentStream.close();
         
         // Save the document to a file
-        document.save(new File(path+File.separator+"doc.pdf"));
+        document.save(new File(path+File.separator+"doc"+cvid+".pdf"));
         
         // Close the document
         document.close();

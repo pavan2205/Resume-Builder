@@ -49,7 +49,7 @@ public class ResumeGenerator extends javax.swing.JFrame {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?useSSL=false","root","pavan123");
-
+           
            Statement ps1 = con.createStatement();
            Statement ps2=con.createStatement();
            Statement ps3=con.createStatement();
@@ -64,7 +64,6 @@ public class ResumeGenerator extends javax.swing.JFrame {
            String query4="select * from projects where cvid="+cvid;
            String query5="select * from achievements where cvid="+cvid;
            String query6="select * from experience where cvid="+cvid;
-           String query7="select * from register where rid="+rid;
 
            ResultSet rs1=ps1.executeQuery(query1);
            ResultSet rs2=ps2.executeQuery(query2);
@@ -72,7 +71,6 @@ public class ResumeGenerator extends javax.swing.JFrame {
            ResultSet rs4=ps4.executeQuery(query4);
            ResultSet rs5=ps5.executeQuery(query5);
            ResultSet rs6=ps6.executeQuery(query6);
-           ResultSet rs7=ps7.executeQuery(query7);
            
            
            //fetch personal content
@@ -82,9 +80,7 @@ public class ResumeGenerator extends javax.swing.JFrame {
                email.setText(rs1.getString(5));
                Githuburllabel.setText(rs1.getString(6));
                Linkedinurllabel.setText(rs1.getString(7));
-           }
-           if(rs7.next()){
-               phone.setText(rs7.getString(4));
+               phoneinp.setText(rs1.getString(8));
            }
            
            //fetch academics content
@@ -110,7 +106,6 @@ public class ResumeGenerator extends javax.swing.JFrame {
         
         while(rs3.next()){
             String s1=rs3.getString(3);
-            
             String s2=rs3.getString(4);
             String s3="<html>&bull;<b>"+s1+"</b><br>&nbsp;&nbsp;"+s2+"</html>";
             skillList.add(s3);
@@ -170,7 +165,6 @@ public class ResumeGenerator extends javax.swing.JFrame {
             public int getSize() { return experinceList.size(); }
             public String getElementAt(int i) { return experinceList.get(i); }
         });
-        
         }
         catch(Exception e){
             System.out.println(e.getMessage());
@@ -220,9 +214,7 @@ public class ResumeGenerator extends javax.swing.JFrame {
                email.setText(rs1.getString(5));
                Githuburllabel.setText(rs1.getString(6));
                Linkedinurllabel.setText(rs1.getString(7));
-           }
-           if(rs7.next()){
-               phone.setText(rs7.getString(4));
+               phoneinp.setText(rs1.getString(8));
            }
            
            //fetch academics content
@@ -255,7 +247,6 @@ public class ResumeGenerator extends javax.swing.JFrame {
         }
         
         SkillsList.setModel(new javax.swing.AbstractListModel<String>() {
-            
             public int getSize() { return skillList.size(); }
             public String getElementAt(int i) { return skillList.get(i); }
         });
@@ -333,13 +324,15 @@ public class ResumeGenerator extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanel1 = new javax.swing.JPanel();
         resumePanel = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         Lnamelabel = new javax.swing.JLabel();
         Fnamelabel1 = new javax.swing.JLabel();
         githuburllabel1 = new javax.swing.JLabel();
         Linkedinurllabel = new javax.swing.JLabel();
-        phone = new javax.swing.JLabel();
+        phoneinp = new javax.swing.JLabel();
         email = new javax.swing.JLabel();
         Linkedinurllabel2 = new javax.swing.JLabel();
         Githuburllabel = new javax.swing.JLabel();
@@ -382,9 +375,20 @@ public class ResumeGenerator extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(1920, 1400));
         setPreferredSize(new java.awt.Dimension(1920, 1400));
 
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setAutoscrolls(true);
+        jScrollPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jScrollPane1.setMinimumSize(new java.awt.Dimension(1920, 1020));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(1920, 1020));
+
+        jPanel1.setMaximumSize(new java.awt.Dimension(1920, 1200));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1920, 1020));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1920, 1000));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         resumePanel.setBackground(new java.awt.Color(255, 255, 255));
         resumePanel.setMaximumSize(new java.awt.Dimension(790, 980));
-        resumePanel.setPreferredSize(new java.awt.Dimension(790, 1080));
+        resumePanel.setPreferredSize(new java.awt.Dimension(790, 1000));
         resumePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel3.setBackground(new java.awt.Color(17, 71, 124));
@@ -402,16 +406,16 @@ public class ResumeGenerator extends javax.swing.JFrame {
         jPanel3.add(Fnamelabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 220, 67));
 
         githuburllabel1.setForeground(new java.awt.Color(255, 255, 255));
-        githuburllabel1.setText("Github :");
+        githuburllabel1.setText("Github url :");
         jPanel3.add(githuburllabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(503, 43, -1, -1));
 
         Linkedinurllabel.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel3.add(Linkedinurllabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(561, 21, 215, 16));
+        jPanel3.add(Linkedinurllabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(576, 21, 200, 16));
 
-        phone.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
-        phone.setForeground(new java.awt.Color(255, 255, 255));
-        phone.setText("7349156554");
-        jPanel3.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 267, 24));
+        phoneinp.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        phoneinp.setForeground(new java.awt.Color(255, 255, 255));
+        phoneinp.setText("7349156554");
+        jPanel3.add(phoneinp, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 267, 24));
 
         email.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         email.setForeground(new java.awt.Color(255, 255, 255));
@@ -419,11 +423,11 @@ public class ResumeGenerator extends javax.swing.JFrame {
         jPanel3.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 51, 267, 24));
 
         Linkedinurllabel2.setForeground(new java.awt.Color(255, 255, 255));
-        Linkedinurllabel2.setText("LinkedLn :");
+        Linkedinurllabel2.setText("Linkedln url :");
         jPanel3.add(Linkedinurllabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(503, 21, -1, -1));
 
         Githuburllabel.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel3.add(Githuburllabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(561, 43, 215, 16));
+        jPanel3.add(Githuburllabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(576, 43, 200, 16));
 
         Phonelabel2.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         Phonelabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -628,6 +632,8 @@ public class ResumeGenerator extends javax.swing.JFrame {
         pcboard.setText("2018 - 2020");
         resumePanel.add(pcboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 350, 90, 20));
 
+        jPanel1.add(resumePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, -1, -1));
+
         back.setBackground(new java.awt.Color(204, 255, 255));
         back.setText("Back");
         back.addActionListener(new java.awt.event.ActionListener() {
@@ -635,6 +641,7 @@ public class ResumeGenerator extends javax.swing.JFrame {
                 backActionPerformed(evt);
             }
         });
+        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(1300, 240, 140, 50));
 
         print.setBackground(new java.awt.Color(255, 204, 204));
         print.setText("PRINT");
@@ -643,33 +650,11 @@ public class ResumeGenerator extends javax.swing.JFrame {
                 printActionPerformed(evt);
             }
         });
+        jPanel1.add(print, new org.netbeans.lib.awtextra.AbsoluteConstraints(1300, 170, 140, 50));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(389, 389, 389)
-                .addComponent(resumePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(111, 111, 111)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(print, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(back, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(print, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(resumePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 948, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(138, Short.MAX_VALUE))
-        );
+        jScrollPane1.setViewportView(jPanel1);
+
+        getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -753,7 +738,6 @@ public class ResumeGenerator extends javax.swing.JFrame {
             }
         });
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JList<String> AchivementList;
     private javax.swing.JList<String> ExperienceList;
@@ -783,14 +767,16 @@ public class ResumeGenerator extends javax.swing.JFrame {
     private javax.swing.JLabel email;
     private javax.swing.JLabel email2;
     private javax.swing.JLabel githuburllabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel label2;
     private javax.swing.JLabel pcboard;
     private javax.swing.JLabel pccourse;
     private javax.swing.JLabel pcname;
     private javax.swing.JLabel pcpercentage;
     private javax.swing.JLabel pcyear;
-    private javax.swing.JLabel phone;
+    private javax.swing.JLabel phoneinp;
     private javax.swing.JButton print;
     private javax.swing.JPanel resumePanel;
     private javax.swing.JLabel skillsLabel;
@@ -800,4 +786,5 @@ public class ResumeGenerator extends javax.swing.JFrame {
     private javax.swing.JPanel underlinepanel3;
     private javax.swing.JPanel underlinepanel5;
     // End of variables declaration//GEN-END:variables
+
 }

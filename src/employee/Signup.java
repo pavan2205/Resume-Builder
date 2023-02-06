@@ -32,12 +32,32 @@ import javax.swing.JOptionPane;
  * @author pavan
  */
 public class Signup extends javax.swing.JFrame {
-
     /**
      * Creates new form Login
      */
     public Signup() {
         initComponents();
+        try {
+            
+            
+            File imageFile = new File("C:\\Users\\pavan\\OneDrive\\Documents\\NetBeansProjects\\Employee\\src\\employee\\custom.png");
+            BufferedImage image = ImageIO.read(imageFile);
+            
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            
+            if (imageFile.getName().endsWith(".jpg")) {
+                ImageIO.write(image, "jpg", baos);
+            } else if (imageFile.getName().endsWith(".jpeg")) {
+                ImageIO.write(image, "jpeg", baos);
+            }else{
+                ImageIO.write(image, "png", baos);
+            }
+            
+            baos.flush();
+            avatar = baos.toByteArray();
+        } catch (IOException ex) {
+            Logger.getLogger(Signup.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 
@@ -195,6 +215,8 @@ public class Signup extends javax.swing.JFrame {
         jLabel11.setText("username");
         jPanel6.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, -1, -1));
 
+        avatarIcon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        avatarIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/custom.png"))); // NOI18N
         avatarIcon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         avatarIcon.setMaximumSize(new java.awt.Dimension(80, 80));
         avatarIcon.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -260,8 +282,10 @@ public class Signup extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code 
-        try{
-           String fnam=fname.getText();
+        
+        boolean res=false;
+        
+        String fnam=fname.getText();
            String lnam=lname.getText();
            String phon=phone.getText();
            String emai=email.getText();
@@ -270,10 +294,39 @@ public class Signup extends javax.swing.JFrame {
            String usernam=username.getText();
            
            
+           
+           try{
+               Class.forName("com.mysql.cj.jdbc.Driver");
+                Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?useSSL=false","root","pavan123");
+                
+                Statement stm=con.createStatement();
+                String query1="select * from register where username='"+usernam+"'";
+                ResultSet rs=stm.executeQuery(query1);
+                res=rs.next();
+                
+  
+                
+                
+           }catch(Exception e){
+               System.out.println(e.getMessage());
+           }
+           
+           
+           
+           
+           
+        if(res){
+            JOptionPane.showMessageDialog(this, "Username already taken");
+        }   
+        else if(!fnam.isEmpty() && !lnam.isEmpty() && !emai.isEmpty() && !passwor.isEmpty() && !usernam.isEmpty() && !cpasswor.isEmpty()){
+         
+        try{
+      
            Class.forName("com.mysql.cj.jdbc.Driver");
            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/resume?useSSL=false","root","pavan123");
            
            PreparedStatement ps;
+           
            
            String query="INSERT INTO register(fname,lname,phone,email,password,avatar,username)values(?,?,?,?,?,?,?)";
            ps=con.prepareStatement(query);
@@ -286,10 +339,7 @@ public class Signup extends javax.swing.JFrame {
            ps.setBlob(6, new SerialBlob(avatar));
            ps.setString(7, usernam);
            
-           
-         
-          
-               
+
                //if username and password is true than go to homepage
               if(ps.executeUpdate()>0){
                JOptionPane.showMessageDialog(this,"registered successfullly");
@@ -298,10 +348,14 @@ public class Signup extends javax.swing.JFrame {
                login.show();
               }
            con.close();
-       }
+        }
        catch(Exception e){
            System.out.println(e.getMessage());
        }
+         }
+         else{
+             JOptionPane.showMessageDialog(this, "Please fill the details");
+         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jLabel3KeyPressed
@@ -331,7 +385,7 @@ public class Signup extends javax.swing.JFrame {
 //            for (int readNum; (readNum=fis.read(buf) ) !=-1;){
 //                bos.write(buf,0,readNum);
 //            }
-             File imageFile = new File(f.getAbsolutePath());
+        File imageFile = new File(f.getAbsolutePath());
         BufferedImage image = ImageIO.read(imageFile);
 
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -349,7 +403,7 @@ if (imageFile.getName().endsWith(".jpg")) {
 
         }
         catch(IOException ex){
-            Logger.getLogger(Signup.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
     }//GEN-LAST:event_uploadButtonActionPerformed
 
@@ -421,7 +475,6 @@ if (imageFile.getName().endsWith(".jpg")) {
     private javax.swing.JButton uploadButton;
     private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables
-
 byte [] avatar=null;
 String filename=null;
 }
